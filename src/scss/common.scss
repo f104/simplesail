@@ -1,0 +1,100 @@
+@import "../fonts/DINPro/stylesheet.css";
+@import "variables";
+@import "mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+body {
+    color: $body-color;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+}
+
+.link {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $link-color;
+        transform-origin: 0% 50%;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+    }
+    &:hover {
+        &:before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.btn {
+    min-width: 214px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    @include transition();
+    &:focus {
+        outline: none;
+    }
+    &.btn-secondary {
+        border: 1px solid $white;
+        &:hover {
+            border-color: $primary;
+            background-color: $primary;
+        }
+    }
+}
+
+header, footer {
+    .container {
+        padding: 0 20px;
+    }
+}
+@include media-breakpoint-up(md) {
+    header, footer {
+        .container {
+            padding: 0 40px;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    body {
+        font-size: 18px;
+    }
+    .btn {
+        font-size: 113%;
+        line-height: 2.5em;
+    }
+    header, footer {
+        .container {
+            padding: 0 3vw;
+        }
+    }
+}
+
+@import "header";
+@import "page-assets/fleet";
+@import "page-assets/services";
+@import "page-assets/blog";
+@import "page-assets/social";

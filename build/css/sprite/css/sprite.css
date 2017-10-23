@@ -1,0 +1,146 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 4em 41.3em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.facebook:before {
+      background-position: 0em 0em;
+      width: 0.9em;
+      height: 1.7em;
+  }
+
+
+
+
+  .icon.facebook-rounded:before {
+      background-position: 0em -1.7em;
+      width: 3.8em;
+      height: 3.9em;
+  }
+
+
+
+
+  .icon.google-rounded:before {
+      background-position: 0em -5.6em;
+      width: 3.8em;
+      height: 3.9em;
+  }
+
+
+
+
+  .icon.mail:before {
+      background-position: 0em -9.5em;
+      width: 3.2em;
+      height: 2.7em;
+  }
+
+
+
+
+  .icon.mail-sm:before {
+      background-position: 0em -12.2em;
+      width: 2.8em;
+      height: 2.2em;
+  }
+
+
+
+
+  .icon.menu-geo:before {
+      background-position: 0em -14.4em;
+      width: 1.4em;
+      height: 2em;
+  }
+
+
+
+
+  .icon.menu-mail:before {
+      background-position: 0em -16.4em;
+      width: 2em;
+      height: 1.6em;
+  }
+
+
+
+
+  .icon.menu-sandwich:before {
+      background-position: 0em -18em;
+      width: 2.2em;
+      height: 1.7em;
+  }
+
+
+
+
+  .icon.menu-weather:before {
+      background-position: 0em -19.7em;
+      width: 3.3em;
+      height: 2.3em;
+  }
+
+
+
+
+  .icon.message:before {
+      background-position: 0em -22em;
+      width: 4em;
+      height: 3.9em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -25.9em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.telegram-rounded:before {
+      background-position: 0em -29.7em;
+      width: 3.8em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.twitter-rounded:before {
+      background-position: 0em -33.5em;
+      width: 3.9em;
+      height: 3.9em;
+  }
+
+
+
+
+  .icon.vk-rounded:before {
+      background-position: 0em -37.4em;
+      width: 3.8em;
+      height: 3.9em;
+  }
+
+
+
+
+

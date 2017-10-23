@@ -1,0 +1,177 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "Index"
+    })
+    <body>
+        @@include('./template/header.html')
+        <section class="index-fleet">
+            <h3 class="index-fleet__header">Our fleet</h3>
+            <div class="container">
+                <div class="row fleet-list">
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">19</div>
+                            <div class="fleet-item__text">Sailing Yachts</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">4</div>
+                            <div class="fleet-item__text">Sailing Catamarans</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">2</div>
+                            <div class="fleet-item__text">Motor Catamarans</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">3</div>
+                            <div class="fleet-item__text">Motor Boats</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">8</div>
+                            <div class="fleet-item__text">New Yachts Built in 2018</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 flex">
+                        <a href="#" class="fleet-item">
+                            <div class="fleet-item__header">
+                                <img  class="fleet-item__logo" src="img/fleet-logo.svg" alt="alt text">
+                            </div>
+                            <div class="fleet-item__text">All Fleet SimpleSail</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-fleet__footer">
+                <button class="btn btn-secondary">Show more</button>
+            </div>
+        </section>
+        <section class="index-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "SimpleSail Adriatic Yacht Team",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter.<br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "Yacht School",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter. <br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "Protection of Your Payment",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter. <br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "Maintenance and Repair",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter. <br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "Charter Management",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter. <br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @@include('./template/chunks/services-item.html', {
+                        "title": "SimpleSail Partnership",
+                        "text": "We charter out sailing and motor yachts, with a possibility for bareboat charter. <br>Plan your vacation on a yacht in Montenegro. Enjoy one day trips (One Day Charter, Montenegro Sailing Days), or chose to sail for a week or longer. SimpleSail fleet in Montenegro comprises new comfortable Beneteau and Jeanneau sailing and motor boats."
+                        })
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="index-blog">
+            <h3 class="index-blog__header">About Fleet, Yachting and Traveling</h3>
+            <div class="container">
+                <div class="row blog-list">
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "1",
+                        "title": "Beneteau Oceanis 38: Review and Tests",
+                        "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma.",
+                        "link_text": "Our Fleet"
+                        })
+                    </div>
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "2",
+                        "title": "The anatomy of sails from all around the world",
+                        "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and…",
+                        "link_text": "Adventure"
+                        })
+                    </div>
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "3",
+                        "title": "Route 3: Montenegro. Boka Kotorska in 7 days ",
+                        "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of…",
+                        "link_text": "Routes"
+                        })
+                    </div>
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "4",
+                        "title": "Abbey of St. George, Perast, Bay of Kotor ",
+                        "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny.",
+                        "link_text": "Yachting"
+                        })
+                    </div>
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "5",
+                        "title": "SimpleSail: Protection of Customer Payments ",
+                        "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly…",
+                        "link_text": "SimpleSail"
+                        })
+                    </div>
+                    <div class="col-12 col-md-4 flex">
+                        @@include('./template/chunks/blog-item.html', {
+                        "img": "6",
+                        "title": "Route 4: Croatia. South Dalmatia in 14 days ",
+                        "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the…",
+                        "link_text": "Routes"
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="index-blog__footer">
+                <button class="btn btn-secondary">Show more</button>
+            </div>
+        </section>
+        <footer>
+            <section class="index-social">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <ul class="social-list">
+                            <li><a href="#"><i class="icon telegram-rounded"></i></a></li>
+                            <li><a href="#"><i class="icon message"></i></a></li>
+                            <li><a href="#"><i class="icon phone"></i></a></li>
+                            <li><a href="#"><i class="icon mail"></i></a></li>
+                        </ul>
+                        <ul class="social-list">
+                            <li><a href="#"><i class="icon facebook-rounded"></i></a></li>
+                            <li><a href="#"><i class="icon twitter-rounded"></i></a></li>
+                            <li><a href="#"><i class="icon google-rounded"></i></a></li>
+                            <li><a href="#"><i class="icon vk-rounded"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+    @@include('./template/foot.html')
+</html>

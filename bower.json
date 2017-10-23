@@ -1,0 +1,15 @@
+{
+    "name": "SimpleSail",
+    "main": "gulpfile.js",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
