@@ -5,8 +5,8 @@
     <body>
         @@include('./template/header.html')
         <section class="index-fleet">
-            <h3 class="index-fleet__header">Our fleet</h3>
             <div class="container">
+                <h3 class="index-fleet__header">Our fleet</h3>
                 <div class="row fleet-list">
                     <div class="col-6 col-md-4 col-lg-2 flex">
                         <a href="#" class="fleet-item">
@@ -47,11 +47,12 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="index-fleet__footer">
-                <button class="btn btn-secondary">Show more</button>
+                <div class="index-fleet__footer">
+                    <button class="btn btn-secondary">Show more</button>
+                </div>
             </div>
         </section>
+
         <section class="index-services">
             <div class="container">
                 <div class="row">
@@ -94,9 +95,119 @@
                 </div>
             </div>
         </section>
+
+        <section class="index-charter">
+            <div class="index-charter__dark">
+                <div class="container">
+                    <div class="index-charter__header-wrapper">
+                        <h3 class="index-charter__header">SimpleSail Catamaran Yacht Charter</h3>
+                        <p class="index-charter__introtext">It is a great idea to spend an unforgettable holiday on a yacht 
+                            under the control of captain-instructor of SimpleSail. Every day you will follow a route specially prepared for you. Every night you will go to a new location: a quiet fishing village or a city with pulsing nightlife. 
+                            Or you can spend your nights on an ancor near the wild beaches.</p>
+                    </div>
+                    <div class="row charter-list">
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "dark",
+                            "img1": "1",
+                            "img2": "1s",
+                            "title": "Fountaine Pajot Lucia 40 ",
+                            "text1": "Mawimbi, 4 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "dark",
+                            "img1": "2",
+                            "img2": "2s",
+                            "title": "Fountaine Pajot Helia 44",
+                            "text1": "Clione, 3 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "dark",
+                            "img1": "1",
+                            "img2": "1s",
+                            "title": "Fountaine Pajot Helia 44",
+                            "text1": "Clione, 3 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "dark",
+                            "img1": "4",
+                            "img2": "4s",
+                            "title": "Fountaine Pajot Helia 44",
+                            "text1": "Clione, 3 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index-charter__light">
+                <div class="container">
+                    <div class="row charter-list">
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "light",
+                            "img1": "5",
+                            "img2": "5s",
+                            "title": "Fountaine Pajot Lucia 40 ",
+                            "text1": "Mawimbi, 4 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "light",
+                            "img1": "6",
+                            "img2": "6s",
+                            "title": "Fountaine Pajot Helia 44",
+                            "text1": "Clione, 3 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "light",
+                            "img1": "7",
+                            "img2": "7s",
+                            "title": "Fountaine Pajot Lucia Fountaine Pajot Lucia 40 ",
+                            "text1": "Mawimbi, 4 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                        <div class="col-3 flex">
+                            @@include('./template/chunks/charter-item.html', {
+                            "class": "light",
+                            "img1": "8",
+                            "img2": "8s",
+                            "title": "Fountaine Pajot Helia 44",
+                            "text1": "Clione, 3 Cabin",
+                            "text2": "19.09-26.10",
+                            "text3": "€ 4 382"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="index-blog">
-            <h3 class="index-blog__header">About Fleet, Yachting and Traveling</h3>
             <div class="container">
+                <h3 class="index-blog__header">About Fleet, Yachting and Traveling</h3>
                 <div class="row blog-list">
                     <div class="col-12 col-md-4 flex">
                         @@include('./template/chunks/blog-item.html', {
@@ -147,11 +258,12 @@
                         })
                     </div>
                 </div>
-            </div>
-            <div class="index-blog__footer">
-                <button class="btn btn-secondary">Show more</button>
+                <div class="index-blog__footer">
+                    <button class="btn btn-secondary">Show more</button>
+                </div>
             </div>
         </section>
+
         <footer>
             <section class="index-social">
                 <div class="container">

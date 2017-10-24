@@ -23,26 +23,14 @@
     background-color: #546e7a;
     @include transition(background .2s ease);
     .blog-item__img-wrapper {
-        position: relative;
+        @include bg-img-wrapper();
         height: 208px;
     }
     .blog-item__img-inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
+        @include bg-img-inner();
     }
     .blog-item__img {
-        position: absolute;
-        min-width: 100%;
-        min-height: 100%;
-        max-width: none;
-        max-height: none;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include bg-img();
     }
     .blog-item__content-wrapper {
         padding: 30px 20px;

@@ -14,7 +14,9 @@ body {
     letter-spacing: normal;
     text-align: left;
 }
-
+.container {
+    overflow: hidden;
+}
 .flex {
     display: flex;
 }
@@ -82,9 +84,10 @@ header, footer {
     body {
         font-size: 18px;
     }
-    .btn {
+    .btn, .btn.btn-secondary {
         font-size: 113%;
         line-height: 2.5em;
+        border-width: .1em;
     }
     header, footer {
         .container {
@@ -96,5 +99,6 @@ header, footer {
 @import "header";
 @import "page-assets/fleet";
 @import "page-assets/services";
+@import "page-assets/charter";
 @import "page-assets/blog";
 @import "page-assets/social";
