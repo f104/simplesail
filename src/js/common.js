@@ -3,6 +3,7 @@ jQuery(function () {
 
     $(document).ready(function () {
         initSly();
+        initLink();
     });
 
     function initSly() {
@@ -29,10 +30,18 @@ jQuery(function () {
                     dynamicHandle: 1,
                     clickBar: 1
                 });
-                $(window).resize(function(e) {
+                $(window).resize(function (e) {
                     $frame.sly('reload');
                 });
             }
+        });
+    }
+
+    function initLink() {
+        $('.js-link').on('click', function (e) {
+            e.preventDefault();
+            var href = $(this).data('link');
+            window.location = href;
         });
     }
 

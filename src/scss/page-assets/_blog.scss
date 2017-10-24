@@ -62,12 +62,16 @@
         font-weight: 700;
         letter-spacing: 0.4px;
         padding: 0 18px;
+        color: $white;
         @include transition();
         &:after {
             position: absolute;
             content: '>';
             right: 18px;
             font-size: 16.9px;
+        }
+        &:hover {
+            background-color: $primary;
         }
     }
     &:hover {
@@ -77,10 +81,6 @@
         }
         .blog-item__text {
             color: $body-color;
-        }
-        .blog-item__link {
-            color: $white;
-            background-color: $primary;
         }
     }
 }
