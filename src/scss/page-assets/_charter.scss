@@ -74,11 +74,10 @@
     }
 }
 
-.charter-list {
-    margin: 0 -9px;
-    .charter-item {
-        margin: 0 4.5px;
-    }
+.charter-scrollbar {
+    display: none;
+    background-color: $white;
+    padding: 20px;
 }
 .charter-item {
     width: 100%;
@@ -186,13 +185,28 @@
         flex-wrap: nowrap;
         .flex {
             max-width: unset;
+            &:last-of-type {
+                .charter-item {
+                    margin-right: 0;
+                }
+            }
         }
         .charter-item {
             width: 223px;
+            margin-right: 9px;
         }
+    }
+    .charter-scrollbar {
+        display: block;
     }
 }
 @include media-breakpoint-up(md) {
+    .charter-list {
+        margin: 0 -9px;
+        .charter-item {
+            margin: 0 4.5px;
+        }
+    }
     .charter-item {
         .charter-item__img-wrapper {
             height: 113.7px;

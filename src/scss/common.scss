@@ -13,12 +13,17 @@ body {
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 .container {
     overflow: hidden;
 }
 .flex {
     display: flex;
+}
+.hidden {
+    display: none !important;
 }
 
 .link {
@@ -96,6 +101,7 @@ header, footer {
     }
 }
 
+@import "sliders";
 @import "header";
 @import "page-assets/fleet";
 @import "page-assets/services";
