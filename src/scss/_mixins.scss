@@ -16,6 +16,16 @@
         }
     }
 }
+@mixin list-inline-center($padding:20px) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    > li {
+        display: inline-block;
+        padding-left: $padding / 2;
+        padding-right: $padding / 2;
+    }
+}
 
 @mixin link-underline() {
     position: relative;
