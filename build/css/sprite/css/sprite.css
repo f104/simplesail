@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 4em 41.3em;
+    background-size: 4em 44em;
 }
 
 .no-svg .icon:before {
@@ -62,8 +62,17 @@
 
 
 
-  .icon.menu-geo:before {
+  .icon.marina-geo:before {
       background-position: 0em -14.4em;
+      width: 1.9em;
+      height: 2.7em;
+  }
+
+
+
+
+  .icon.menu-geo:before {
+      background-position: 0em -17.1em;
       width: 1.4em;
       height: 2em;
   }
@@ -72,7 +81,7 @@
 
 
   .icon.menu-mail:before {
-      background-position: 0em -16.4em;
+      background-position: 0em -19.1em;
       width: 2em;
       height: 1.6em;
   }
@@ -81,7 +90,7 @@
 
 
   .icon.menu-sandwich:before {
-      background-position: 0em -18em;
+      background-position: 0em -20.7em;
       width: 2.2em;
       height: 1.7em;
   }
@@ -90,7 +99,7 @@
 
 
   .icon.menu-weather:before {
-      background-position: 0em -19.7em;
+      background-position: 0em -22.4em;
       width: 3.3em;
       height: 2.3em;
   }
@@ -99,7 +108,7 @@
 
 
   .icon.message:before {
-      background-position: 0em -22em;
+      background-position: 0em -24.7em;
       width: 4em;
       height: 3.9em;
   }
@@ -108,7 +117,7 @@
 
 
   .icon.phone:before {
-      background-position: 0em -25.9em;
+      background-position: 0em -28.6em;
       width: 3.8em;
       height: 3.8em;
   }
@@ -117,7 +126,7 @@
 
 
   .icon.telegram-rounded:before {
-      background-position: 0em -29.7em;
+      background-position: 0em -32.4em;
       width: 3.8em;
       height: 3.8em;
   }
@@ -126,7 +135,7 @@
 
 
   .icon.twitter-rounded:before {
-      background-position: 0em -33.5em;
+      background-position: 0em -36.2em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -135,7 +144,7 @@
 
 
   .icon.vk-rounded:before {
-      background-position: 0em -37.4em;
+      background-position: 0em -40.1em;
       width: 3.8em;
       height: 3.9em;
   }
