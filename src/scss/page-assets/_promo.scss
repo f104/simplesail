@@ -1,0 +1,255 @@
+.promo-item {
+    position: relative;
+    .promo-item__img {
+        display: block;
+        width: 100%;
+    }
+    .promo-item__inner {
+        height: 75px;
+        padding: 0 17px 0 20px;
+        background-color: #ecf2f5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .promo-item__text {
+        font-size: 15px;
+        width: 155px;
+        letter-spacing: 0.2px;
+        color: #455a64;
+    }
+    .promo-item__price {
+        font-family: $font-family-alt;
+        font-size: 37px;
+        line-height: 44px;
+        color: #f45221;
+    }
+}
+@include media-breakpoint-up(md) {
+    .promo-item {
+        padding-right: 1px;
+        &:last-of-type {
+            padding-right: 0;
+        }
+        .promo-item__inner {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 260px;
+            opacity: 0.85;
+            background-color: $white;
+            flex-direction: column;
+            height: auto;
+            padding: 15px;
+        }
+        .promo-item__text {
+            font-size: 17px;
+            line-height: 21px;
+            width: 175px;
+        }
+        .promo-item__price {
+            font-size: 27.6px;
+            line-height: 1em;
+            letter-spacing: 0.4px;
+            text-align: right;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .promo-item {
+        .promo-item__inner {
+            top: 12.3%;
+            width: 45%;
+            padding: 17px;
+        }
+        .promo-item__text {
+            font-size: 19px;
+            line-height: 25px;
+            width: 75%;
+        }
+        .promo-item__price {
+            font-size: 31px;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .promo-item {
+        .promo-item__inner {
+            padding: 1.15em;
+        }
+        .promo-item__text {
+            font-size: 126.6%;
+            line-height: 1.35em;
+        }
+        .promo-item__price {
+            font-size: 206.6%;
+            letter-spacing: 0.03em;
+        }
+    }
+}
+
+.index-promo__text {
+    min-height: 358px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    color: #78909c;
+    .index-promo__text__title {
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    .index-promo__text__intro {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        margin: 0;
+    }
+}
+@include media-breakpoint-up(md) {
+    .index-promo__text {
+        min-height: 275px;
+        padding: 0 79px;
+        .index-promo__text__title {
+            font-size: 35px;
+            letter-spacing: 0.6px;
+            margin-bottom: 24px;
+        }
+    }    
+}
+@include media-breakpoint-up(lg) {
+    .index-promo__text {
+        min-height: 292px;
+        padding: 0 267px;
+        .index-promo__text__title {
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+        .index-promo__text__intro {
+            font-size: 17px;
+            line-height: normal;
+            letter-spacing: 0.3px;
+        }
+    }    
+}
+@include media-breakpoint-up(xl) {
+    .index-promo__text {
+        min-height: 20em;
+        padding: 0 18em;
+        .index-promo__text__title {
+            letter-spacing: 0.03em;
+            margin-bottom: 0.7em;
+        }
+        .index-promo__text__intro {
+            font-size: 113.3%;
+            letter-spacing: 0.02em;
+        }
+    }    
+}
+
+.promo-icon {
+    .promo-icon__item {
+        display: block;
+        padding-right: 1px;
+        padding-bottom: 1px;
+        .promo-icon__item__inner {
+            height: 148px;
+            background-color: #b4bec3;
+            display: flex;
+            flex-direction: column;
+            padding: 9px;
+            &:hover {
+                background-color: #8ca2ad;
+            }
+            @include transition();
+        }
+        .promo-icon__item__icon {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-basis: 50%;
+        }
+        .promo-icon__item__text {
+            flex: 1;
+            padding-top: 14px;
+            flex-basis: 50%;
+            text-align: center;
+            color: #f5f8f9;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .promo-icon {
+        .promo-icon__item {
+            &:nth-child(2n) {
+                padding-right: 0;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .promo-icon {
+        .promo-icon__item {
+            &:last-of-type {
+                padding-right: 0;
+            }
+            .promo-icon__item__inner {
+                height: 178px;
+            }
+            .promo-icon__item__icon {
+                .icon {
+                    font-size: 11px;
+                }
+            }
+            .promo-icon__item__text {
+                padding-top: 17px;
+                font-size: 17px;
+                line-height: 16.1px;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .promo-icon {
+        .promo-icon__item {
+            .promo-icon__item__inner {
+                height: 298px;
+            }
+            .promo-icon__item__icon {
+                .icon {
+                    font-size: 18px;
+                }
+            }
+            .promo-icon__item__text {
+                padding-top: 24px;
+                font-size: 23px;
+                line-height: 27px;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .promo-icon {
+        .promo-icon__item {
+            .promo-icon__item__inner {
+                height: 20em;
+            }
+            .promo-icon__item__icon {
+                .icon {
+                    font-size: 120%;
+                }
+            }
+            .promo-icon__item__text {
+                font-size: 153.3%;
+                padding-top: 1em;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
