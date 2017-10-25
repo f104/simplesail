@@ -103,6 +103,13 @@ gulp.task('image:build', function () {
 //  spriteData.css.pipe(gulp.dest(path.build.sprite));
 //});
 gulp.task('sprite:build', function () {
+//    var config = {
+//        shape: {
+//            spacing: {// Spacing related options
+//                padding: 10
+//            }
+//        }
+//    };
     gulp.src(path.src.sprite)
             .pipe(svgSprite())
             .pipe(gulp.dest(path.build.sprite));
