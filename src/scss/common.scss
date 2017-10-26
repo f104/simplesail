@@ -1,9 +1,9 @@
 @import "../fonts/DINPro/stylesheet.css";
 @import "variables";
 @import "mixins";
-@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-
+@import "libs/bootstrap/bootstrap-reboot.scss";
+@import "libs/bootstrap/bootstrap-grid.scss";
+@import "libs/bootstrap/utilities/_embed.scss";
 body {
     color: $body-color;
     font-size: 15px;
