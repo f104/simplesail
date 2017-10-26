@@ -6,11 +6,13 @@
         margin-bottom: 9px;
     }
     .index-charter__header-wrapper {
-        padding: 55px 0;
-        max-width: 77.2%;
-        margin: 0 auto;
+        padding: 0 40px;
         text-align: center;
         color: #78909c;
+        min-height: 348px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .index-charter__header {
         font-size: 25px;
@@ -28,8 +30,8 @@
 @include media-breakpoint-up(md) {
     .index-charter {
         .index-charter__header-wrapper {
-            padding: 83px 0 77px;
-            max-width: 82.7%;
+            min-height: 304px;
+            padding: 0 10%;
         }
         .index-charter__header {
             font-size: 35px;
@@ -44,13 +46,11 @@
 @include media-breakpoint-up(lg) {
     .index-charter {
         .index-charter__header-wrapper {
-            max-width: 60.5%;
+            min-height: 293px;
+            padding: 0 20%;
         }
         .index-charter__dark, .index-charter__light {
             margin-bottom: 13px;
-        }
-        .index-charter__header-wrapper {
-            padding: 83px 0 84px;
         }
     }
 }
@@ -60,7 +60,7 @@
             margin-bottom: 1em;
         }
         .index-charter__header-wrapper {
-            padding: 5.6em 0;
+            min-height: 20em;
         }
         .index-charter__header {
             font-size: 233%;
@@ -83,15 +83,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    .charter-item__img-wrapper {
-        @include bg-img-wrapper();
-        height: 136.8px;
-    }
-    .charter-item__img-inner {
-        @include bg-img-inner();
-    }
     .charter-item__img {
-        @include bg-img();
+        display: block;
+        width: 100%;
     }
     .charter-item__content-wrapper {
         display: flex;
@@ -107,8 +101,10 @@
         line-height: 24px;
         font-weight: 700;
         text-align: center;
-        color: $white;
         margin-bottom: 7.7px;
+        .link {
+            display: inline-block;
+        }
     }
     .charter-item__sub {
         opacity: 0.56;
@@ -150,7 +146,13 @@
     }
     &_dark {
         background-color: #4d5e66;
-        .charter-item__header, .charter-item__sub {
+        .charter-item__header {
+            color: $white;
+            .link:before {
+                background-color: $white;
+            }
+        }
+        .charter-item__sub {
             color: $white;
         }
         charter-item__date, .charter-item__price {
@@ -159,11 +161,20 @@
         .charter-item__bnt {
             border-color: #9db3be;
         }
+        &:hover {
+            .charter-item__bnt {
+                border-color: $primary;
+                background-color: $primary;
+            }
+        }
     }
     &_light{
         background-color: #cfd8dc;
         .charter-item__header {
             color: #4c5a62;
+            .link:before {
+                background-color: #4c5a62;
+            }
         }
         .charter-item__sub {
             color: #283237;
@@ -174,9 +185,18 @@
         .charter-item__bnt {
             border-color: #7f9daa;
             color: #4c5a62;
-            &:hover {
+        }
+        &:hover {
+            .charter-item__bnt {
                 color: $white;
+                border-color: $primary;
+                background-color: $primary;
             }
+        }
+    }
+    &:hover {
+        .link:before {
+            transform: scaleX(1);
         }
     }
 }
@@ -208,9 +228,6 @@
         }
     }
     .charter-item {
-        .charter-item__img-wrapper {
-            height: 113.7px;
-        }
         .charter-item__content-wrapper {
             padding: 18px;
         }
@@ -254,9 +271,6 @@
         }
     }
     .charter-item {
-        .charter-item__img-wrapper {
-            height: 190px;
-        }
         .charter-item__content-wrapper {
             padding: 30px;
         }
@@ -300,9 +314,6 @@
         }
     }
     .charter-item {
-        .charter-item__img-wrapper {
-            height: 16em;
-        }
         .charter-item__content-wrapper {
             padding: 2em;
         }
