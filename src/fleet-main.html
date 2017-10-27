@@ -5,22 +5,22 @@
     <body>
         @@include('./template/header.html')
         <section class="page-header">
-            <div class="page-header__img-wrapper">
-                <div class="page-header__img-inner">
+            <div class="container">
+                <div class="page-header__wrapper">
                     <img src="img/fleet-main.jpg"
                          srcset="img/fleet-main@2x.jpg 2x,
                          img/fleet-main@3x.jpg 3x"
                          class="page-header__img" alt="alt text">
+                    <div class="page-header__inner">
+                        <h1 class="page-header__h1">Yacht Charter Fleet 2018</h1>
+                        <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
+                        <a href="#" class="page-header__back"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="page-header__inner">
-                <h1 class="page-header__h1">page-header__img</h1>
-                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
-                <a href="#" class="page-header__back"></a>
             </div>
         </section>
 
-        <section class="fleet-list">
+        <section class="container fleet-list">
             <div class="row fleet-list__inner">
                 <div class="col-12 col-md-3">
                     @@include('./template/chunks/fleet-item.html', {
