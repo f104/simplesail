@@ -169,8 +169,11 @@
     display: block;
     background-color: $white;
     color: #4c5a62;
+    .fleet-item__img-wrapper {
+        overflow: hidden;
+    }
     .fleet-item__img {
-        width: 100%;
+        min-width: 100%;
     }
     .fleet-item__inner {
         min-height: 140px;
