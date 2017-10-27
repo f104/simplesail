@@ -1,0 +1,74 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "Index"
+    })
+    <body>
+        @@include('./template/header.html')
+
+        <div class="fleet-list">
+            <div class="row fleet-list__inner">
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "1",
+                    "title": "Парусные яхты",
+                    "text": "Beneteau Oceanis 38,  41,  41.1,  45,  48<br>Jeanneau Sun Odyssey  409<br>3 - 5 Double Cabins"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "2",
+                    "title": "Парусные катамараны",
+                    "text": "Fountaine Pajot Lucia 40, Helia 44<br>3 - 4 Double Cabins"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "3",
+                    "title": "Моторные катамараны",
+                    "text": "Fountaine Pajot MY37,  MY44"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "4",
+                    "title": "Моторные катера и яхты",
+                    "text": "Azimut Fly 55,  Beneteau Gran Turismo GT 34,  Bayliner 175"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "5",
+                    "title": "Подводный скутер",
+                    "text": "Seabob F5 "
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "6",
+                    "title": "Моторная супер яхта",
+                    "text": "Парусные яхты и катамараны<br>Моторные катамараны"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "7",
+                    "title": "Флот SimpleSail в Черногории",
+                    "text": "Парусные и моторные яхты и катамараны<br>Марина Muo (next to Kotor)"
+                    })
+                </div>
+                <div class="col-12 col-md-3">
+                    @@include('./template/chunks/fleet-item.html', {
+                    "img": "8",
+                    "title": "Флот SimpleSail в Хорватии",
+                    "text": "Парусные и моторные яхты и катамараны<br>Марина Slano (next to Dubrovnik)"
+                    })
+                </div>
+            </div>
+        </div>
+
+        @@include('./template/index-fleet.html')
+        @@include('./template/index-blog.html')
+        @@include('./template/footer.html')
+    </body>
+    @@include('./template/foot.html')
+</html>
