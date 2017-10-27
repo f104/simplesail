@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <!--<link href="css/sprite/css/sprite.css" rel="stylesheet" type="text/css">-->
-    <link href="css/fontello.css" rel="stylesheet" type="text/css"/>
-    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link href="css/fontello.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.formstyler.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.formstyler.theme.css" rel="stylesheet" type="text/css">
     <link href="css/slick.css" rel="stylesheet" type="text/css">
     <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/video-js.css" rel="stylesheet" type="text/css">
     <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
     <body>
@@ -78,13 +77,13 @@
                                 <li class="main-nav__hidden-sm main-nav__hidden-lg">
                                     <a href="#" class="main-nav__icon-menu__link main-nav__contacts-link">
                                         <span class="main-nav__contacts-icon">HR</span>
-                                        +382 69 541228
+                                        <span class="main-nav__contacts-link__underline">+382 69 541228</span>
                                     </a>
                                 </li>
                                 <li class="main-nav__hidden-sm main-nav__hidden-lg">
                                     <a href="#" class="main-nav__icon-menu__link main-nav__contacts-link">
                                         <span class="main-nav__contacts-icon">ME</span>
-                                        +382 69 541228
+                                        <span class="main-nav__contacts-link__underline">+382 69 541228</span>
                                     </a>
                                 </li>
                                 <li class="main-nav__hidden-md"><a href="#" class="main-nav__icon-menu__link"><i class="icon icon-weather"></i></a></li>
@@ -204,7 +203,9 @@
 </section>
         <section class="index-fleet">
             <div class="container">
-                <h3 class="index-fleet__header">Our fleet</h3>
+                <div class="index-fleet__header">
+                    <h3 class="index-fleet__header__inner">Our fleet</h3>
+                </div>
                 <div class="row fleet-list">
                     <div class="col-6 col-md-4 col-lg-2 flex">
                         <a href="#" class="fleet-item">
@@ -246,7 +247,9 @@
                     </div>
                 </div>
                 <div class="index-fleet__footer">
-                    <button class="btn btn-secondary">Show more</button>
+                    <div class="index-fleet__footer__inner">
+                        <button class="btn btn-secondary">Show more</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -908,7 +911,9 @@
                     </div>
                 </div>
                 <div class="index-blog__footer">
-                    <button class="btn btn-secondary">Show more</button>
+                    <div class="index-blog__footer__inner">
+                        <button class="btn btn-secondary">Show more</button>
+                    </div>
                 </div>
             </div>
         </section>

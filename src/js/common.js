@@ -81,7 +81,7 @@ jQuery(function () {
     
     function initMenu() {
         $('.js-menu-toggler').on('click', function(e){
-            e.preventDefault;
+            e.preventDefault();
             $('.js-menu').toggleClass('mobile-nav_active');
         });
     }
