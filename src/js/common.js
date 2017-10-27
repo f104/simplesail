@@ -83,6 +83,8 @@ jQuery(function () {
         $('.js-menu-toggler').on('click', function(e){
             e.preventDefault();
             $('.js-menu').toggleClass('mobile-nav_active');
+            $('.js-menu-logo').toggleClass('main-nav__logo-link_crop');
+            $('.js-menu-icon').toggleClass('main-nav__hidden-md');
         });
     }
 
