@@ -46,6 +46,10 @@ body {
         }
     }
 }
+.block-link {
+    display: block;
+    color: inherit !important;
+}
 
 .btn {
     min-width: 214px;
@@ -61,10 +65,16 @@ body {
     padding: 0;
     cursor: pointer;
     @include transition();
+    border: none;
+    background-color: $primary;
+    &:hover {
+        background-color: #ff7347;
+    }
     &:focus {
         outline: none;
     }
     &.btn-secondary {
+        background-color: transparent;
         border: 1px solid $white;
         &:hover {
             border-color: $primary;

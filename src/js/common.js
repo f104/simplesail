@@ -4,6 +4,9 @@ jQuery(function () {
     $(document).ready(function () {
         initSly();
         initLink();
+        initSlider();
+        initSelect();
+        initMenu();
     });
 
     function initSly() {
@@ -42,6 +45,44 @@ jQuery(function () {
             e.preventDefault();
             var href = $(this).data('link');
             window.location = href;
+        });
+    }
+
+    function initSlider() {
+        $('.index-slider .slider-wrapper').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
+        });
+    }
+
+    function initSelect() {
+        $('select').styler({
+            selectSmartPositioning: true,
+//            onSelectOpened: function () {
+//                if ($(this).find('select').hasClass('top')) {
+//                    var selectTop = $(this).find('.jq-selectbox__dropdown').height();
+//                    $(this).find('.jq-selectbox__dropdown').css('top', -selectTop + 'px');
+//                }
+//            }
+        });
+
+    }
+    
+    function initMenu() {
+        $('.js-menu-toggler').on('click', function(e){
+            e.preventDefault;
+            $('.js-menu').toggleClass('mobile-nav_active');
         });
     }
 

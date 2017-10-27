@@ -1,6 +1,6 @@
 @mixin transition($p) {
     @if length($p) < 1 {
-        $p: all .2 ease-in-out;
+        $p: all .2s ease-in-out;
     }
     transition: $p;
 }
@@ -27,7 +27,7 @@
     }
 }
 
-@mixin link-underline() {
+@mixin link-underline($color: $link-color) {
     position: relative;
     &:before {
         content: "";
@@ -36,7 +36,7 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: $link-color;
+        background-color: $color;
         transform-origin: 0% 50%;
         transform: scaleX(0);
         transition: transform 0.2s ease;

@@ -65,12 +65,13 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        &:before {
-            font-size: 10px;
+        .icon {
             position: absolute;
             right: 21px;
             top: 50%;
             transform: translateY(-50%);
+            font-size: 27px;
+            color: $primary;
         }
     }
 }
@@ -122,9 +123,9 @@
                 right: auto;
                 left: 0;
             }
-            &:before {
-                right: 7px;
-                transform: translateY(-50%) scale(.6);
+            .icon {
+                right: 19px;
+                font-size: 17px;
             }
         }
     }
@@ -173,9 +174,9 @@
                 width: 1px;
                 height: 100px;
             }
-            &:before {
-                right: 30px;
-                transform: translateY(-50%);
+            .icon {
+                right: 31px;
+                font-size: 28px;
             }
         }
     }
@@ -213,9 +214,9 @@
                 width: 0.1em;
                 height: 5.8em;
             }
-            &:before {
-                right: 2em;
-                font-size: 75%;
+            .icon {
+                right: 1.1em;
+                font-size: 1.6em;
             }
         }
     }

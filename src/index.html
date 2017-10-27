@@ -4,6 +4,7 @@
     })
     <body>
         @@include('./template/header.html')
+        @@include('./template/index-slider.html')
         <section class="index-fleet">
             <div class="container">
                 <h3 class="index-fleet__header">Our fleet</h3>
@@ -107,8 +108,8 @@
                 <div class="row promo-icon">
                     <a href="#" class="col-6 col-md-3 promo-icon__item">
                         <div class="promo-icon__item__inner">
-                            <div class="promo-icon__item__icon">
-                                <i class="icon school-white"></i>
+                            <div class="promo-icon__item__icon-wrapper">
+                                <img src="img/school-white.svg" class="promo-icon__item__icon">
                             </div>
                             <div class="promo-icon__item__text">
                                 Yacht School
@@ -117,8 +118,8 @@
                     </a>
                     <a href="#" class="col-6 col-md-3 promo-icon__item">
                         <div class="promo-icon__item__inner">
-                            <div class="promo-icon__item__icon">
-                                <i class="icon parking-white"></i>
+                            <div class="promo-icon__item__icon-wrapper">
+                                <img src="img/parking-white.svg" class="promo-icon__item__icon">
                             </div>
                             <div class="promo-icon__item__text">
                                 Yacht Parking
@@ -127,8 +128,8 @@
                     </a>
                     <a href="#" class="col-6 col-md-3 promo-icon__item">
                         <div class="promo-icon__item__inner">
-                            <div class="promo-icon__item__icon">
-                                <i class="icon service-white"></i>
+                            <div class="promo-icon__item__icon-wrapper">
+                                <img src="img/service-white.svg" class="promo-icon__item__icon">
                             </div>
                             <div class="promo-icon__item__text">
                                 Maintenance and Repair
@@ -137,8 +138,8 @@
                     </a>
                     <a href="#" class="col-6 col-md-3 promo-icon__item">
                         <div class="promo-icon__item__inner">
-                            <div class="promo-icon__item__icon">
-                                <i class="icon charter-white"></i>
+                            <div class="promo-icon__item__icon-wrapper">
+                                <img src="img/charter-white.svg" class="promo-icon__item__icon">
                             </div>
                             <div class="promo-icon__item__text">
                                 Charter Management
@@ -184,8 +185,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md order-md-2 marina-item__geo-wrapper">
-                                    <div class="marina-item__geo icon marina-geo">
+                                    <div class="marina-item__geo">
                                         SimpleSail Base in Croatia
+                                        <i class="icon icon-geo"></i>
                                     </div>
                                 </div>
                             </div>
@@ -221,8 +223,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md order-md-2 marina-item__geo-wrapper">
-                                    <div class="marina-item__geo icon marina-geo">
+                                    <div class="marina-item__geo">
                                         SimpleSail Base in Montenegro
+                                        <i class="icon icon-geo"></i>
                                     </div>
                                 </div>
                             </div>
@@ -286,19 +289,16 @@
             </div>
         </section>
 
-<!--        <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-               poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-            <source src="MY_VIDEO.mp4" type='video/mp4'>
-            <source src="MY_VIDEO.webm" type='video/webm'>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>-->
-
-        <!--        <section class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/196854096?title=0&byline=0&portrait=0"></iframe>
-                </section>-->
+        <section class="index-video">
+            <video id="my-video" class="video-js" controls preload="none"
+                   poster="img/poster.jpg" data-setup='{"fluid": true}'>
+                <source src="img/video.mp4" type='video/mp4'>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </section>
 
         <section class="index-charter">
             <div class="index-charter__dark">

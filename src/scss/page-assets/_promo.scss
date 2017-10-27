@@ -168,7 +168,7 @@
             }
             @include transition();
         }
-        .promo-icon__item__icon {
+        .promo-icon__item__icon-wrapper {
             flex: 1;
             display: flex;
             align-items: flex-end;
@@ -203,9 +203,7 @@
                 height: 178px;
             }
             .promo-icon__item__icon {
-                .icon {
-                    transform: scale(1.1);
-                }
+                width: 80px;
             }
             .promo-icon__item__text {
                 padding-top: 17px;
@@ -222,9 +220,7 @@
                 height: 298px;
             }
             .promo-icon__item__icon {
-                .icon {
-                    transform: scale(1.85);
-                }
+                width: 134px;
             }
             .promo-icon__item__text {
                 padding-top: 24px;
@@ -241,9 +237,7 @@
                 height: 20em;
             }
             .promo-icon__item__icon {
-                .icon {
-                    transform: scale(2);
-                }
+                width: 9em;
             }
             .promo-icon__item__text {
                 font-size: 153.3%;

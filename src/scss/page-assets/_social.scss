@@ -1,12 +1,20 @@
 .index-social {
     background-color: #b0bec5;
-    padding: 30px 0;
     text-align: center;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .social-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    /*font-size: 0;*/
+    width: 100%;
+    &:first-of-type {
+        margin-bottom: 20px;
+    }
     li {
         display: inline;
         margin-right: 15px;
@@ -15,30 +23,44 @@
         }
         a {
             display: inline-block;
-        }
-    }
-}
-@include media-breakpoint-down(sm) {
-    .index-social {
-        .social-list {
-            width: 100%;
-            &:first-of-type {
-                margin-bottom: 20px;
+            font-size: 32px;
+            color: white;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+            .icon-mail {
+                font-size: 80%;
             }
         }
     }
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-up(md) {
     .index-social {
+        min-height: 100px;
         .social-list {
-            transform: scale(.85);
+            margin-bottom: 0;
+            width: auto;
+            li a {
+                font-size: 34px;
+            }
         }
     }
 }
-@include media-breakpoint-down(xl) {
-    .social-list {
-        li {
-            margin-right: 1em;
+@include media-breakpoint-up(lg) {
+    .index-social {
+        .social-list li a {
+            font-size: 36px;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .index-social {
+        min-height: 6em;
+        .social-list {
+            li {
+                margin-right: 1em;
+            }
         }
     }
 }
