@@ -95,6 +95,7 @@
     }
     .charter-item__content-header {
         flex-grow: 1;
+        position: relative;
     }
     .charter-item__header {
         font-size: 20px;
@@ -151,6 +152,9 @@
             .link:before {
                 background-color: $white;
             }
+            .underline-anime__line {
+                border-bottom-color: $white; 
+            }
         }
         .charter-item__sub {
             color: $white;
@@ -174,6 +178,9 @@
             color: #4c5a62;
             .link:before {
                 background-color: #4c5a62;
+            }
+            .underline-anime__line {
+                border-bottom-color: #4c5a62; 
             }
         }
         .charter-item__sub {

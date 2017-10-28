@@ -96,14 +96,17 @@ body {
         transform-origin: 0 0;
         transform: scaleX(0);  
         transition: transform 0.2s ease-in-out 0s;  
-        color: transparent; 
+        color: transparent !important; 
         /*overflow: hidden;*/
         .underline-anime__line {
             border-bottom: 1px solid $body-color; 
         }
+        &.underline-anime__hidden_centered {
+            transform-origin: 50% 0;
+        }
     }
     .underline-anime__toggler:hover .underline-anime__hidden, 
-    .underline-anime__toggler.hovered .underline-anime__hidden {
+        .underline-anime__toggler.hovered .underline-anime__hidden {
         transform: scaleX(1);
     }
 }
