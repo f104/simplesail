@@ -17,6 +17,9 @@
         width: 155px;
         letter-spacing: 0.2px;
         color: #455a64;
+        .underline-anime__hidden .underline-anime__line {
+            border-color: #455a64;
+        }
     }
     .promo-item__price {
         font-family: $font-family-alt;

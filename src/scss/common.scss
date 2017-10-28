@@ -83,6 +83,31 @@ body {
     }
 }
 
+.underline-anime {
+    position: relative;
+    .underline-anime__visible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .underline-anime__hidden {
+        transform-origin: 0 0;
+        transform: scaleX(0);  
+        transition: transform 0.2s ease-in-out 0s;  
+        color: transparent; 
+        /*overflow: hidden;*/
+        .underline-anime__line {
+            border-bottom: 1px solid $body-color; 
+        }
+    }
+    .underline-anime__toggler:hover .underline-anime__hidden, 
+    .underline-anime__toggler.hovered .underline-anime__hidden {
+        transform: scaleX(1);
+    }
+}
+
 header, footer {
     .container {
         padding: 0 20px;

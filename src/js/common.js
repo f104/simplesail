@@ -7,6 +7,7 @@ jQuery(function () {
         initSlider();
         initSelect();
         initMenu();
+        initOther();
     });
 
     function initSly() {
@@ -78,13 +79,22 @@ jQuery(function () {
         });
 
     }
-    
+
     function initMenu() {
-        $('.js-menu-toggler').on('click', function(e){
+        $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             $('.js-menu').toggleClass('mobile-nav_active');
             $('.js-menu-logo').toggleClass('main-nav__logo-link_crop');
             $('.js-menu-icon').toggleClass('main-nav__hidden-md');
+        });
+    }
+    
+    function initOther() {
+        $('.marina-item__img-wrapper').on('mouseenter', function () {
+            $(this).parents('.marina-item').find('.marina-item__header').addClass('hovered');
+        })
+        $('.marina-item__img-wrapper').on('mouseleave', function () {
+            $(this).parents('.marina-item').find('.marina-item__header').removeClass('hovered');
         });
     }
 

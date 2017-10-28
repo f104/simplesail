@@ -4,7 +4,8 @@
         border-bottom: none;
     }
     .marina-item__header {
-        display: block;
+        display: flex;
+        align-items: center;
         position: relative;
         padding: 25px 40px 25px 15px;
         font-size: 0;
@@ -26,10 +27,14 @@
         vertical-align: middle;
     }
     .marina-item__header-wrapper {
-        display: inline-block;
+        flex: 1;
         vertical-align: middle;
         margin-left: 14px;
         color: #455a64;
+        position: relative;
+    }
+    .underline-anime__line {
+        border-color: #455a64 !important;
     }
     .marina-item__header-title {
         display: block;
@@ -65,13 +70,22 @@
             top: 50%;
             transform: translateY(-50%);
         }
+        .marina-item__geo__inner {
+            position: relative;
+        }
         .icon {
             position: absolute;
             right: 21px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 27px;
-            color: $primary;
+            color: inherit;
+            @include transition();
+        }
+        &:hover {
+            .icon {
+                color: $primary;
+            }
         }
     }
 }

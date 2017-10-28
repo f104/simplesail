@@ -32,7 +32,13 @@
                 color: $primary;
                 a {
                     color: inherit;
-                    @include link-underline($primary);
+                    /*@include link-underline($primary);*/
+                }
+            }
+            .underline-anime__hidden {
+                transform-origin: 50% 0;
+                .underline-anime__line {
+                    border-bottom: 1px solid $primary; 
                 }
             }
             .slide__header__text {
@@ -159,6 +165,9 @@
                 }
                 .slide__header__h1 {
                     text-align: left;
+                }
+                .underline-anime__hidden {
+                    transform-origin: 0 0;
                 }
             }
             .slide__content {
