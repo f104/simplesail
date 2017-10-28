@@ -1,5 +1,9 @@
 .index-fleet {
     background-color: #78909c;
+    position: relative;
+    .index-fleet__wrapper {
+        position: relative;
+    }
     .index-fleet__header {
         display: flex;
         flex-direction: column;
@@ -22,6 +26,34 @@
         flex-direction: column;
         justify-content: center;
         min-height: 171px;
+    }
+    .index-fleet__video-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        .index-fleet__video {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: none;
+            max-height: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: .6;
+        }
     }
 }
 @include media-breakpoint-only(md) {
