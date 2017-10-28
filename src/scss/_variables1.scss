@@ -1,0 +1,21 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1024px
+);
+$grid-gutter-width: 0;
+$container-max-widths: (
+  lg: 100%,
+  xl: 100%
+);
+
+$primary: #ff5722;
+$body-color: #263238;
+$link-color: #495a63;
+$link-hover-color: $link-color;
+$link-hover-decoration: none;
+/*$headings-color: #495a63;*/
+$font-family-base: 'PT Sans Narrow', sans-serif;
+$font-family-alt: 'DINPro', 'PT Sans Narrow', sans-serif;

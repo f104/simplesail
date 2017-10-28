@@ -44,13 +44,16 @@
 .footer-protection {
     margin-bottom: 55px;
     .footer-protection__wrapper {
-        overflow: hidden;
+        display: flex;
     }
     .footer-protection__img {
-        float: left;
+        flex: 1;
+        img {
+            min-height: 100%;
+        }
     }
     .footer-protection__inner {
-        padding-left: 78px;
+        padding-left: 20px;
         color: $white;
         opacity: .6;
         .footer-protection__inner__header {
