@@ -176,77 +176,77 @@
     }
 }
 @include media-breakpoint-up(lg) {
+    .footer-dark {
+        padding-top: 1.8em;
+    }
     .footer-address {
-        margin-bottom: 80px;
-        padding-right: 40px;
+        margin-bottom: 4em;
+        padding-right: 0;
+        padding-left: 3vw;
         &.footer-address_last:after {
             content: '';
         }
         &:first-of-type {
             padding-left: 0;
         }
+        .footer-address__header {
+            font-size: 100%;
+            margin-bottom: .7em;
+        }
+        .footer-address__inner {
+            margin-bottom: .9em;
+            .footer-address__inner__address {
+                font-size: 80%;
+            }
+            .footer-address__inner__geo {
+                font-size: 80%;
+                padding-left: 8.7em;
+            }
+        }
+        .footer-address__phone {
+            font-size: 106%;
+        }
     }
     .footer-protection {
-        margin-bottom: 80px;
+        margin-bottom: 4em;
         padding-right: 0;
+        padding-left: 3vw;
+        .footer-protection__inner {
+            padding-left: 1em;
+            .footer-protection__inner__header {
+                font-size: 100%;
+                margin-bottom: .7em;
+            }
+            .footer-protection__inner__text {
+                font-size: 85%;
+            }
+        }
     }
     .footer-logos {
+        font-size: 105%;
+        p {
+            margin-bottom: .9em;
+        }
         .footer-logos__list {
-            @include list-inline-center(70px);
+            @include list-inline-center(4.4em);
+        }
+        &.footer-logos_booking {
+            margin-bottom: 3.2em;
         }
         &.footer-logos_made {
+            margin-bottom: 4.8em;
             &:after {
                 width: 58%;
             }
         }
         &.footer-logos_payment {
-            margin-bottom: 45px;
+            margin-bottom: 2.9em;
         }
     }
     .footer-credits {
+        font-size: 105%;
         .footer-credits_made {
-            margin-bottom: 44px;
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .footer-address {
-        margin-bottom: 5.3em;
-    }
-    .footer-protection {
-        margin-bottom: 5.3em;
-    }
-    .footer-logos {
-        font-size: 106.6%;
-        p {
-            margin-bottom: .9em;
-        }
-        .footer-logos__list {
-            @include list-inline-center(4.3em);
-            li {
-                padding-top: .9em;
-                padding-bottom: .9em;
-            }
-        }
-        &.footer-logos_booking {
-            margin-bottom: 3.4em;
-        }
-        &.footer-logos_made {
-            margin-bottom: 4.8em;
-            &:after {
-                bottom: -2.3em;
-            }
-        }
-        &.footer-logos_payment {
             margin-bottom: 2.8em;
-        }
-    }
-    .footer-credits {
-        p {
-            margin-bottom: 1.5em;
-        }
-        .footer-credits_made {
-            margin-bottom: 2.75em;
         }
     }
 }

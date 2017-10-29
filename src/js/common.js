@@ -1,6 +1,13 @@
 jQuery(function () {
     "use strict";
 
+    var appConfig = {
+        breakpoint: {
+            md: 768,
+            lg: 1024
+        }
+    };
+
     $(document).ready(function () {
         initSly();
         initLink();
@@ -58,7 +65,7 @@ jQuery(function () {
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: appConfig.breakpoint.md,
                     settings: {
                         arrows: false
                     }
@@ -87,8 +94,40 @@ jQuery(function () {
             $('.js-menu-logo').toggleClass('main-nav__logo-link_crop');
             $('.js-menu-icon').toggleClass('main-nav__hidden-md');
         });
+        if (window.innerWidth >= appConfig.breakpoint.lg) {
+            var $header = $('header');
+            var headerHeight = $header.outerHeight();
+            var q = 2;
+            var action = 0;
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > headerHeight * q) {
+                    if (action == 1) {
+                        return;
+                    }
+                    action = 1;
+                    $header.stop();
+                    $('body').css({'padding-top': headerHeight});
+                    $header.css({'top': -headerHeight})
+                            .addClass('header_fixed')
+                            .animate({'top': 0}, 400);
+                } else {
+                    if (action == 2) {
+                        return;
+                    }
+                    action = 2;
+                    $header.animate({'top': -headerHeight}, "fast", function(){
+                        $header.css({'top': 0});
+                        $('body').css({'padding-top': 0});
+                        $header.removeClass('header_fixed');                        
+                    });
+                }
+            });
+            $(window).on('resize', function () {
+                headerHeight = $header.outerHeight();
+            });
+        }
     }
-    
+
     function initOther() {
         $('.marina-item__img-wrapper').on('mouseenter', function () {
             $(this).parents('.marina-item').find('.marina-item__header').addClass('hovered');

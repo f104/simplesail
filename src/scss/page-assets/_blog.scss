@@ -140,85 +140,45 @@
 @include media-breakpoint-up(lg) {
     .index-blog {
         .index-blog__header {
-            min-height: 209px;
-        }
-        .index-blog__footer {
-            min-height: 189px;
-        }
-    }
-    .blog-item {
-        .blog-item__content-wrapper {
-            padding: 31px 30px 66px;
-            @include transition();
-        }
-        .blog-item__link {
-            top: 30px;
-            width: 248px;
-            font-size: 16px;
-            line-height: 48px;
-            padding: 0 19px;
-            &:after {
-                right: 19px;
-                font-size: 19px;
-                transform: translateX(-100%);
-            }
-        }
-        .blog-item__header {
-            font-size: 19px;
-            line-height: 22px;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            padding-right: 19px;
-            &:after {
-                font-size: 19px;
-            }
-        }
-        .blog-item__text {
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: 0.3px;
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .index-blog {
-        .index-blog__header {
-            font-size: 233.3%;
-            line-height: 1.174em;
+            font-size: 184%;
+            line-height: normal;
             height: 6em;
+            min-height: unset;
         }
         .index-blog__footer {
-            height: 12.6em;
+            height: 10em;
+            min-height: unset;
         }
     }
     .blog-item {
         font-size: 100%;
         .blog-item__content-wrapper {
-            padding: 2em 2em 6em;
+            padding: 1.5em 1.3em 3.5em 1.5em;
         }
         .blog-item__link {
             top: 2em;
-            width: 15.5em;
-            font-size: 106.6%;
-            line-height: 3.1em;
+            width: 58%;
+            font-size: 85%;
+            line-height: 3em;
             padding: 0 1.2em;
             &:after {
                 right: 1em;
-                font-size: 126.6%;
+                font-size: 103%;
             }
         }
         .blog-item__header {
-            font-size: 126.6%;
-            line-height: 1.16em;
+            font-size: 100%;
+            line-height: normal;
             letter-spacing: 0.03em;
             margin-bottom: .43em;
+            padding-right: 1em;
             &:after {
-                font-size: 126.6%;
+                font-size: 100%;
             }
         }
         .blog-item__text {
-            font-size: 100%;
-            line-height: 1.35em;
+            font-size: 91%;
+            line-height: 1.2em;
             letter-spacing: 0.02em;
         }
     }

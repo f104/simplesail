@@ -46,30 +46,22 @@
 @include media-breakpoint-up(lg) {
     .index-charter {
         .index-charter__header-wrapper {
-            min-height: 293px;
+            min-height: unset;
+            height: 15em;
             padding: 0 20%;
         }
-        .index-charter__dark, .index-charter__light {
-            margin-bottom: 13px;
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .index-charter {
-        .index-charter__dark, .index-charter__light {
-            margin-bottom: 1em;
-        }
-        .index-charter__header-wrapper {
-            min-height: 20em;
-        }
         .index-charter__header {
-            font-size: 233%;
-            line-height: 1.2em;
-            margin-bottom: .65em;
+            font-size: 185%;
+            line-height: normal;
+            margin-bottom: .7em;
         }
         .index-charter__introtext {
-            font-size: 113%;
-            letter-spacing: 0.03em;
+            font-size: 95%;
+            line-height: normal;
+            letter-spacing: .02em;
+        }
+        .index-charter__dark, .index-charter__light {
+            margin-bottom: .8em;
         }
     }
 }
@@ -271,87 +263,43 @@
 }
 @include media-breakpoint-up(lg) {
     .charter-list {
-        margin: 0 -13px;
+        margin: 0 -.8em;
         .charter-item {
-            margin: 0 6.5px;
+            margin: 0 .4em;
         }
     }
     .charter-item {
         .charter-item__content-wrapper {
-            padding: 30px;
+            padding: 1.6em;
         }
         .charter-item__header {
-            font-size: 28px;
-            line-height: 33px;
-            margin-bottom: 11px;
+            font-size: 145%;
+            line-height: 1.2em;
+            margin-bottom: 0.3em;
         }
         .charter-item__sub {
-            font-size: 18px;
-            line-height: 21px;
-            margin-bottom: 22px;
+            font-size: 100%;
+            line-height: normal;
+            margin-bottom: 1.5em;
         }
         .charter-item__content-img {
-            max-width: 192px;
-            max-height: 123px;
-            margin-bottom: 22px;
+            max-width: 10em;
+            max-height: 5em;
+            margin-bottom: 1.8em;
         }
         .charter-item__date, .charter-item__price {
-            font-size: 16px;
-            line-height: 19px;
-            margin-bottom: 11px;
+            font-size: 85%;
+            line-height: normal;
+            margin-bottom: 0.5em;
         }
         .charter-item__date {
-            margin-left: 11px;
+            margin-left: 0.5em;
         }
         .charter-item__price {
-            margin-right: 11px;
+            margin-right: 0.5em;
         }
         .charter-item__bnt {
-            font-size: 17px;
-            line-height: 48px;
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .charter-list {
-        margin: 0 -1em;
-        .charter-item {
-            margin: 0 .5em;
-        }
-    }
-    .charter-item {
-        .charter-item__content-wrapper {
-            padding: 2em;
-        }
-        .charter-item__header {
-            font-size: 186.6%;
-            line-height: 1.2em;
-            margin-bottom: .4em;
-        }
-        .charter-item__sub {
-            font-size: 120%;
-            line-height: 1.2em;
-            margin-bottom: 1.25em;
-        }
-        .charter-item__content-img {
-            max-width: 13em;
-            max-height: 8.3em;
-            margin-bottom: 1.47em;
-        }
-        .charter-item__date, .charter-item__price {
-            font-size: 106.6%;
-            line-height: 1.2em;
-            margin-bottom: .7em;
-        }
-        .charter-item__date {
-            margin-bottom: .7em;
-        }
-        .charter-item__price {
-            margin-bottom: .7em;
-        }
-        .charter-item__bnt {
-            font-size: 113.3%;
-            line-height: 3em;
+            font-size: 85%;
         }
     }
 }

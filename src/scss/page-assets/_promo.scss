@@ -62,32 +62,18 @@
 @include media-breakpoint-up(lg) {
     .promo-item {
         .promo-item__inner {
-            top: 12.3%;
+            padding: 0.9em;
+            top: 2.3em;
             width: 45%;
-            padding: 17px;
         }
         .promo-item__text {
-            font-size: 19px;
-            line-height: 25px;
-            width: 75%;
+            font-size: 97%;
+            line-height: 1.1em;
+            margin-bottom: 0.5em;
+            width: 12em;
         }
         .promo-item__price {
-            font-size: 31px;
-            letter-spacing: 0.5px;
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .promo-item {
-        .promo-item__inner {
-            padding: 1.15em;
-        }
-        .promo-item__text {
-            font-size: 126.6%;
-            line-height: 1.35em;
-        }
-        .promo-item__price {
-            font-size: 206.6%;
+            font-size: 151%;
             letter-spacing: 0.03em;
         }
     }
@@ -127,30 +113,18 @@
 }
 @include media-breakpoint-up(lg) {
     .index-promo__text {
-        min-height: 292px;
-        padding: 0 267px;
+        min-height: unset;
+        height: 15.3em;
+        padding: 0 21%;
         .index-promo__text__title {
-            letter-spacing: 0.5px;
-            margin-bottom: 25px;
-        }
-        .index-promo__text__intro {
-            font-size: 17px;
-            line-height: normal;
-            letter-spacing: 0.3px;
-        }
-    }    
-}
-@include media-breakpoint-up(xl) {
-    .index-promo__text {
-        min-height: 20em;
-        padding: 0 18em;
-        .index-promo__text__title {
+            font-size: 176%;
             letter-spacing: 0.03em;
             margin-bottom: 0.7em;
         }
         .index-promo__text__intro {
-            font-size: 113.3%;
+            font-size: 88%;
             letter-spacing: 0.02em;
+            line-height: normal;
         }
     }    
 }
@@ -220,32 +194,15 @@
     .promo-icon {
         .promo-icon__item {
             .promo-icon__item__inner {
-                height: 298px;
+                height: 15.7em;
             }
             .promo-icon__item__icon {
-                width: 134px;
+                width: 7em;
             }
             .promo-icon__item__text {
-                padding-top: 24px;
-                font-size: 23px;
-                line-height: 27px;
-            }
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .promo-icon {
-        .promo-icon__item {
-            .promo-icon__item__inner {
-                height: 20em;
-            }
-            .promo-icon__item__icon {
-                width: 9em;
-            }
-            .promo-icon__item__text {
-                font-size: 153.3%;
-                padding-top: 1em;
-                line-height: 1.3em;
+                font-size: 120%;
+                padding-top: 1.2em;
+                line-height: normal;
             }
         }
     }

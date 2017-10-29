@@ -157,17 +157,24 @@
             }
             .slide__header {
                 min-height: auto;
-                padding: 76px 49px 0 40px;
+                padding: 4em 2.1em 0;
                 display: block;
-                width: 385px;
+                width: 20.2em;
                 .slide__header__inner {
                     display: block;
                 }
                 .slide__header__h1 {
                     text-align: left;
+                    font-size: 175%;
+                    line-height: 1.1em;
                 }
                 .underline-anime__hidden {
                     transform-origin: 0 0;
+                }
+                .slide__header__text {
+                    font-size: 80%;
+                    letter-spacing: 0.02em;
+                    margin-top: 0.7em;
                 }
             }
             .slide__content {
@@ -178,109 +185,30 @@
             position: absolute;
             right: 0;
             bottom: 0;
-            padding: 40px;
-            width: 385px;
+            padding: 2.1em;
+            width: 20.2em;
+            .index-slider__request__col_select {
+                margin-bottom: .7em;
+            }
         }
         .slick-dotted.slick-slider {
             margin-bottom: 0;
             .slick-dots {
                 bottom: auto;
-                top: 32px;
-                width: auto;
-                left: 50%;
-                transform: translateX(290px);
-                li {
-                    margin: 0 3px;
-                }
-                button::before {
-                    opacity: 0.5;
-                    color: #263238;
-                }
-                .slick-active button::before {
-                    opacity: 1;
-                }
-            }
-            .slick-prev, .slick-next {
-                top: 50%;
-                left: 50%;
-            }
-            .slick-prev {
-                transform: translate(-610px, -50%) rotate(45deg);
-            }
-            .slick-next {
-                transform: translate(195px, -50%) rotate(45deg);
-            }
-        }
-    }   
-}
-@media (min-width: 1500px) {
-    .index-slider {
-        .slide {
-            .slide__header {
-                height: 595px;
-                background-color: $body-bg;
-                background-color: #fff;
-                box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.05);
-                z-index: 1;
-            }
-            .slide__content {
-                height: 595px;
-                position: absolute;
-                top: 0;
-                left: 0;
+                top: 1.6em;
+                width: 20.2em;
                 right: 0;
-                bottom: 0;
-                overflow: hidden;
-            }
-        }
-        .slick-dotted.slick-slider {
-            .slick-prev {
-                left: 48px;
-                transform: translateY(-50%) rotate(45deg);
-            }
-            .slick-next {
-                left: auto;
-                right: 48px;
-                transform: translateY(-50%) rotate(45deg);
-            }
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .index-slider {
-        .slide {
-            .slide__header {
-                .slide__header__h1 {
-                    font-size: 220%;
-                    line-height: 1.1em;
-                }
-                .slide__header__text {
-                    letter-spacing: 0.02em;
-                    margin-top: 1em;
-                }
-                .slide__header__link {
-                    font-size: 93.3%;
-                    line-height: 1.2em;
-                    margin-top: 1.07em;
-                }
-            }
-        }
-        .slick-dotted.slick-slider {
-            margin-bottom: 0;
-            .slick-dots {
-                bottom: auto;
-                top: 32px;
-                width: 353px;
                 text-align: left;
-                right: 0;
-                left: auto;
-                transform: none;
+                padding-left: 1.8em;
                 li {
-                    margin: 0 3px;
+                    margin: 0 .2em;
                 }
-                button::before {
-                    opacity: 0.5;
-                    color: #263238;
+                button {
+                    font-size: 1.46484375vw;
+                    &::before {
+                        opacity: 0.5;
+                        color: #263238;
+                    }
                 }
                 .slick-active button::before {
                     opacity: 1;
@@ -289,8 +217,13 @@
             .slick-prev, .slick-next {
                 top: 50%;
             }
+            .slick-prev {
+                transform: translateY(-50%) rotate(45deg);
+                left: 2.6em;
+            }
             .slick-next {
-                right: 428px;
+                transform: translateY(-50%) rotate(45deg);
+                right: 22.6em;
             }
         }
     }   

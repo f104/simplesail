@@ -156,73 +156,34 @@
 @include media-breakpoint-up(lg) {
     .marina-item {
         .marina-item__header {
-            padding: 38px 15px 38px 41px;
+            padding: 2em 2em 2.0em 2.2em;
+            font-size: 100%;
             &:after {
                 display: none;
             }
         }
         .marina-item__header-flag {
-            width: 67px;
-        }
-        .marina-item__header-wrapper {
-            margin-left: 18px;
-        }
-        .marina-item__header-title {
-            font-size: 21.3px;
-            line-height: 22.7px;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-        }
-        .marina-item__header-geo {
-            font-size: 14.6px;
-            line-height: 17px;
-        }
-        .marina-item__geo-wrapper {
-            max-width: 200px;
-        }
-        .marina-item__geo {
-            padding: 0 68px 0 33px;
-            font-size: 17.5px;
-            line-height: 22.3px;
-            &:after {
-                width: 1px;
-                height: 100px;
-            }
-            .icon {
-                right: 31px;
-                font-size: 28px;
-            }
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .marina-item {
-        .marina-item__header {
-            padding: 2.6em 1em 2.6em 2.8em;
-            font-size: 100%;
-        }
-        .marina-item__header-flag {
-            width: auto;
+            width: 3.5em;
         }
         .marina-item__header-wrapper {
             margin-left: 1.2em;
         }
         .marina-item__header-title {
-            font-size: 140%;
-            line-height: 1.1em;
+            font-size: 108%;
+            line-height: 1em;
             letter-spacing: 0.03em;
             margin-bottom: .3em;
         }
         .marina-item__header-geo {
-            font-size: 93.3%;
+            font-size: 75%;
             line-height: 1.25em;
         }
         .marina-item__geo-wrapper {
-            max-width: 30%;
+            max-width: 31%;
         }
         .marina-item__geo {
-            padding: 0 3.9em 0 1.5em;
-            font-size: 116.6%;
+            padding: 0 3.7em 0 1.6em;
+            font-size: 95%;
             line-height: 1.3em;
             &:after {
                 width: 0.1em;

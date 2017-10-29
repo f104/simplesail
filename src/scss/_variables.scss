@@ -2,13 +2,11 @@ $grid-breakpoints: (
   xs: 0,
   sm: 320px,
   md: 768px,
-  lg: 1280px,
-  xl: 1600px
+  lg: 1024px
 );
 $grid-gutter-width: 0;
 $container-max-widths: (
-  lg: 1280px,
-  xl: 100%
+  lg: 100%
 );
 
 $primary: #ff5722;
