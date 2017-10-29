@@ -26,7 +26,7 @@
     .top-nav {
         position: absolute;
         background: transparent;
-        top: 0.6em;
+        top: 0.3em;
         .top-nav__social {
             margin-right: 1.6em;
             .top-nav__social__underline {
@@ -326,6 +326,7 @@
         .main-nav {
             .main-nav__inner {
                 height: auto;
+                padding: 0.9em 0;
             }
             .main-nav__logo .main-nav__logo-img {
                 height: 2.1em;

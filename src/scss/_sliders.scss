@@ -167,6 +167,12 @@
                     text-align: left;
                     font-size: 175%;
                     line-height: 1.1em;
+                    &::after {
+                        content: '>';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
                 }
                 .underline-anime__hidden {
                     transform-origin: 0 0;
