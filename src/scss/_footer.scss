@@ -121,6 +121,9 @@
     .footer-credits_made {
         margin-bottom: 49px;
     }
+    .footer-credits__img {
+        opacity: .5;
+    }
 }
 @include media-breakpoint-up(md) {
     .footer-address {
