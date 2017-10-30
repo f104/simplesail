@@ -115,10 +115,10 @@ jQuery(function () {
                         return;
                     }
                     action = 2;
-                    $header.animate({'top': -headerHeight}, "fast", function(){
+                    $header.animate({'top': -headerHeight}, "fast", function () {
                         $header.css({'top': 0});
                         $('body').css({'padding-top': 0});
-                        $header.removeClass('header_fixed');                        
+                        $header.removeClass('header_fixed');
                     });
                 }
             });
@@ -129,12 +129,28 @@ jQuery(function () {
     }
 
     function initOther() {
-        $('.marina-item__img-wrapper').on('mouseenter', function () {
-            $(this).parents('.marina-item').find('.marina-item__header').addClass('hovered');
-        })
-        $('.marina-item__img-wrapper').on('mouseleave', function () {
-            $(this).parents('.marina-item').find('.marina-item__header').removeClass('hovered');
-        });
+        $('.marina-item__img-wrapper').hover(
+                function () {
+                    $(this).parents('.marina-item').find('.marina-item__header').addClass('hovered');
+                },
+                function () {
+                    $(this).parents('.marina-item').find('.marina-item__header').removeClass('hovered');
+                }
+        );
+        // play video in blog listing
+        $('.js-video-hover').hover(
+                function () {
+                    $(this).find('.js-video-hover__poster').addClass('video-poster_hidden');
+                    $(this).find('video.js-video-hover__video')[0].play();
+                },
+                function () {
+                    $(this).find('.js-video-hover__poster').removeClass('video-poster_hidden');
+                    var v = $(this).find('video.js-video-hover__video')[0];
+                    v.pause();
+                    v.currentTime = 0;
+                }
+
+        );
     }
 
 });

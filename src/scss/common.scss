@@ -176,6 +176,10 @@ header, footer {
 .index-video {
     margin-bottom: 1px;
 }
+// класс для скрытия картинок при проигрывании видео
+.video-poster_hidden {
+    opacity: 0;
+}
 
 .page-header {
     .page-header__wrapper {

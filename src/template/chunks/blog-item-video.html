@@ -1,10 +1,13 @@
-<a href="#" class="blog-item">
+<a href="#" class="blog-item js-video-hover">
     <div class="blog-item__img-wrapper">
-        <div class="blog-item__img-inner">
+        <video id=test class="blog-item__video js-video-hover__video" preload="none">
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+        <div class="blog-item__img-inner js-video-hover__poster">
             <img src="img/blog/@@img.jpg" 
                  srcset="img/blog/@@img@2x.jpg 2x, img/blog/@@img@3x.jpg 3x" 
                  alt="@@title" 
-                 class="blog-item__img js-video-hover__poster">
+                 class="blog-item__img">
         </div>
     </div>
     <div class="blog-item__link js-link" data-link="##">
