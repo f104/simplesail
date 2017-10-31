@@ -4,15 +4,18 @@
     })
     <body>
         @@include('./template/header.html')
-        @@include('./template/index-slider.html')
-        @@include('./template/index-fleet.html')
-        @@include('./template/index-promo.html')
-        @@include('./template/index-marina.html')
-        @@include('./template/index-services.html')
-        @@include('./template/index-video.html')
-        @@include('./template/index-charter.html')
-        @@include('./template/index-blog.html')
-        @@include('./template/footer.html')
+        <div class="content">
+            @@include('./template/index-slider.html')
+            @@include('./template/index-fleet.html')
+            @@include('./template/index-promo.html')
+            @@include('./template/index-marina.html')
+            @@include('./template/index-services.html')
+            @@include('./template/index-video.html')
+            @@include('./template/index-charter.html')
+            @@include('./template/index-blog.html')
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
     </body>
     @@include('./template/foot.html')
 </html>

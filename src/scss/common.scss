@@ -145,6 +145,21 @@ header, footer {
     }
 }
 
+.content {
+    position: relative;
+    .content__overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .4;
+        z-index: 900;
+        @include transition();
+    }
+}
 .underline-anime {
     position: relative;
     .underline-anime__visible {

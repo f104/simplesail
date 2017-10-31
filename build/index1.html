@@ -105,37 +105,39 @@
         </div>
     </nav>
     <nav class="mobile-nav js-menu">
-        <ul class="mobile-nav__menu">
-            <li><a href="fleet-main.html">Our Fleet</a></li>
-            <li><a href="#">Rates</a></li>
-            <li><a href="#">Yacht Charter</a></li>
-            <li><a href="#">School</a></li>
-            <li><a href="#">Marina</a></li>
-            <li><a href="#">For Yacht Owners</a></li>
-        </ul>
-        <ul class="mobile-nav__menu mobile-nav__menu_sub">
-            <li><a href="#">Routes</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-        <button class="btn btn-primary">Request</button>
-        <ul class="nav-contacts nav-contacts_mobile-menu">
-            <li>
-                <a href="#" class="nav-contacts__link">
-                    <span class="nav-contacts__icon">HR</span>
-                    <span class="nav-contacts__underline">+382 69 541228</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-contacts__link">
-                    <span class="nav-contacts__icon">ME</span>
-                    <span class="nav-contacts__underline">+382 69 541228</span>
-                </a>
-            </li>
-        </ul>
+        <div class="mobile-nav__inner js-scrollbar scrollbar-outer">
+            <ul class="mobile-nav__menu">
+                <li><a href="fleet-main.html">Our Fleet</a></li>
+                <li><a href="#">Rates</a></li>
+                <li><a href="#">Yacht Charter</a></li>
+                <li><a href="#">School</a></li>
+                <li><a href="#">Marina</a></li>
+                <li><a href="#">For Yacht Owners</a></li>
+            </ul>
+            <ul class="mobile-nav__menu mobile-nav__menu_sub">
+                <li><a href="#">Routes</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <button class="btn btn-primary">Request</button>
+            <ul class="nav-contacts nav-contacts_mobile-menu">
+                <li>
+                    <a href="#" class="nav-contacts__link">
+                        <span class="nav-contacts__icon">HR</span>
+                        <span class="nav-contacts__underline">+382 69 541228</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-contacts__link">
+                        <span class="nav-contacts__icon">ME</span>
+                        <span class="nav-contacts__underline">+382 69 541228</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>
         <section class="index-slider">
@@ -926,7 +928,7 @@
             <div class="col-12 col-md-4 flex">
                 <a href="#" class="blog-item js-video-hover">
     <div class="blog-item__img-wrapper">
-        <video id=test class="blog-item__video js-video-hover__video">
+        <video muted class="blog-item__video js-video-hover__video">
             <source src="img/video.mp4" type="video/mp4">
         </video>
         <div class="blog-item__img-inner js-video-hover__poster">
@@ -1183,5 +1185,6 @@
 <script src="js/libs/video.js" type="text/javascript"></script>
 <script src="js/libs/jquery.formstyler.min.js" type="text/javascript"></script>
 <script src="js/libs/slick.min.js" type="text/javascript"></script>
+<script src="js/libs/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
 </html>

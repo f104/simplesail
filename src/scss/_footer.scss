@@ -48,9 +48,6 @@
     }
     .footer-protection__img {
         flex: 1;
-        img {
-            min-height: 100%;
-        }
     }
     .footer-protection__inner {
         padding-left: 20px;
@@ -147,6 +144,11 @@
         margin-bottom: 80px;
         padding-left: 50px;
         padding-right: 50px;
+        .footer-protection__img {
+            img {
+                min-height: 100%;
+            }
+        }
     }
     .footer-logos {
         .footer-logos__list {
