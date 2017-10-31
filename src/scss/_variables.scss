@@ -9,7 +9,10 @@ $container-max-widths: (
   lg: 100%
 );
 
-$primary: #ff5722;
+$primary: #ff5722; // основной красный
+$primary-dark: #f4511e; // темн-красный
+$gray-light: #eceff1; // светлый серый фон
+$blue-dark: #455a64; // темно-синий, часто используется
 $body-color: #263238;
 $link-color: #495a63;
 $link-hover-color: $link-color;

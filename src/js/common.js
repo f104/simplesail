@@ -5,7 +5,8 @@ jQuery(function () {
         breakpoint: {
             md: 768,
             lg: 1024
-        }
+        },
+        sliderSpeeed: 3000
     };
 
     $(document).ready(function () {
@@ -48,10 +49,12 @@ jQuery(function () {
     }
 
     function initSlider() {
-        $('.index-slider .slider-wrapper').slick({
+        $('.js-slider_single').slick({
             dots: true,
-            infinite: false,
-            speed: 300,
+            infinite: true,
+            autoplay: true,
+            autoplaySpees: appConfig.sliderSpeeed,
+            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [

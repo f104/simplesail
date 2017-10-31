@@ -297,3 +297,65 @@
         }
     }
 }
+
+.boat-slider {
+    background-color: $gray-light;
+    .boat-slider__slide {
+        padding: 55px 20px;
+    }
+    .boat-slider__img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.boat-info {
+    position: relative;
+    padding: 25px 20px;
+    .boat-info__title {
+        font-size: 21px;
+        letter-spacing: 0.2px;
+        color: $blue-dark;
+        margin-bottom: 7px;
+        .boat-info__title__primary {
+            display: block;
+            color: $primary-dark;
+        }
+    }
+    .boat-info__subtitle {
+        font-size: 13px;
+        letter-spacing: 0.1px;
+        color: $blue-dark;
+        margin-bottom: 13px;
+    }
+    .boat-info__data {
+        list-style: none;
+        padding: 0 100px 0 0;
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 0.1px;
+        color: $blue-dark;
+    }
+    .boat-info__discount {
+        background-color: $primary-dark;
+        padding: 10px;
+        color: $white;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 92px;
+        transform: translateY(-50%);
+        .boat-info__discount__title {
+            font-family: $font-family-alt;
+            font-size: 19px;
+            line-height: 19px;
+            letter-spacing: 0.2px;
+            margin-bottom: 8.8px;
+        }
+        .boat-info__discount__text {
+            font-size: 12px;
+            letter-spacing: 0.1px;
+        }
+    }
+}
