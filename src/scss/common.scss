@@ -16,6 +16,9 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
+@media (hover: none) {
+    a:hover { color: inherit !important; }
+}
 .container {
     overflow: hidden;
 }
