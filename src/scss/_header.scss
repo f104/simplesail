@@ -35,6 +35,9 @@
             .icon {
                 color: $link-color;
                 opacity: 1;
+                &:before {
+                    line-height: inherit;
+                }
             }
         }
     }

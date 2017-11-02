@@ -4,9 +4,10 @@
 @import "libs/bootstrap/bootstrap-reboot.scss";
 @import "libs/bootstrap/bootstrap-grid.scss";
 @import "libs/bootstrap/utilities/_embed.scss";
+
 body {
     color: $body-color;
-    font-size: 15px;
+    font-size: $font-size-base-px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -27,6 +28,10 @@ body {
 }
 .hidden {
     display: none !important;
+}
+
+a {
+    outline: none;
 }
 
 .link {
@@ -54,36 +59,9 @@ body {
     color: inherit !important;
 }
 
-.btn {
-    min-width: 214px;
-    text-transform: uppercase;
-    font-size: 17px;
-    line-height: 48px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 3px;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
-    @include transition();
-    border: none;
-    background-color: $primary;
-    &:hover {
-        background-color: #ff7347;
-    }
-    &:focus {
-        outline: none;
-    }
-    &.btn-secondary {
-        background-color: transparent;
-        border: 1px solid rgba(255,255,255,.5);
-        &:hover {
-            border-color: $primary;
-            background-color: $primary;
-        }
-    }
+[class^="icon-"]:before, [class*=" icon-"]:before {
+     margin-right: .2em; 
+     margin-left: .2em; 
 }
 
 header, footer {
@@ -100,51 +78,12 @@ header, footer {
 }
 @include media-breakpoint-up(lg) {
     body {
-        font-size: 1.46484375vw;
-    }
-    .btn, .btn.btn-secondary {
-        font-size: 89%;
-        line-height: 3em;
-        border-width: .1em;
-        border-radius: 0.2em;
-        min-width: 13em;
+        /*font-size: 1.46484375vw;*/
     }
     header, footer {
         .container {
             padding: 0 3vw;
         }
-    }
-    .jq-selectbox__select {
-        padding: 0 2.4em 0 0.8em;
-        border-radius: .2em;
-        border-width: .1em;
-        font-size: 100%;
-        line-height: 2.5em;
-        letter-spacing: 0.02em;
-        height: 2.7em;
-    }
-    .jq-selectbox__trigger {
-        width: 2.6em;
-    }
-    .jq-selectbox__trigger-arrow {
-        top: 1em;
-        right: 1em;
-        border-top-width: .4em;
-        border-right-width: .25em;
-        border-left-width: .25em;
-    }
-    .jq-selectbox__dropdown {
-        border-width: .1em;
-        border-radius: 0 0 .2em .2em;
-    }
-    .jq-selectbox li {
-        line-height: 2.5em;
-        padding: 0 0.8em;
-    }
-    .jq-selectbox li:after {
-        left: 0.8em;
-        right: 0.8em;
-        height: .1em;
     }
 }
 
@@ -319,6 +258,7 @@ header, footer {
 }
 
 @import "sliders";
+@import "forms";
 @import "header";
 @import "footer";
 @import "page-assets/fleet";

@@ -14,6 +14,7 @@ jQuery(function () {
         initSlider();
         initSelect();
         initMenu();
+//        initDatepicker();
         initOther();
     });
 
@@ -49,7 +50,7 @@ jQuery(function () {
     }
 
     function initSlider() {
-        $('.js-slider_single').slick({
+        $('.js-slider_index').slick({
             dots: true,
             infinite: true,
             autoplay: true,
@@ -61,6 +62,46 @@ jQuery(function () {
                 {
                     breakpoint: appConfig.breakpoint.md,
                     settings: {
+                        arrows: false
+                    }
+                }
+            ]
+        });
+        $('.js-slider_boat').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.md,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
+        });
+        $('.js-slider_gallery').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '12%',
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.lg,
+                    settings: {
+                        centerPadding: '70px'
+                    }
+                },
+                {
+                    breakpoint: appConfig.breakpoint.md,
+                    settings: {
+                        centerPadding: '50px',
                         arrows: false
                     }
                 }
@@ -127,6 +168,17 @@ jQuery(function () {
         }
     }
 
+    function initDatepicker() {
+        $.datepicker.setDefaults({
+//            regional: 'ru',
+            firstDay: 1,
+            dateFormat: "dd-mm-yyyy",
+            minDate: new Date()
+        });
+        $('.js-datepicker').datepicker({
+            numberOfMonths: 2
+        });
+    }
     function initOther() {
         $('.marina-item__img-wrapper').hover(
                 function () {
