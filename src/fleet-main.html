@@ -4,86 +4,91 @@
     })
     <body>
         @@include('./template/header.html')
-        <section class="page-header">
-            <div class="container">
-                <div class="page-header__wrapper">
-                    <img src="img/fleet-main.jpg"
-                         srcset="img/fleet-main@2x.jpg 2x,
-                         img/fleet-main@3x.jpg 3x"
-                         class="page-header__img" alt="alt text">
-                    <div class="page-header__inner">
-                        <h1 class="page-header__h1">Yacht Charter Fleet 2018</h1>
-                        <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
-                        <a href="#" class="page-header__back"></a>
+        <div class="content">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <img src="img/fleet-main.jpg"
+                             srcset="img/fleet-main@2x.jpg 2x,
+                             img/fleet-main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <h1 class="page-header__h1">Yacht Charter Fleet 2018</h1>
+                                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="container fleet-list">
-            <div class="row fleet-list__inner">
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "1",
-                    "title": "Парусные яхты",
-                    "text": "Beneteau Oceanis 38,  41,  41.1,  45,  48<br>Jeanneau Sun Odyssey  409<br>3 - 5 Double Cabins"
-                    })
+            <section class="container fleet-list">
+                <div class="row fleet-list__inner">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "1",
+                        "title": "Парусные яхты",
+                        "text": "Beneteau Oceanis 38,  41,  41.1,  45,  48<br>Jeanneau Sun Odyssey  409<br>3 - 5 Double Cabins"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "2",
+                        "title": "Парусные катамараны",
+                        "text": "Fountaine Pajot Lucia 40, Helia 44<br>3 - 4 Double Cabins"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "3",
+                        "title": "Моторные катамараны",
+                        "text": "Fountaine Pajot MY37,  MY44"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "4",
+                        "title": "Моторные катера и яхты",
+                        "text": "Azimut Fly 55,  Beneteau Gran Turismo GT 34,  Bayliner 175"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "5",
+                        "title": "Подводный скутер",
+                        "text": "Seabob F5 "
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "6",
+                        "title": "Моторная супер яхта",
+                        "text": "Парусные яхты и катамараны<br>Моторные катамараны"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "7",
+                        "title": "Флот SimpleSail в Черногории",
+                        "text": "Парусные и моторные яхты и катамараны<br>Марина Muo (next to Kotor)"
+                        })
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        @@include('./template/chunks/fleet-item.html', {
+                        "img": "8",
+                        "title": "Флот SimpleSail в Хорватии",
+                        "text": "Парусные и моторные яхты и катамараны<br>Марина Slano (next to Dubrovnik)"
+                        })
+                    </div>
                 </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "2",
-                    "title": "Парусные катамараны",
-                    "text": "Fountaine Pajot Lucia 40, Helia 44<br>3 - 4 Double Cabins"
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "3",
-                    "title": "Моторные катамараны",
-                    "text": "Fountaine Pajot MY37,  MY44"
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "4",
-                    "title": "Моторные катера и яхты",
-                    "text": "Azimut Fly 55,  Beneteau Gran Turismo GT 34,  Bayliner 175"
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "5",
-                    "title": "Подводный скутер",
-                    "text": "Seabob F5 "
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "6",
-                    "title": "Моторная супер яхта",
-                    "text": "Парусные яхты и катамараны<br>Моторные катамараны"
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "7",
-                    "title": "Флот SimpleSail в Черногории",
-                    "text": "Парусные и моторные яхты и катамараны<br>Марина Muo (next to Kotor)"
-                    })
-                </div>
-                <div class="col-12 col-md-3">
-                    @@include('./template/chunks/fleet-item.html', {
-                    "img": "8",
-                    "title": "Флот SimpleSail в Хорватии",
-                    "text": "Парусные и моторные яхты и катамараны<br>Марина Slano (next to Dubrovnik)"
-                    })
-                </div>
-            </div>
-        </section>
+            </section>
 
-        @@include('./template/index-fleet.html')
-        @@include('./template/index-blog.html')
-        @@include('./template/footer.html')
+            @@include('./template/index-fleet.html')
+            @@include('./template/index-blog.html')
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
     </body>
     @@include('./template/foot.html')
 </html>

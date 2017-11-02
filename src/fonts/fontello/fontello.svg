@@ -41,6 +41,8 @@
 <glyph glyph-name="slide-left" unicode="&#xe810;" d="M814-138v189l-615 305 615 305v189l-814-413v-162z" horiz-adv-x="833" />
 
 <glyph glyph-name="checkbox" unicode="&#xe814;" d="M389 72l-278 267 78 75 200-192 422 406 78-75-500-481z" horiz-adv-x="1000" />
+
+<glyph glyph-name="back" unicode="&#xe815;" d="M0 310v62l700 478 91-116-446-310-172-81 170-69 457-308-89-116z" horiz-adv-x="800" />
 </font>
 </defs>
 </svg>

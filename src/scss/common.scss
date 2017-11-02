@@ -60,8 +60,10 @@ a {
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-     margin-right: .2em; 
-     margin-left: .2em; 
+    margin-right: 0; 
+    margin-left: 0; 
+    width: auto;
+    line-height: inherit;
 }
 
 header, footer {
@@ -70,9 +72,14 @@ header, footer {
     }
 }
 @include media-breakpoint-up(md) {
-    header, footer {
+    header {
         .container {
-            padding: 0 40px;
+            padding: 0 30px 0 18px;
+        }
+    }
+    footer {
+        .container {
+            padding: 0 30px;
         }
     }
 }
@@ -80,7 +87,12 @@ header, footer {
     body {
         font-size: 1.46484375vw;
     }
-    header, footer {
+    header {
+        .container {
+            padding: 0 3vw 0 2.8vw;
+        }
+    }
+    footer {
         .container {
             padding: 0 3vw;
         }
@@ -143,13 +155,10 @@ header, footer {
         position: relative;
     }
     .page-header__inner {
-        background-color: #eceff1;
+        background-color: $gray-light;
         opacity: 0.85;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         min-height: 153px;
-        padding: 0 20px 0 35px;
+        padding: 20px;
         position: relative;
         .page-header__h1 {
             font-size: 20px;
@@ -168,9 +177,18 @@ header, footer {
         }
         .page-header__back {
             position: absolute;
-            top: 26px;
-            left: 21px;
+            top: 0;
+            left: 0;
+            font-size: 10px;
+            line-height: 24px;
+            @include transition();
+            &:hover {
+                color: $primary;
+            }
         }
+    }
+    .page-header__outer {
+        position: relative;
     }
     .page-header__img {
         display: none;
@@ -189,7 +207,7 @@ header, footer {
             top: 57px;
             width: 70%;
             min-height: 175px;
-            padding: 0 31.2px 0 65.6px;
+            padding: 30px;
             .page-header__h1 {
                 font-size: 25px;
                 line-height: 29px;
@@ -198,11 +216,11 @@ header, footer {
             .page-header__text {
                 font-size: 15px;
                 line-height: 20px;
+                padding-left: 10%;
             }
             .page-header__back {
-                position: absolute;
-                top: 34.4px;
-                left: 34px;
+                font-size: 12.8px;
+                line-height: 29px;
             }
         }
     }
@@ -210,48 +228,23 @@ header, footer {
 @include media-breakpoint-up(lg) {
     .page-header {
         .page-header__inner {
-            right: 0;
-            top: 70px;
+            top: 3.6em;
+            min-height: 10.4em;
+            padding: 1.5em 3vw;
             width: 66%;
-            min-height: 198px;
-            padding: 0 39px 0 64px;
             .page-header__h1 {
-                font-size: 35px;
-                line-height: 41px;
-                margin-bottom: 29px;
+                font-size: 181.5%;
+                line-height: normal;
+                margin-bottom: 0.9em;
             }
             .page-header__text {
-                font-size: 20px;
-                line-height: 22px;
-            }
-            .page-header__back {
-                position: absolute;
-                top: 43px;
-                left: 41px;
-            }
-        }
-    }
-}
-@include media-breakpoint-up(xl) {
-    .page-header {
-        .page-header__inner {
-            right: 0;
-            top: 4.66em;
-            min-height: 13.2em;
-            padding: 0 2.6em 0 4.26em;
-            .page-header__h1 {
-                font-size: 233.3%;
-                line-height: 1em;
-                margin-bottom: 0.7em
-            }
-            .page-header__text {
-                font-size: 133.3%;
+                font-size: 96.3%;
                 line-height: 1.15em;
+                padding-left: 0;
             }
             .page-header__back {
-                position: absolute;
-                top: 43px;
-                left: 41px;
+                font-size: 90%;
+                line-height: 2.7em;
             }
         }
     }
