@@ -92,6 +92,41 @@
         }
     }
 }
+@include media-breakpoint-up(lg) {
+    .input-group {
+        margin-bottom: 20px;
+        label {
+            font-size: 70%;
+            letter-spacing: 0.02em;
+            margin-bottom: .3em;
+        }
+        input, textarea {
+            font-size: 80%;
+            letter-spacing: 0.02em;
+            padding: 0 .8em;
+            border-radius: 0.2em;
+            border-width: 0.1em;
+        }
+        input {
+            line-height: 3em;
+        }
+        textarea {
+            height: 6em;
+            padding-top: .8em;
+            padding-bottom: .8em;
+        }
+        .input-group__datepicker {
+            position: relative;
+            input {
+                padding-left: 3em;
+            }
+            .icon {
+                font-size: 100%;
+                left: .6em;
+            }
+        }
+    }
+}
 
 .input-checkbox {
     margin-bottom: 20px;
@@ -144,6 +179,35 @@
         margin-bottom: 0;
     }
 }
+@include media-breakpoint-up(lg) {
+    .input-checkbox {
+        margin-bottom: .8em;
+        input[type=checkbox] {
+            /*left: 0;*/
+            top: .3em;
+            &:before {
+                width: 1.2em;
+                height: 1.2em;
+                /*bottom: -0.3em;*/
+                /*border-width: 0.15em;*/
+                border-radius: 0.2em;
+            }
+            &:checked {
+                &:after {
+                    font-size: 110%;
+                    left: .05em;
+                    bottom: .03em;
+                }
+            }
+        }
+        label {
+            font-size: 77%;
+            padding-left: 2.5em;
+            letter-spacing: 0.02em;
+        }
+    }
+}
+
 .radio-switch {
     margin-bottom: 28px;
     display: flex;
@@ -203,6 +267,54 @@
             &:checked + label {
                 &:after {
                     right: -4px;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .radio-switch {
+        margin-bottom: 1.5em;
+        .radio-switch__item {
+            font-size: 80%;
+            line-height: 2.6em;
+            letter-spacing: 0.02em;
+            label {
+                padding-left: 3em;
+                padding-right: 3em;
+            }
+            &:before {
+                width: 2.2em;
+                border-width: 0.1em;
+            }
+            &:first-child {
+                &:before {
+                    border-radius: 1.3em 0 0 1.3em;
+                }
+                label {
+                    &:after {
+                        width: 2.2em;
+                        height: 2.2em;
+                        right: -2em;
+                        top: .2em;
+                    }
+                }
+            }
+            &:last-child {
+                label {
+                    padding-right: 0;
+                }
+                &:before {
+                    border-left-width: 0;
+                    border-radius: 0 1.3em 1.3em 0;
+                }
+            }
+            input {
+                display: none;
+                &:checked + label {
+                    &:after {
+                        right: -.2em;
+                    }
                 }
             }
         }

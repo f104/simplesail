@@ -78,7 +78,7 @@ header, footer {
 }
 @include media-breakpoint-up(lg) {
     body {
-        /*font-size: 1.46484375vw;*/
+        font-size: 1.46484375vw;
     }
     header, footer {
         .container {

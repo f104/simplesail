@@ -277,10 +277,10 @@
         }
         .slick-prev, .slick-next {
             width: 17px;
+            font-size: 17px;
             &:before {
                 @include transition();
                 color: #8fa2ad;
-                font-size: 17px;
                 opacity: 1;
             }
             &:hover {
@@ -303,6 +303,57 @@
         &.slick-dotted.slick-slider {
             .slick-dots {
                 bottom: 9px;
+            }
+            .slick-dots {
+                @include transition();
+                bottom: 18px;
+                li {
+                    button:before {
+                        color: #8fa2ad;
+                        opacity: 0.4;
+                    }
+                    &.slick-active {
+                        opacity: 1;
+                    }
+                }
+                .slick-active button::before {
+                    opacity: 1;
+                }
+            }
+            .slick-prev, .slick-next {
+                width: 17px;
+                font-size: 17px;
+                &:before {
+                    @include transition();
+                    color: #8fa2ad;
+                    opacity: 1;
+                }
+                &:hover {
+                    &:before {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .boat-slider {
+        &.slick-dotted.slick-slider {
+            .slick-dots {
+               bottom: 1em;
+            }
+            .slick-prev, .slick-next {
+                width: 1em;
+                height: 1em;
+                font-size: 130%;
+            }
+            .slick-prev {
+                left: 1.6em;
+                z-index: 1;
+            }
+            .slick-next {
+                right: 1.2em;
             }
         }
     }
@@ -332,11 +383,9 @@
     .boat-gallery {
         &.slick-slider {
             .slick-prev, .slick-next {
-                width: 20px;
-                height: 25px;
-                &:before {
-                    font-size: 24px;
-                }
+                width: 1em;
+                height: 1em;
+                font-size: 130%;
             }
             .slick-prev {
                 left: 4%;
