@@ -1,0 +1,66 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "fleet-boats"
+    })
+    <body>
+        @@include('./template/header.html')
+        <div class="content">
+            <section class="page-header">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <img src="img/fleet-boats.jpg"
+                             srcset="img/fleet-boats@2x.jpg 2x,
+                             img/fleet-boats@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <ul class="page-header__title">
+                                    <li><a href="fleet-main.html">Yacht Charter Fleet 2018</a></li>
+                                    <li><h1 class="page-header__title__h1">Sailing Catamarans</h1></li>
+                                </ul>
+                                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container fleet-boats-list">
+                @@include('./template/chunks/fleet-boats-item.html', {
+                "img": "boat1",
+                "discount": 1
+                })
+                @@include('./template/chunks/fleet-boats-item.html', {
+                "img": "boat2",
+                "discount": 0
+                })
+                @@include('./template/chunks/fleet-boats-item.html', {
+                "img": "boat3",
+                "discount": 1
+                })
+                @@include('./template/chunks/fleet-boats-item.html', {
+                "img": "boat4",
+                "discount": 0
+                })
+            </section>
+
+            <section class="container fleet-boats-text">
+                <h3>Articles Part 01  Title</h3>
+                <p>Если начать разговор с самой Черногории, то история страны весьма насыщенна. Изначально ее территорию населяли иллирийские племена, потом она перешла под власть Римской империи. Но свой след в истории и культуре страны оставили и французы, и турки, и австро-венгры, и венецианцы. В общем, страна вобрала в себя ото всех по чуть-чуть.</p>
+                <p>Одним из самых красивых мест является залив Бока, который формируют четыре залива: Которский, Рисанский, Тиватский и Херцег-Новский. На берегу Которского залива стоит город Пераст, где когда-то располагался венецианский флот, насчитывавший 1000 кораблей, там же находится главная достопримечательность города – морской музей. Неподалеку расположен Котор – город с прекрасно сохранившейся древней архитектурой, на чьих крепостных стенах протяженностью в четыре километра по ночам загорается вереница огней, буквально идущих в небо.</p>
+                <p>Кстати, в Черногории находятся объекты Всемирного наследия ЮНЕСКО: сам город Котор и весь Которский залив, а также национальный парк «Дурмитор». На протяжении многих столетий Которский залив был оживленным портом, в который стекались корабли венецианских купцов, следовавших на восток. В конце XIX века в Тивате был основан военный порт. На его территории сейчас и расположен Porto Montenegro.</p>
+                <p>Надо сказать, что на Которский залив распространяется государственная программа поддержки элитного туризма. Это означает, что одобрение могут получить только лучшие проекты, прошедшие тщательный отбор. Благодаря стабильной экономике и благоприятному инвестиционному климату в последние пять лет в стране наблюдался один из самых высоких показателей объема прямых инвестиций на душу населения.</p>
+                <p>Вот и канадский бизнесмен Питер Манк, а также кое-кто из Ротшильдов, глава LVMH Бернар Арно, владелец яхты «Queen K» Олег Дерипаска и другие влиятельные особы решили инвестировать в Черногорию. И в 2006 году началось строительство «маленького города» под названием Porto Montenegro, который уже превратился в место с развитой инфраструктурой, роскошными апартаментами, пятизвездочным отелем Regent (первым отелем столь высокого класса в Которской бухте) и одной из самых больших марин Адриатики.</p>
+                <p>На сегодняшний день в проект было инвестировано более 300 миллионов евро. Территория Porto Montenegro – 24 гектара суши и 65 гектаров водного пространства.</p>
+                <p>Здесь можно не только приобрести апартаменты, поселиться в отеле или пришвартоваться в марине. К услугам гостей рестораны, бары, магазины, яхтенные представительства,спа-салон, парикмахерская, супермаркет, булочная, сервис для яхт, спортивный клуб, ночной клуб и бассейн.</p>
+            </section>
+
+            @@include('./template/index-fleet.html')
+            @@include('./template/index-blog.html')
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+    </body>
+    @@include('./template/foot.html')
+</html>
