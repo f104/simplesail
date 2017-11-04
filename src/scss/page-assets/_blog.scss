@@ -233,3 +233,190 @@
         }
     }
 }
+
+.articles-tags {
+    padding: 30px 20px 24px;
+    .articles-tags__list {
+        font-size: 13px;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        @include list-inline-center(0);
+        a {
+            color: #37474f;
+            @include link-underline(#37474f);
+        }
+        li {
+            position: relative;
+            &:after {
+                content: '';
+                width: 1px;
+                height: 13px;
+                background-color: #37474f;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 6px;
+                margin-right: 4px;
+            }
+            &.last, &:last-of-type {
+                &:after {
+                    background-color: transparent;
+                }
+            }
+            &.active {
+                a:before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+.articles-list {
+    border-style: solid;
+    border-color: rgba(84, 110, 122, 0.4);
+    border-width: 0 0 1px 0;
+    .articles-list__inner {
+        border-bottom: 1px solid rgba(84, 110, 122, 0.4);
+    }
+    .articles-list__footer {
+        text-align: center;
+        padding: 48px 35px;
+        .btn {
+            width: 100%;
+        }
+    }
+}
+.articles-item {
+    display: block;
+    background-color: $white;
+    color: #4c5a62;
+    .articles-item__img-wrapper {
+        overflow: hidden;
+    }
+    .articles-item__img {
+        width: 100%;
+    }
+    .articles-item__inner {
+        min-height: 140px;
+        padding: 20px;
+    }
+    .articles-item__title {
+        font-size: 15px;
+        margin-bottom: 17px;
+        font-weight: 400;
+        .articles-item__title__link {
+            display: block;
+            position: relative;
+            @include transition();
+            &:after {
+                position: absolute;
+                right: 0;
+                top: 0;
+                content: '>';
+                font-size: 20px;
+                line-height: 17px;
+                font-weight: 700;
+            }
+        }
+        .underline-anime__line {
+            border-color: #4c5a62;
+        }
+    }
+    .articles-item__text {
+        font-size: 12px;
+    }
+}
+@include media-breakpoint-up(md) {
+    .articles-tags {
+        padding: 35px;
+        .articles-tags__list {
+            font-size: 18px;
+            line-height: normal;
+            letter-spacing: 0.3px;
+            li {
+                &:after {
+                    height: 18px;
+                    margin-left: 10px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+    .articles-list {
+        padding: 30px;
+        border-width: 1px 0;
+        .articles-list__inner {
+            > * {
+                display: flex;
+            }
+            background-color: #eceff1;
+            padding: 1px 0 0 1px;
+            border-bottom: none;
+        }
+        .articles-list__footer {
+            padding: 60px 0 30px;
+            .btn {
+                width: 250px;
+            }
+        }
+    }
+    .articles-item {
+        flex: 1;
+        margin: 0 1px 1px 0;
+        .articles-item__inner {
+            min-height: 160px;
+            padding: 25px;
+        }
+        .articles-item__title {
+            font-size: 16.9px;
+            margin-bottom: 18px;
+        }
+        .articles-item__text {
+            font-size: 13.4px;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .articles-tags {
+        padding: 1.6em;
+        .articles-tags__list {
+            font-size: 90%;
+            letter-spacing: 0.02em;
+            li {
+                &:after {
+                    height: 1em;
+                    margin-left: 1ex;
+                    margin-right: 0.6ex;
+                }
+            }
+        }
+    }
+    .articles-list {
+        padding: 3vw;
+        .articles-list__inner {
+        }
+        .articles-list__footer {
+            padding: 6vw 0 3vw;
+            .btn {
+                width: 15em;
+            }
+        }
+    }
+    .articles-item {
+        .articles-item__inner {
+            min-height: 9em;
+            padding: 1em;
+        }
+        .articles-item__title {
+            font-size: 100%;
+            line-height: normal;
+            margin-bottom: 1em;
+            &:after {
+                font-size: 100%;
+            }
+        }
+        .articles-item__text {
+            font-size: 85%;
+        }
+    }
+}

@@ -15,6 +15,7 @@ jQuery(function () {
         initSelect();
         initMenu();
 //        initDatepicker();
+//        initArticles();
         initOther();
     });
 
@@ -179,6 +180,23 @@ jQuery(function () {
             numberOfMonths: 2
         });
     }
+
+    function initList() {
+        $('.js-inline-list').each(function () {
+            var lastElement = false;
+            $(this).find('li').each(function () {
+                $(this).removeClass('last');
+                if (lastElement && lastElement.offset().top != $(this).offset().top) {
+                    lastElement.addClass('last');
+                }
+                lastElement = $(this);
+            });
+        });
+    }
+    $(window).on('load resize', function (e) {
+        initList();
+    });
+
     function initOther() {
         $('.marina-item__img-wrapper').hover(
                 function () {

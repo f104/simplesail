@@ -28,6 +28,16 @@
             background-color: $primary;
         }
     }
+    &.btn-secondary_inverse {
+        background-color: transparent;
+        border: solid 1px #7f9daa;
+        color: #4c5a62;
+        &:hover {
+            color: $white;
+            border-color: $primary;
+            background-color: $primary;
+        }
+    }
 }
 @include media-breakpoint-up(lg) {
     .btn, .btn.btn-secondary {
