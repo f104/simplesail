@@ -8,10 +8,6 @@
             <section class="page-header">
                 <div class="container">
                     <div class="page-header__wrapper">
-                        <img src="img/articles-main.jpg"
-                             srcset="img/articles-main@2x.jpg 2x,
-                             img/articles-main@3x.jpg 3x"
-                             class="page-header__img" alt="alt text">
                         <div class="page-header__inner">
                             <div class="page-header__outer">
                                 <ul class="page-header__title">
@@ -21,105 +17,573 @@
                                 <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
                             </div>
                         </div>
+                        <img src="img/articles-main.jpg"
+                             srcset="img/articles-main@2x.jpg 2x,
+                             img/articles-main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
                     </div>
                 </div>
             </section>
-            
-            @@include('./template/chunks/articles-tags.html')
 
-            <section class="container articles-list">
-                <div class="row articles-list__inner">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "1",
-                        "title": "Beneteau Oceanis 38: Review and Tests",
-                        "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
-                        })
+            <div class="container js-tabs">
+
+                @@include('./template/chunks/articles-tags.html')
+
+                <section id="section1" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 1. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "2",
-                        "title": "The anatomy of sails from all around the world",
-                        "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "3",
-                        "title": "Abbey of St. George, Perast, Bay of Kotor",
-                        "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
-                        })
+                </section>
+
+                <section id="section2" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 2. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "4",
-                        "title": "Моторная супер яхта",
-                        "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "5",
-                        "title": "Моторные катамараны",
-                        "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
-                        })
+                </section>
+
+                <section id="section3" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 3. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "6",
-                        "title": "Route 4: Croatia. South Dalmatia in 14 days",
-                        "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "1",
-                        "title": "Beneteau Oceanis 38: Review and Tests",
-                        "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
-                        })
+                </section>
+                
+                <section id="section4" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 4. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "2",
-                        "title": "The anatomy of sails from all around the world",
-                        "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "3",
-                        "title": "Abbey of St. George, Perast, Bay of Kotor",
-                        "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
-                        })
+                </section>
+                
+                <section id="section5" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 5. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "4",
-                        "title": "Моторная супер яхта",
-                        "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "5",
-                        "title": "Моторные катамараны",
-                        "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
-                        })
+                </section>
+                
+                <section id="section6" class="articles-list">
+                    <div class="row articles-list__inner">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Tab 6. Beneteau Oceanis 38",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "1",
+                            "title": "Beneteau Oceanis 38: Review and Tests",
+                            "text": "The new Beneteau Oceanis 38 has been designed using a ‘flexiboat’ concept and is available in three guises. Duncan Kent tested her in Palma"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "2",
+                            "title": "The anatomy of sails from all around the world",
+                            "text": "Some researchers attribute the invention of mankind sail almost the forward wheel, which is understandable - the river served us and sometimes fishing, and communication routes."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "3",
+                            "title": "Abbey of St. George, Perast, Bay of Kotor",
+                            "text": "In the vicinity of Our Lady of the Rock, the island that arose from the deep sea by effort of men, lies the St George, the island of entirely different nature and destiny."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "4",
+                            "title": "Моторная супер яхта",
+                            "text": "When a customer picks up a charter company, one of the key criteria is his assurance that the deposit payment is a guarantee that all services will be duly provided in full and on the highest quality level. Normally, a deposit constitutes…"
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "5",
+                            "title": "Моторные катамараны",
+                            "text": "Distance: 91 NM. The SimpleSail Company has developed this route in order to give you an opportunity to enjoy yachting and see most of the major sights of the Boka Kotorska."
+                            })
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            @@include('./template/chunks/articles-item.html', {
+                            "img": "6",
+                            "title": "Route 4: Croatia. South Dalmatia in 14 days",
+                            "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
+                            })
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        @@include('./template/chunks/articles-item.html', {
-                        "img": "6",
-                        "title": "Route 4: Croatia. South Dalmatia in 14 days",
-                        "text": "This route is approximately 300 nautical miles long. The main part of this voyage will be in the waters of the Republic of Croatia, which is a member of the European Union. You will be able to visit main islands of South…"
-                        })
+                    <div class="articles-list__footer">
+                        <button class="btn btn-secondary_inverse">Show More</button>
                     </div>
-                </div>
-                <div class="articles-list__footer">
-                    <button class="btn btn-secondary_inverse">Show More</button>
-                </div>
-            </section>
-            
-            @@include('./template/chunks/articles-tags.html')
+                </section>
+                
+                @@include('./template/chunks/articles-tags.html')
+
+            </div>
 
             @@include('./template/index-fleet.html')
             @@include('./template/index-blog.html')

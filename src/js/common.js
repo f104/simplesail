@@ -15,7 +15,7 @@ jQuery(function () {
         initSelect();
         initMenu();
 //        initDatepicker();
-//        initArticles();
+        initTabs();
         initOther();
     });
 
@@ -196,6 +196,15 @@ jQuery(function () {
     $(window).on('load resize', function (e) {
         initList();
     });
+    
+    function initTabs() {
+        $('.js-tabs').easytabs();
+        // set active for second tabs ul
+        $('.js-tabs').bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
+            var tab = $clicked.attr('href');
+            $(this).find('> ul > li a[href="'+tab+'"]').parent('li').addClass('active');
+        });
+    }
 
     function initOther() {
         $('.marina-item__img-wrapper').hover(

@@ -170,7 +170,7 @@ header, footer {
                 @include link-underline();
             }
             li {
-                display: inline-block;
+                display: inline;
                 margin-right: .7ex;
                 &:before {
                     display: inline-block;
@@ -191,7 +191,7 @@ header, footer {
                 }
             }
             .page-header__title__h1 {
-                display: inline-block;
+                display: inline;
                 margin-bottom: 0;
                 font-size: 20px;
                 letter-spacing: 0.5px;
@@ -223,13 +223,18 @@ header, footer {
     }
     .page-header__img {
         display: none;
+        width: 100%;
+    }
+    &.page-header_article {
+        .page-header__img {
+            display: block;
+        }
     }
 }
 @include media-breakpoint-up(md) {
     .page-header {
         .page-header__img {
             display: block;
-            width: 100%;
         }
         .page-header__inner {
             background-color: #ffffff;

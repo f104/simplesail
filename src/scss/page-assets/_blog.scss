@@ -1,3 +1,5 @@
+$articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разделителя
+
 .index-blog {
     background-color: #78909c;
     .index-blog__header {
@@ -235,48 +237,46 @@
 }
 
 .articles-tags {
+    @include list-inline-center(0);
     padding: 30px 20px 24px;
-    .articles-tags__list {
-        font-size: 13px;
-        line-height: 26px;
-        letter-spacing: 0.2px;
-        text-align: center;
-        @include list-inline-center(0);
-        a {
-            color: #37474f;
-            @include link-underline(#37474f);
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    a {
+        color: #37474f;
+        @include link-underline(#37474f);
+    }
+    li {
+        position: relative;
+        &:after {
+            content: '';
+            width: 1px;
+            height: 13px;
+            background-color: #37474f;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 6px;
+            margin-right: 4px;
         }
-        li {
-            position: relative;
+        &.last, &:last-of-type {
             &:after {
-                content: '';
-                width: 1px;
-                height: 13px;
-                background-color: #37474f;
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 6px;
-                margin-right: 4px;
+                background-color: transparent;
             }
-            &.last, &:last-of-type {
-                &:after {
-                    background-color: transparent;
-                }
-            }
-            &.active {
-                a:before {
-                    transform: scaleX(1);
-                }
+        }
+        &.active {
+            a:before {
+                transform: scaleX(1);
             }
         }
     }
 }
 .articles-list {
     border-style: solid;
-    border-color: rgba(84, 110, 122, 0.4);
+    border-color: $articles-line-color;
     border-width: 0 0 1px 0;
     .articles-list__inner {
-        border-bottom: 1px solid rgba(84, 110, 122, 0.4);
+        border-bottom: 1px solid $articles-line-color;
     }
     .articles-list__footer {
         text-align: center;
@@ -329,16 +329,14 @@
 @include media-breakpoint-up(md) {
     .articles-tags {
         padding: 35px;
-        .articles-tags__list {
-            font-size: 18px;
-            line-height: normal;
-            letter-spacing: 0.3px;
-            li {
-                &:after {
-                    height: 18px;
-                    margin-left: 10px;
-                    margin-right: 6px;
-                }
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        li {
+            &:after {
+                height: 18px;
+                margin-left: 10px;
+                margin-right: 6px;
             }
         }
     }
@@ -379,15 +377,13 @@
 @include media-breakpoint-up(lg) {
     .articles-tags {
         padding: 1.6em;
-        .articles-tags__list {
-            font-size: 90%;
-            letter-spacing: 0.02em;
-            li {
-                &:after {
-                    height: 1em;
-                    margin-left: 1ex;
-                    margin-right: 0.6ex;
-                }
+        font-size: 90%;
+        letter-spacing: 0.02em;
+        li {
+            &:after {
+                height: 1em;
+                margin-left: 1ex;
+                margin-right: 0.6ex;
             }
         }
     }
@@ -419,4 +415,110 @@
             font-size: 85%;
         }
     }
+}
+
+.article-introtext {
+    padding: 20px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    color: $blue-dark;
+    border-bottom: 1px solid $articles-line-color;
+}
+.article-content {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $blue-dark;
+    border-bottom: 1px solid $articles-line-color;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    .article-content__h1 {
+        font-size: 26px;
+        line-height: normal;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: normal;
+        margin-bottom: 1.5rem;
+    }
+    h3 {
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        font-weight: normal;
+        margin-bottom: 1rem;
+    }
+    ol {
+        padding-left: 3ex;
+        li {
+            padding-left: 1ex;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 1.5ex;
+        li {
+            padding-left: 2.5ex;
+            position: relative;
+            &:before {
+                content: '·';
+                font-size: 300%;
+                position: absolute;
+                left: 0;
+                line-height: 0.35;
+            }
+        }
+    }
+    a {
+        font-weight: 700;
+        color: #207aa5;
+        text-decoration: underline;
+    }
+    blockquote {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        padding: 40px 0 25px;
+        position: relative;
+        &:before, &:after {
+            position: absolute;
+            font-size: 50px;
+        }
+        &:before {
+            content: '«';
+            top: 0;
+            left: 0;
+        }
+        &:after{
+            content: '»';
+            bottom: 0;
+            right: 0;
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+    .article-content__img {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+@include media-breakpoint-up(md) {
+    .article-introtext {
+        padding: 30px;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .article-introtext {
+        padding: 3vw;
+    }    
 }
