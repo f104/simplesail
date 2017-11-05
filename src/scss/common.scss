@@ -29,6 +29,7 @@ body {
 .hidden {
     display: none !important;
 }
+.text-nowrap { white-space: nowrap !important; }
 
 a {
     outline: none;
@@ -122,8 +123,10 @@ header, footer {
         left: 0;
         width: 100%;
         z-index: 2;
+        display: inline-block;
     }
     .underline-anime__hidden {
+        display: inline-block;
         transform-origin: 0 0;
         transform: scaleX(0);  
         transition: transform 0.2s ease-in-out 0s;  
@@ -148,6 +151,41 @@ header, footer {
 // класс для скрытия картинок при проигрывании видео
 .video-poster_hidden {
     opacity: 0;
+}
+
+.scrollbar-outer {
+    > .scroll-element {
+        background-color: #dae5e8;
+        border-radius: 4px;
+        &.scroll-y {
+            width: 8px;
+            .scroll-element_outer {
+                left: 0;
+                width: 8px;
+            }
+        }
+        &.scroll-x {
+            height: 8px;
+            .scroll-element_outer {
+                top: 0;
+                height: 8px;
+            }
+        }
+        .scroll-bar {
+            background: rgba(78, 94, 104, 0.35);
+            border-radius: 4px;
+        }
+    }
+    > .scroll-content.scroll-scrolly_visible {
+        left: 0;
+        margin-left: 0;
+        right: -12px;
+        margin-right: 12px;
+    }
+    > .scroll-content.scroll-scrollx_visible {
+        top: -20px;
+        margin-top: 20px;
+    }
 }
 
 .page-header {

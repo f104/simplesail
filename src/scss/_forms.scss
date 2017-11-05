@@ -1,4 +1,5 @@
 .btn {
+    display: inline-block;
     min-width: 214px;
     text-transform: uppercase;
     font-size: 17px;
@@ -8,11 +9,13 @@
     text-align: center;
     color: #ffffff;
     border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
     background-color: transparent;
     padding: 0;
     cursor: pointer;
     @include transition();
-    border: none;
+    border-color: transparent;
     background-color: $primary;
     &:hover {
         background-color: #ff7347;
@@ -22,7 +25,7 @@
     }
     &.btn-secondary {
         background-color: transparent;
-        border: 1px solid rgba(255,255,255,.5);
+        border-color: rgba(255,255,255,.5);
         &:hover {
             border-color: $primary;
             background-color: $primary;
@@ -30,7 +33,7 @@
     }
     &.btn-secondary_inverse {
         background-color: transparent;
-        border: solid 1px #7f9daa;
+        border-color: #7f9daa;
         color: #4c5a62;
         &:hover {
             color: $white;
@@ -38,14 +41,28 @@
             background-color: $primary;
         }
     }
+    &.btn-sm {
+        font-size: 11px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+        min-width: 140px;
+        border-radius: 2px;
+    }
 }
 @include media-breakpoint-up(lg) {
-    .btn, .btn.btn-secondary {
-        font-size: 89%;
+    .btn {
+        font-size: 1.1rem;
         line-height: 3em;
         border-width: .1em;
         border-radius: 0.2em;
         min-width: 13em;
+        &.btn-sm {
+            font-size: 0.9rem;
+            line-height: 2.5em;
+            letter-spacing: 0.02em;
+            min-width: 13em;
+            border-radius: .2em;
+        }
     }
 }
 
@@ -146,13 +163,15 @@
         visibility: hidden;
         position: absolute;
         left: 0;
-        top: 4px;
+        top: 50%;
+        transform: translateY(-50%);
         &:before {
             content: '';
             width: 18px;
             height: 18px;
             position: absolute;
-            bottom: 0px;
+            top: 50%;
+            transform: translateY(-50%);
             border: 1.5px solid rgba(1, 1, 1, .54);
             border-radius: 1.5px;
             visibility: visible;
@@ -167,7 +186,8 @@
                 content: '\e814';
                 font-family: "fontello";
                 position: absolute;
-                bottom: 0px;
+                top: 50%;
+                transform: translateY(-50%);
                 left: .5px;
                 color: white;
                 font-size: 17px;
@@ -193,20 +213,15 @@
     .input-checkbox {
         margin-bottom: .8em;
         input[type=checkbox] {
-            /*left: 0;*/
-            top: .3em;
             &:before {
                 width: 1.2em;
                 height: 1.2em;
-                /*bottom: -0.3em;*/
-                /*border-width: 0.15em;*/
                 border-radius: 0.2em;
             }
             &:checked {
                 &:after {
                     font-size: 110%;
                     left: .05em;
-                    bottom: .03em;
                 }
             }
         }

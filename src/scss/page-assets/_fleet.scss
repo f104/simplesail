@@ -516,50 +516,6 @@
     }
 }
 
-.boat-gallery {
-    margin-bottom: 20px;
-    .boat-gallery__slide {
-        margin: 0 5px;
-        cursor: pointer;
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: $blue-dark;
-            opacity: 0.7;
-            @include transition(opacity .1s ease-in-out);
-        }
-        &.slick-active {
-            &:after {
-                opacity: 0;
-                z-index: -1;
-            }
-        }
-    }
-    .boat-gallery__img {
-        display: block;
-        width: 100%;
-    }
-}
-@include media-breakpoint-up(md) {
-    .boat-gallery {
-        .boat-gallery__slide {
-            margin: 0 10px;
-        }
-    }
-}
-@include media-breakpoint-up(lg) {
-    .boat-gallery {
-        margin-bottom: 1.6em;
-        .boat-gallery__slide {
-            margin: 0 .8em;
-        }
-    }
-}
-
 .boat-data {
     flex: 1;
     background-color: $gray-light;

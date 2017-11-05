@@ -43,6 +43,10 @@
 <glyph glyph-name="checkbox" unicode="&#xe814;" d="M389 72l-278 267 78 75 200-192 422 406 78-75-500-481z" horiz-adv-x="1000" />
 
 <glyph glyph-name="back" unicode="&#xe815;" d="M0 310v62l700 478 91-116-446-310-172-81 170-69 457-308-89-116z" horiz-adv-x="800" />
+
+<glyph glyph-name="blockquote-left" unicode="&#xe81f;" d="M333 340l281 504 105-72-176-340-85-92 85-78 189-334-111-72-288 484z m-333 0l288 510 111-78-183-340-85-92 85-78 196-334-118-78-294 490z" horiz-adv-x="732" />
+
+<glyph glyph-name="blockquote-right" unicode="&#xe820;" d="M399 340l-281 504-105-72 177-340 85-92-85-78-190-334 105-72 294 484z m333 0l-288 510-111-78 183-340 85-92-85-78-196-334 111-78 301 490z" horiz-adv-x="732" />
 </font>
 </defs>
 </svg>

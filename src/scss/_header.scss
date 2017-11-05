@@ -370,25 +370,6 @@
     }
     .scrollbar-outer {
         height: 100%;
-        > .scroll-element {
-            background-color: #dae5e8;
-            &.scroll-y {
-                width: 8px;
-                .scroll-element_outer {
-                    left: 0;
-                    width: 8px;
-                }
-            }
-            .scroll-bar {
-                background: rgba(78, 94, 104, 0.35);
-            }
-        }
-        > .scroll-content.scroll-scrolly_visible {
-            left: 0;
-            margin-left: 0;
-            right: -12px;
-            margin-right: 12px;
-        }
     }
     .mobile-nav__menu {
         font-size: 16px;

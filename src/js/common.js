@@ -196,13 +196,33 @@ jQuery(function () {
     $(window).on('load resize', function (e) {
         initList();
     });
-    
+
     function initTabs() {
-        $('.js-tabs').easytabs();
-        // set active for second tabs ul
-        $('.js-tabs').bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
-            var tab = $clicked.attr('href');
-            $(this).find('> ul > li a[href="'+tab+'"]').parent('li').addClass('active');
+        $('.js-tabs')
+                .easytabs()
+                .bind('easytabs:midTransition', function (event, $clicked, $targetPanel, settings) {
+                    // set active for other tabs ul
+                    var tab = $clicked.attr('href');
+                    $(this).find('> ul > li a[href="' + tab + '"]').parent('li').addClass('active');
+                    // move slider
+                    console.log($clicked);
+                    var slide = $clicked.data('slide');
+                    $(this).find('.js-slider_gallery').slick('slickGoTo', slide);
+                })
+                .find('.js-slider_gallery').on('afterChange', function (slick, currentSlide) {
+                    var tab = currentSlide.$slides[currentSlide.currentSlide].dataset.tab;
+                    $(this).parents('.js-tabs').easytabs('select', tab)
+                });
+        // nav tabs by buttons
+        $('.js-tabs-button').on('click', function (e) {
+            e.preventDefault();
+            $(this).parents('.js-tabs')
+                    .easytabs('select', $(this).data('tab'))
+                    .bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
+//                        var offset = $targetPanel.offset().top - parseFloat($('body').css('padding-top'));
+                        var offset = $(this).offset().top - parseFloat($('body').css('padding-top'));
+                        $('html, body').animate({scrollTop: offset}, 500);
+                    });
         });
     }
 
