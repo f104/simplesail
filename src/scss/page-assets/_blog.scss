@@ -559,7 +559,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             left: 20px;
         }
     }
-    .article-content__footer {
+    .article-content__footer__inner {
         text-align: center;
         margin: 36px 30px 16px;
         .btn {
@@ -588,6 +588,12 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
     }
+    > :last-child {
+        margin-bottom: 0 !important;
+    }
+    &.article-content_border-bottom {
+        border-bottom: 1px solid $articles-line-color;
+    }
 }
 .articles-map {
     width: 100%;
@@ -599,10 +605,6 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     .articles-related__img {
         display: block;
         width: 100%;
-    }
-    .articles-related__wrapper {
-        display: flex;
-        flex-direction: column;
     }
     .articles-related__header {
         padding: 15px 20px;
@@ -707,7 +709,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         > .scrollbar-outer {
             margin: 0 0 40px;
         }
-        .article-content__footer {
+        .article-content__footer__inner {
             margin: 40px 40px 10px;
             .btn {
                 width: auto;
@@ -722,6 +724,12 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     }
     .articles-map {
         height: 432px;
+    }
+    .articles-related {
+        .articles-related__wrapper {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 @include media-breakpoint-up(lg) {
@@ -763,7 +771,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         > .scrollbar-outer {
             margin: 0 0 3vw;
         }
-        .article-content__footer {
+        .article-content__footer__inner {
             margin: 3vw 3vw 0;
         }
     }

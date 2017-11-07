@@ -31,6 +31,10 @@ body {
 }
 .text-nowrap { white-space: nowrap !important; }
 
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
 a {
     outline: none;
 }

@@ -1,0 +1,133 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "yacht-charter"
+    })
+    <body>
+        @@include('./template/header.html')
+        <div class="content">
+            <section class="page-header page-header_article">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <ul class="page-header__title">
+                                    <li><h1 class="page-header__title__h1">Yacht Charter Fleet 2018</h1></li>
+                                </ul>
+                                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options.</div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
+                        <img src="img/fleet-main.jpg"
+                             srcset="img/fleet-main@2x.jpg 2x,
+                             img/articles/fleet-main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <section class="article-content article-content_border-bottom">
+                    <h2>Articles Part 01 Title — h2</h2>
+                    <p>Если начать разговор с самой Черногории, то история страны весьма насыщенна. Изначально ее территорию населяли иллирийские племена, потом она перешла под власть Римской империи. Но свой след в истории и культуре страны оставили и французы, и турки, и австро-венгры, и венецианцы. В общем, страна вобрала в себя ото всех по чуть-чуть.</p>
+                    <p>Одним из самых красивых мест является залив Бока, который формируют четыре залива: Которский, Рисанский, Тиватский и Херцег-Новский. На берегу Которского залива стоит город Пераст, где когда-то располагался венецианский флот, насчитывавший 1000 кораблей, там же находится главная достопримечательность города – морской музей. Неподалеку расположен Котор – город с прекрасно сохранившейся древней архитектурой, на чьих крепостных стенах протяженностью в четыре километра по ночам загорается вереница огней, буквально идущих в небо.</p>
+                </section>
+            </div>
+
+            <div class="container js-tabs">
+
+                <ul class="articles-tabs js-inline-list">
+                    <li><a href="#part1">Аренда яхт в Черногории</a></li>
+                    <li><a href="#part2">Аренда яхт в Хорватии</a></li>
+                </ul>
+
+                <section id="part1">
+                    <div class="article-content no-padding-top">
+                        <h2>Аренда яхт в Черногории</h2>
+                        <p>Если начать разговор с самой <a href="#">Черногории</a>, то история страны весьма насыщенна. Изначально ее территорию населяли иллирийские племена, потом она перешла под власть Римской империи. Но свой след в истории и культуре страны оставили и французы, и турки, и австро-венгры, и <strong>венецианцы</strong>. В общем, страна вобрала в себя ото всех по чуть-чуть.</p>
+                        <p>Одним из самых красивых мест является залив Бока, который формируют четыре залива: Которский, Рисанский, Тиватский и Херцег-Новский. На берегу Которского залива стоит город Пераст, где когда-то располагался венецианский флот, насчитывавший 1000 кораблей, там же находится главная достопримечательность города — морской музей. Неподалеку расположен Котор — город с прекрасно сохранившейся древней архитектурой, на чьих крепостных стенах протяженностью в четыре километра по ночам загорается вереница огней, буквально идущих в небо.</p>
+                        <p>Кстати, в Черногории находятся объекты Всемирного наследия ЮНЕСКО: сам город Котор и весь Которский залив, а также национальный парк «Дурмитор». На протяжении многих столетий Которский залив был оживленным портом, в который стекались корабли венецианских купцов, следовавших на восток. В конце XIX века в Тивате был основан военный порт. На его территории сейчас и расположен Porto Montenegro.</p>
+                    </div>
+                    <div class="fleet-list no-padding-top">
+                        <div class="row fleet-list__inner">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "7",
+                                "title": "Флот SimpleSail в Черногории",
+                                "text": "Парусные и моторные яхты и катамараны<br>Марина Muo (next to Kotor)"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "1",
+                                "title": "Парусные яхты",
+                                "text": "Beneteau Oceanis 38,  41,  41.1,  45,  48<br>Jeanneau Sun Odyssey  409<br>3 - 5 Double Cabins"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "2",
+                                "title": "Парусные катамараны",
+                                "text": "Fountaine Pajot Lucia 40, Helia 44<br>3 - 4 Double Cabins"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "6",
+                                "title": "Моторная супер яхта",
+                                "text": "Парусные яхты и катамараны<br>Моторные катамараны"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="part2">
+                    <div class="article-content no-padding-top">
+                        <h2>Аренда яхт в Хорватии</h2>
+                        <p>Если начать разговор с самой <a href="#">Черногории</a>, то история страны весьма насыщенна. Изначально ее территорию населяли иллирийские племена, потом она перешла под власть Римской империи. Но свой след в истории и культуре страны оставили и французы, и турки, и австро-венгры, и <strong>венецианцы</strong>. В общем, страна вобрала в себя ото всех по чуть-чуть.</p>
+                        <p>Одним из самых красивых мест является залив Бока, который формируют четыре залива: Которский, Рисанский, Тиватский и Херцег-Новский. На берегу Которского залива стоит город Пераст, где когда-то располагался венецианский флот, насчитывавший 1000 кораблей, там же находится главная достопримечательность города — морской музей. Неподалеку расположен Котор — город с прекрасно сохранившейся древней архитектурой, на чьих крепостных стенах протяженностью в четыре километра по ночам загорается вереница огней, буквально идущих в небо.</p>
+                        <p>Кстати, в Черногории находятся объекты Всемирного наследия ЮНЕСКО: сам город Котор и весь Которский залив, а также национальный парк «Дурмитор». На протяжении многих столетий Которский залив был оживленным портом, в который стекались корабли венецианских купцов, следовавших на восток. В конце XIX века в Тивате был основан военный порт. На его территории сейчас и расположен Porto Montenegro.</p>
+                    </div>
+                    <div class="fleet-list no-padding-top">
+                        <div class="row fleet-list__inner">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "8",
+                                "title": "Флот SimpleSail в Хорватии",
+                                "text": "Парусные и моторные яхты и катамараны<br>Марина Slano (next to Dubrovnik)"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "1",
+                                "title": "Парусные яхты",
+                                "text": "Beneteau Oceanis 38,  41,  41.1,  45,  48<br>Jeanneau Sun Odyssey  409<br>3 - 5 Double Cabins"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "2",
+                                "title": "Парусные катамараны",
+                                "text": "Fountaine Pajot Lucia 40, Helia 44<br>3 - 4 Double Cabins"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/fleet-item.html', {
+                                "img": "6",
+                                "title": "Моторная супер яхта",
+                                "text": "Парусные яхты и катамараны<br>Моторные катамараны"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            @@include('./template/index-blog.html')
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+    </body>
+    @@include('./template/foot.html')
+</html>
