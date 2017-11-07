@@ -1,0 +1,98 @@
+.weather {
+    padding: 20px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .weather-row {
+        flex-basis: 100%;
+    }
+    .weather-item {
+        color: $blue-dark;
+        display: flex;
+        margin-bottom: 30px;
+        padding-right: 10px;
+        flex-direction: column;
+        align-items: left;
+        .weather-item__header {
+            font-size: 18px;
+            letter-spacing: 0.1px;
+        }
+        .weather-item__inner {
+            display: inline-block;
+        }
+        .weather-item__content {
+            font-family: $font-family-alt;
+            font-size: 36px;
+            line-height: 1;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+            margin-top: 13px;
+            .weather-item__content__img {
+                height: 28px;
+                margin-bottom: 6px;
+            }
+        }
+        .weather-item__footer {
+            opacity: 0.5;
+            font-size: 13.5px;
+            letter-spacing: 0.1px;
+            text-align: right;
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .weather {
+        padding: 30px 30px 0;
+        .weather-row {
+            display: flex;
+        }
+        .weather-item {
+            flex-basis: 33%;
+            margin-bottom: 40px;
+            .weather-item__header {
+                font-size: 20px;
+                letter-spacing: 0.2px;
+            }
+            .weather-item__content {
+                font-size: 40px;
+                .weather-item__content__img {
+                    height: 30px;
+                    margin-bottom: 6px;
+                }
+            }
+            .weather-item__footer {
+                font-size: 15px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .weather {
+        padding: 3vw 3vw 0;
+        .weather-row {
+            flex-basis: 40%;
+            justify-content: space-between;
+        }
+        .weather-item {
+            flex-basis: auto;
+            margin-bottom: 0;
+            .weather-item__header {
+                font-size: 110%;
+                letter-spacing: 0.01em;
+            }
+            .weather-item__content {
+                font-size: 210%;
+                margin-top: 0.4em;
+                .weather-item__content__img {
+                    height: 0.8em;
+                    margin-bottom: 0.1em;
+                }
+            }
+            .weather-item__footer {
+                font-size: 90%;
+                letter-spacing: 0.01em;
+            }
+        }
+    }
+}

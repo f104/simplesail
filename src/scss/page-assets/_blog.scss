@@ -518,6 +518,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     table {
         width: 100%;
         font-size: inherit;
+        color: $blue-dark;
         tr {
             td, th {
                 padding: 1rem;
@@ -536,6 +537,13 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
                 &:last-of-type {
                     border-right: none;
                 }
+                &.no-border {
+                    border-right-color: transparent;
+                    padding-right: 0;
+                }
+            }
+            &.border-top {
+                border-top: 5px solid #b0bec5;
             }
         }
         tbody tr:nth-child(odd) {
@@ -545,7 +553,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         }
     }
     > .scrollbar-outer {
-        margin: 0 -20px;
+        margin: 0 -20px 20px;
         > .scroll-element.scroll-x {
             width: 88%;
             left: 20px;
@@ -559,6 +567,24 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             margin-bottom: 10px;
             &:last-of-type {
                 margin-bottom: 0;
+            }
+        }
+    }
+    &.article-content_weather {
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+        .table-weather {
+            tr {
+                td, th {
+                    text-align: left;
+                    width: 12%;
+                    min-width: 95px;
+                    &:first-of-type {
+                        width: 22%;
+                        min-width: 145px;
+                    }
+                }
             }
         }
     }
@@ -679,13 +705,18 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
         > .scrollbar-outer {
-            margin: 0;
+            margin: 0 0 40px;
         }
         .article-content__footer {
             margin: 40px 40px 10px;
             .btn {
                 width: auto;
                 margin-bottom: 0;
+            }
+        }
+        &.article-content_weather {
+            h1, h2, h3, h4, h5, h6 {
+                text-align: left;
             }
         }
     }
@@ -728,6 +759,9 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
                 margin-right: 2rem;
                 float: left;
             }
+        }
+        > .scrollbar-outer {
+            margin: 0 0 3vw;
         }
         .article-content__footer {
             margin: 3vw 3vw 0;

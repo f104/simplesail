@@ -1,0 +1,265 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "weather"
+    })
+    <body>
+        @@include('./template/header.html')
+        <div class="content">
+            <section class="page-header page-header_article">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <ul class="page-header__title">
+                                    <li><h1 class="page-header__title__h1">Marina Muo - Simple Sail</h1></li>
+                                </ul>
+                                <div class="page-header__text">Current Conditions as of 16:10 Monday, October 30, 2017</div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
+                        <img src="img/articles/article/main.jpg"
+                             srcset="img/articles/article/main@2x.jpg 2x,
+                             img/articles/article/main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <section class="weather">
+                    <div class="weather-item">
+                        <div class="weather-item__header">Current Temprature:</div>
+                        <div class="weather-item__inner">
+                            <div class="weather-item__content">
+                                <img src="img/weather/temperature.svg" class="weather-item__content__img" alt="alt text">
+                                16.9 °С
+                            </div>
+                            <div class="weather-item__footer">Outside</div>
+                        </div>
+                        <div class="weather-item__inner">
+                            <div class="weather-item__content">
+                                <img src="img/weather/temperature.svg" class="weather-item__content__img" alt="alt text">
+                                19.5 °С
+                            </div>
+                            <div class="weather-item__footer">Inside</div>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <div class="weather-item__header">Current Humidity:</div>
+                        <div class="weather-item__inner">
+                            <div class="weather-item__content">
+                                <img src="img/weather/humidity.svg" class="weather-item__content__img" alt="alt text">
+                                32%
+                            </div>
+                            <div class="weather-item__footer">Outside</div>
+                        </div>
+                        <div class="weather-item__inner">
+                            <div class="weather-item__content">
+                                <img src="img/weather/humidity.svg" class="weather-item__content__img" alt="alt text">
+                                41%
+                            </div>
+                            <div class="weather-item__footer">Inside</div>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <div class="weather-item__header">Atmosphere Pressure:</div>
+                        <div class="weather-item__inner">
+                            <div class="weather-item__content">
+                                <img src="img/weather/pressure.svg" class="weather-item__content__img" alt="alt text">
+                                761.8 mm
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather-row">
+                        <div class="weather-item">
+                            <div class="weather-item__header">Wind Speed:</div>
+                            <div class="weather-item__inner">
+                                <div class="weather-item__content">
+                                    <img src="img/weather/wind-speed.svg" class="weather-item__content__img" alt="alt text">
+                                    15.6 m/s
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <div class="weather-item__header">Wind Direction:</div>
+                            <div class="weather-item__inner">
+                                <div class="weather-item__content">
+                                    <img src="img/weather/wind-direction.svg" class="weather-item__content__img" alt="alt text">
+                                    SE 128°
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-content article-content_weather">
+                    <h2>Detail Broadcast</h2>
+                    <div class="js-scrollbar scrollbar-outer">
+                        <table class="table-weather">
+                            <tbody>
+                                <tr>
+                                    <th class="article-content__th">Station Summary</th>
+                                    <th class="article-content__th">Current</th>
+                                    <th colspan="2" class="article-content__th">Today's Highs</th>
+                                    <th colspan="2" class="article-content__th">Today's Lows</th>
+                                </tr>
+                                <tr>
+                                    <td>Outside Temp</td>
+                                    <td class="text-nowrap">16.9 °C</td>
+                                    <td class="text-nowrap no-border">21.2 °C</td>
+                                    <td class="text-nowrap">16:21</td>
+                                    <td class="text-nowrap no-border">14.3 °C</td>
+                                    <td class="text-nowrap">16:21</td>
+                                </tr>
+                                <tr>
+                                    <td>Outside Humidity</td>
+                                    <td class="text-nowrap">32%</td>
+                                    <td class="text-nowrap no-border">32%</td>
+                                    <td class="text-nowrap">21:12</td>
+                                    <td class="text-nowrap no-border">32%</td>
+                                    <td class="text-nowrap">21:12</td>
+                                </tr>
+                                <tr class="border-top">
+                                    <td>Inside Temp</td>
+                                    <td class="text-nowrap">19.9 °C</td>
+                                    <td class="text-nowrap no-border">24.2 °C</td>
+                                    <td class="text-nowrap">16:21</td>
+                                    <td class="text-nowrap no-border">21.2 °C</td>
+                                    <td class="text-nowrap">16:21</td>
+                                </tr>
+                                <tr>
+                                    <td>Inside Humidity</td>
+                                    <td class="text-nowrap">30%</td>
+                                    <td class="text-nowrap no-border">43%</td>
+                                    <td class="text-nowrap">21:12</td>
+                                    <td class="text-nowrap no-border">23%</td>
+                                    <td class="text-nowrap">21:12</td>
+                                </tr>
+                                <tr class="border-top">
+                                    <td>Heat Index</td>
+                                    <td class="text-nowrap">19.9 °C</td>
+                                    <td class="text-nowrap no-border">19.9 °C</td>
+                                    <td class="text-nowrap">16:21</td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                </tr>
+                                <tr>
+                                    <td>Wind Chill</td>
+                                    <td class="text-nowrap">24.5 °C</td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                    <td class="text-nowrap no-border">41.1 °C</td>
+                                    <td class="text-nowrap">21:12</td>
+                                </tr>
+                                <tr>
+                                    <td>Dew Point</td>
+                                    <td class="text-nowrap">0 °C</td>
+                                    <td class="text-nowrap no-border">6.1 °C</td>
+                                    <td class="text-nowrap">21:12</td>
+                                    <td class="text-nowrap no-border">-5 °C</td>
+                                    <td class="text-nowrap">21:12</td>
+                                </tr>
+                                <tr class="border-top">
+                                    <td>Barometr</td>
+                                    <td class="text-nowrap">761.8mm</td>
+                                    <td class="text-nowrap no-border">761.8mm</td>
+                                    <td class="text-nowrap">16:21</td>
+                                    <td class="text-nowrap no-border">756.0mm</td>
+                                    <td class="text-nowrap"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Trend</td>
+                                    <td>Rising Slowly</td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                </tr>
+                                <tr class="border-top">
+                                    <td>Wind Speed</td>
+                                    <td class="text-nowrap">Calm</td>
+                                    <td class="text-nowrap no-border">15.6 m/s</td>
+                                    <td class="text-nowrap">04:27</td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                </tr>
+                                <tr>
+                                    <td>Wind Direction</td>
+                                    <td>SE 128°</td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                    <td class="text-nowrap no-border"></td>
+                                    <td class="text-nowrap"></td>
+                                </tr>
+                                <tr class="border-top">
+                                    <td>12 Hour Forecast</td>
+                                    <td colspan="5">Increasing clouds with little temperature change.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="js-scrollbar scrollbar-outer">
+                        <table class="table-weather">
+                            <tbody>
+                                <tr>
+                                    <th class="article-content__th">Wind</th>
+                                    <th class="article-content__th">2 Minute</th>
+                                    <th colspan="4" class="article-content__th">10 Minute</th>
+                                </tr>
+                                <tr>
+                                    <td>Average Wind Speed</td>
+                                    <td>Calm</td>
+                                    <td class="no-border">Calm</td>
+                                    <td class="no-border"></td>
+                                    <td class="no-border"></td>
+                                    <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                    <td>Wind Gust Speed</td>
+                                    <td></td>
+                                    <td colspan="4" class="text-nowrap">1.8 m/s</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="js-scrollbar scrollbar-outer">
+                        <table class="table-weather">
+                            <tbody>
+                                <tr>
+                                    <th class="article-content__th">Rain</th>
+                                    <th class="article-content__th">Rate</th>
+                                    <th class="article-content__th">Day</th>
+                                    <th class="article-content__th">Storm</th>
+                                    <th class="article-content__th">Month</th>
+                                    <th class="article-content__th">Year</th>
+                                </tr>
+                                <tr>
+                                    <td>Rain</td>
+                                    <td>1.2mm/Hour</td>
+                                    <td>0.4mm</td>
+                                    <td>0.4mm</td>
+                                    <td>231mm</td>
+                                    <td>532mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Hour Rain</td>
+                                    <td>0.4mm</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+    </body>
+    @@include('./template/foot.html')
+</html>
