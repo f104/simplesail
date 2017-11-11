@@ -12,8 +12,10 @@
     <link href="css/libs/video-js.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
     <body>
@@ -297,18 +299,18 @@
                             <form>
                                 <div class="radio-switch">
                                     <div class="radio-switch__item">
-                                        <input id="weekly" type="radio" name="radio" checked>
-                                        <label for="weekly">Weekly Charter                            </label>
+                                        <input id="weekly" value="weekly" type="radio" name="radio" checked class="js-datepicker__range-toggler">
+                                        <label for="weekly">Weekly Charter</label>
                                     </div>
                                     <div class="radio-switch__item">
-                                        <input id="daily" type="radio" name="radio">
+                                        <input id="daily" value="daily" type="radio" name="radio"  class="js-datepicker__range-toggler">
                                         <label for="daily">Daily Charter</label>
                                     </div>
                                 </div>
                                 <div class="input-group">
                                     <label for="date">Travel date:</label>
                                     <div class="input-group__datepicker">
-                                        <input name="date" id="date" class="js-datepicker">
+                                        <input name="date" id="date" class="js-datepicker js-datepicker_range">
                                         <i class="icon icon-calendar"></i>
                                     </div>
                                 </div>
@@ -691,8 +693,8 @@
 <script src="js/libs/jquery.formstyler.min.js" type="text/javascript"></script>
 <script src="js/libs/slick.min.js" type="text/javascript"></script>
 <script src="js/libs/jquery.scrollbar.min.js" type="text/javascript"></script>
-<script src="js/libs/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/libs/jquery.fancybox.min.js" type="text/javascript"></script>
 <script src="js/libs/jquery.easytabs.min.js" type="text/javascript"></script>
+<script src="js/libs/datepicker.min.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
 </html>

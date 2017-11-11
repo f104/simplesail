@@ -14,7 +14,7 @@ jQuery(function () {
         initSlider();
         initSelect();
         initMenu();
-//        initDatepicker();
+        initDatepicker();
         initTabs();
         initOther();
     });
@@ -169,15 +169,47 @@ jQuery(function () {
         }
     }
 
+    function renderDatepickerCell(date, cellType, disabledDays) {
+        if (typeof disabledDays === 'undefined') {
+            disabledDays = [];
+        }
+        if (cellType == 'day') {
+            var day = date.getDay(),
+                    isDisabled = disabledDays.indexOf(day) != -1;
+
+            return {
+                disabled: isDisabled
+            }
+        }
+    }
+
     function initDatepicker() {
-        $.datepicker.setDefaults({
-//            regional: 'ru',
-            firstDay: 1,
-            dateFormat: "dd-mm-yyyy",
-            minDate: new Date()
-        });
+        var disabledDays = [0, 1, 2, 3, 4, 5];
         $('.js-datepicker').datepicker({
-            numberOfMonths: 2
+            minDate: new Date(),
+            range: true,
+            multipleDatesSeparator: ' - ',
+            onRenderCell: function (date, cellType) {
+                return renderDatepickerCell(date, cellType, disabledDays);
+            }
+        });
+        $('.js-datepicker_range').parents('form').find('.js-datepicker__range-toggler').on('change', function () {
+            var datepicker = $(this).parents('form').find('.js-datepicker_range')[0];
+            var datepickerData = $(datepicker).data('datepicker');
+            datepickerData.clear();
+            if ($(this).val() == 'daily') {
+                datepickerData.update({
+                    onRenderCell: function (date, cellType) {
+                        return renderDatepickerCell(date, cellType)
+                    }
+                });
+            } else {
+                datepickerData.update({
+                    onRenderCell: function (date, cellType) {
+                        return renderDatepickerCell(date, cellType, disabledDays)
+                    }
+                });
+            }
         });
     }
 
@@ -210,9 +242,9 @@ jQuery(function () {
                     $(this).find('.js-slider_gallery').slick('slickGoTo', slide);
                 })
                 .find('.js-slider_gallery').on('afterChange', function (slick, currentSlide) {
-                    var tab = currentSlide.$slides[currentSlide.currentSlide].dataset.tab;
-                    $(this).parents('.js-tabs').easytabs('select', tab)
-                });
+            var tab = currentSlide.$slides[currentSlide.currentSlide].dataset.tab;
+            $(this).parents('.js-tabs').easytabs('select', tab)
+        });
         // nav tabs by buttons
         $('.js-tabs-button').on('click', function (e) {
             e.preventDefault();

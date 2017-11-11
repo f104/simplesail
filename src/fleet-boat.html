@@ -164,18 +164,18 @@
                             <form>
                                 <div class="radio-switch">
                                     <div class="radio-switch__item">
-                                        <input id="weekly" type="radio" name="radio" checked>
-                                        <label for="weekly">Weekly Charter                            </label>
+                                        <input id="weekly" value="weekly" type="radio" name="radio" checked class="js-datepicker__range-toggler">
+                                        <label for="weekly">Weekly Charter</label>
                                     </div>
                                     <div class="radio-switch__item">
-                                        <input id="daily" type="radio" name="radio">
+                                        <input id="daily" value="daily" type="radio" name="radio"  class="js-datepicker__range-toggler">
                                         <label for="daily">Daily Charter</label>
                                     </div>
                                 </div>
                                 <div class="input-group">
                                     <label for="date">Travel date:</label>
                                     <div class="input-group__datepicker">
-                                        <input name="date" id="date" class="js-datepicker">
+                                        <input name="date" id="date" class="js-datepicker js-datepicker_range">
                                         <i class="icon icon-calendar"></i>
                                     </div>
                                 </div>
