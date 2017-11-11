@@ -186,11 +186,13 @@
     .fleet-item__inner {
         min-height: 140px;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
     }
     .fleet-item__title {
         font-size: 20px;
         margin-bottom: 12px;
-        padding-right: 20px;
+        margin-right: 20px;
         position: relative;
         @include transition();
         .fleet-item__title__underline {
@@ -199,7 +201,8 @@
         }
         &:after {
             position: absolute;
-            right: 0;
+            right: -20px;
+            top: 0;
             content: '>';
             font-size: 22.2px;
             font-weight: 700;
@@ -207,13 +210,34 @@
     }
     .fleet-item__text {
         font-size: 15px;
+        .fleet-item__text__list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+                display: inline-block;
+                &:after {
+                    content: ' |';
+                }
+                &:last-of-type {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
     }
     &:hover {
         .fleet-item__title {
             /*color: $primary;*/
-/*            .fleet-item__title__underline:before {
-                transform: scaleX(1);
-            }*/
+            /*            .fleet-item__title__underline:before {
+                            transform: scaleX(1);
+                        }*/
+        }
+    }
+    &.fleet-item_text-down {
+        .fleet-item__title {
+            flex: 1;
         }
     }
 }

@@ -1,0 +1,110 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "downloads"
+    })
+    <body>
+        @@include('./template/header.html')
+        <div class="content">
+            <section class="page-header page-header_article">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <ul class="page-header__title">
+                                    <li><h1 class="page-header__title__h1">Downloads</h1></li>
+                                </ul>
+                                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options. </div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
+                        <img src="img/articles/article/main.jpg"
+                             srcset="img/articles/article/main@2x.jpg 2x,
+                             img/articles/article/main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                    </div>
+                </div>
+            </section>
+
+            <div class="container js-tabs">
+
+                <ul class="articles-tabs js-inline-list">
+                    <li><a href="#part1">SimpleSail</a></li>
+                    <li><a href="#part2">Yacht Owners Programm</a></li>
+                    <li><a href="#part3">From Vendors</a></li>
+                    <li><a href="#part4">To SimpleSail Partners</a></li>
+                </ul>
+
+                <div class="downloads">
+                    <div id="part1" class="fleet-list">
+                        <div class="row fleet-list__inner">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "7",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "1",
+                                "title": "SimpleSail Yacht Charter"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "2",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "6",
+                                "title": "SimpleSail Yacht Charter"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "7",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "1",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "2",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                @@include('./template/chunks/download-item.html', {
+                                "img": "6",
+                                "title": "SimpleSail Yacht Charter & Marina Muo price"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div id="part2" class="fleet-list">
+                        tab 2
+                    </div>
+                    <div id="part3" class="fleet-list">
+                        tab 3
+                    </div>
+                    <div id="part4" class="fleet-list">
+                        tab 4
+                    </div>
+                </div>
+
+                @@include('./template/promo-icon.html')
+
+            </div>
+
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+    </body>
+    @@include('./template/foot.html')
+</html>
