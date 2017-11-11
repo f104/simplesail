@@ -1,0 +1,60 @@
+<html lang="en">
+    @@include('./template/head.html', {
+    "name": "partners"
+    })
+    <body>
+        @@include('./template/header.html')
+        <div class="content">
+            <section class="page-header page-header_article">
+                <div class="container">
+                    <div class="page-header__wrapper">
+                        <div class="page-header__inner">
+                            <div class="page-header__outer">
+                                <ul class="page-header__title">
+                                    <li><h1 class="page-header__title__h1">Partners</h1></li>
+                                </ul>
+                                <div class="page-header__text">Main Fleet Page Description RU choices and numerous additional options, Beneteau’s Oceanis 38 really can be built to a buyer’s individual preferences, as this choices and numerous additional options. </div>
+                                <a href="index.html" class="page-header__back"><i class="icon icon-back"></i></a>
+                            </div>
+                        </div>
+                        <img src="img/articles/article/main.jpg"
+                             srcset="img/articles/article/main@2x.jpg 2x,
+                             img/articles/article/main@3x.jpg 3x"
+                             class="page-header__img" alt="alt text">
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <section class="partners">
+                    <ul class="partners-list">
+                        @@include('./template/chunks/partners-item.html', {"img": 1})
+                        @@include('./template/chunks/partners-item.html', {"img": 2})
+                        @@include('./template/chunks/partners-item.html', {"img": 3})
+                        @@include('./template/chunks/partners-item.html', {"img": 4})
+                        @@include('./template/chunks/partners-item.html', {"img": 5})
+                        @@include('./template/chunks/partners-item.html', {"img": 6})
+                        @@include('./template/chunks/partners-item.html', {"img": 7})
+                        @@include('./template/chunks/partners-item.html', {"img": 8})
+                        @@include('./template/chunks/partners-item.html', {"img": 9})
+                        @@include('./template/chunks/partners-item.html', {"img": 10})
+                        @@include('./template/chunks/partners-item.html', {"img": 1})
+                        @@include('./template/chunks/partners-item.html', {"img": 2})
+                        @@include('./template/chunks/partners-item.html', {"img": 3})
+                        @@include('./template/chunks/partners-item.html', {"img": 4})
+                        @@include('./template/chunks/partners-item.html', {"img": 5})
+                        @@include('./template/chunks/partners-item.html', {"img": 6})
+                    </ul>
+                </section>
+                
+                @@include('./template/promo-icon.html')
+
+            </div>
+
+            @@include('./template/footer.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+    </body>
+    @@include('./template/foot.html')
+</html>
