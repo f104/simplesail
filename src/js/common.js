@@ -136,38 +136,46 @@ jQuery(function () {
         $('.js-menu-overlay').on('click', function (e) {
             $('.js-menu-toggler').click();
         });
-        if (window.innerWidth >= appConfig.breakpoint.lg) {
-            var $header = $('header');
-            var headerHeight = $header.outerHeight();
-            var q = 2;
-            var action = 0;
-            $(window).on('scroll', function () {
-                if ($(this).scrollTop() > headerHeight * q) {
-                    if (action == 1) {
-                        return;
-                    }
-                    action = 1;
-                    $header.stop();
-                    $('body').css({'padding-top': headerHeight});
-                    $header.css({'top': -headerHeight})
-                            .addClass('header_fixed')
-                            .animate({'top': 0}, 400);
-                } else {
-                    if (action == 2) {
-                        return;
-                    }
-                    action = 2;
-                    $header.animate({'top': -headerHeight}, "fast", function () {
-                        $header.css({'top': 0});
-                        $('body').css({'padding-top': 0});
-                        $header.removeClass('header_fixed');
-                    });
+        var pinHeader = function () {
+            if ($(this).scrollTop() > headerHeight * q) {
+                if (action == 1) {
+                    return;
                 }
-            });
-            $(window).on('resize', function () {
-                headerHeight = $header.outerHeight();
-            });
+                action = 1;
+                $header.stop();
+                $('body').css({'padding-top': headerHeight});
+                $header.css({'top': -headerHeight})
+                        .addClass('header_fixed')
+                        .animate({'top': 0}, 400);
+            } else {
+                if (action == 2) {
+                    return;
+                }
+                action = 2;
+                $header.animate({'top': -headerHeight}, "fast", function () {
+                    $header.css({'top': 0});
+                    $('body').css({'padding-top': 0});
+                    $header.removeClass('header_fixed');
+                });
+            }
         }
+        var $header = $('header');
+        var headerHeight = $header.outerHeight();
+        var q = 2;
+        var action = 0;
+        if (window.innerWidth >= appConfig.breakpoint.lg) {
+            $(window).on('scroll', pinHeader);
+        }
+        $(window).on('resize', function () {
+            if (window.innerWidth >= appConfig.breakpoint.lg) {
+                headerHeight = $header.outerHeight();
+                $(window).on('scroll', pinHeader);
+            } else {
+                $(window).off('scroll', pinHeader);
+                $('body').removeAttr('style');
+                $header.removeClass('header_fixed');
+            }
+        });
     }
 
     function renderDatepickerCell(date, cellType, disabledDays) {
