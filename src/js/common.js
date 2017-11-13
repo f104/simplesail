@@ -238,7 +238,7 @@ jQuery(function () {
                     var tab = $clicked.attr('href');
                     $(this).find('> ul > li a[href="' + tab + '"]').parent('li').addClass('active');
                     // move slider
-                    console.log($clicked);
+//                    console.log($clicked);
                     var slide = $clicked.data('slide');
                     $(this).find('.js-slider_gallery').slick('slickGoTo', slide);
                 })
@@ -258,7 +258,7 @@ jQuery(function () {
                     });
         });
     }
-    
+
     function initRadioSwitch() {
         $('.js-radio-switch input').on('click', function () {
             var $parent = $(this).parent('.js-radio-switch__item');
@@ -303,6 +303,18 @@ jQuery(function () {
             e.preventDefault();
             var href = $(this).data('link');
             window.location = href;
+        });
+        // scroll to anchor
+        $('.js-anchor').on('click', function (e) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            var offset = $(target).offset().top - parseFloat($('body').css('padding-top'));
+            $('html, body').animate({scrollTop: offset}, 500, function () {
+                if ($('header').hasClass('header_fixed')) {
+                    offset = $(target).offset().top - parseFloat($('body').css('padding-top')) + $('header').outerHeight();
+                    $('html, body').animate({scrollTop: offset}, 200);
+                }
+            });
         });
     }
 
