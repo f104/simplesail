@@ -295,6 +295,11 @@
                 }
             }
         }
+        &.active {
+            label span {
+                border-bottom: 1px solid;
+            }
+        }
     }
 }
 @include media-breakpoint-up(lg) {

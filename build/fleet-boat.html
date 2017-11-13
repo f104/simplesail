@@ -297,14 +297,14 @@
                                 <span class="boat-charter__title__name">Fountaine Pajot Lucia 40</span>
                             </h3>
                             <form>
-                                <div class="radio-switch">
-                                    <div class="radio-switch__item">
+                                <div class="radio-switch js-radio-switch">
+                                    <div class="radio-switch__item js-radio-switch__item active">
                                         <input id="weekly" value="weekly" type="radio" name="radio" checked class="js-datepicker__range-toggler">
-                                        <label for="weekly">Weekly Charter</label>
+                                        <label for="weekly"><span>Weekly Charter</span></label>
                                     </div>
-                                    <div class="radio-switch__item">
-                                        <input id="daily" value="daily" type="radio" name="radio"  class="js-datepicker__range-toggler">
-                                        <label for="daily">Daily Charter</label>
+                                    <div class="radio-switch__item js-radio-switch__item">
+                                        <input id="daily" value="daily" type="radio" name="radio" class="js-datepicker__range-toggler">
+                                        <label for="daily"><span>Daily Charter</span></label>
                                     </div>
                                 </div>
                                 <div class="input-group">
@@ -324,7 +324,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="phone">Or phone:</label>
-                                    <input name="phone" id="phone" placeholder="+ 7 (999) 999-99-99">
+                                    <input name="phone" id="phone">
                                 </div>
                                 <div class="input-group">
                                     <label for="comment">Comment (promo-code):</label>

@@ -16,6 +16,7 @@ jQuery(function () {
         initMenu();
         initDatepicker();
         initTabs();
+        initRadioSwitch();
         initOther();
     });
 
@@ -90,7 +91,7 @@ jQuery(function () {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true,
-            centerPadding: '12%',
+            centerPadding: '10vw',
             focusOnSelect: true,
             responsive: [
                 {
@@ -103,7 +104,7 @@ jQuery(function () {
                     breakpoint: appConfig.breakpoint.md,
                     settings: {
                         centerPadding: '50px',
-                        arrows: false
+//                        arrows: false
                     }
                 }
             ]
@@ -255,6 +256,18 @@ jQuery(function () {
                         var offset = $(this).offset().top - parseFloat($('body').css('padding-top'));
                         $('html, body').animate({scrollTop: offset}, 500);
                     });
+        });
+    }
+    
+    function initRadioSwitch() {
+        $('.js-radio-switch input').on('click', function () {
+            var $parent = $(this).parent('.js-radio-switch__item');
+            if ($parent.hasClass('active')) {
+                $parent.siblings('.js-radio-switch__item').find('input').click();
+            } else {
+                $(this).parents('.js-radio-switch').find('.active').removeClass('active');
+                $parent.addClass('active');
+            }
         });
     }
 
