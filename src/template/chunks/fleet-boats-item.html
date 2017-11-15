@@ -21,18 +21,22 @@
                     </a>
                 </h3>
                 <div class="boat-info__subtitle">Boat Name: <strong>Mawimbi</strong></div>
-                <ul class="boat-info__data">
-                    <li><strong>3</strong> Cabins</li>
-                    <li><strong>10 (8+2) / 2</strong> Berths/Toilets-Showers</li>
-                    <li><strong>11.50 m</strong> (38ft) Lenght Overall</li>
-                    <li><strong>3.99 m</strong> Hull Beam, <strong>2.09</strong> Draft</li>
-                    <li>Year of built <strong>2015</strong></li>
-                    <li>Base — <strong>Muo, ME</strong></li>
+                <ul class="boat-info__data @@if (discount == 1) {boat-info__data_padding-right}">
+                    <li>Cabins: <strong class="text-nowrap">3</strong></li>
+                    <li>Berths/Toilets-Showers: <strong class="text-nowrap">10 (8+2) / 2</strong></li>
+                    <li>Lenght Overall: <strong class="text-nowrap">11.50 m</strong> (38ft)</li>
+                    <li>Hull Beam: <strong class="text-nowrap">3.99 m</strong></li>
+                    <li>Draft: <strong class="text-nowrap">2.09</strong></li>
+                    <li>Year of built: <strong class="text-nowrap">2015</strong></li>
+                    <li>Base: <strong class="text-nowrap">Muo, ME</strong></li>
+                    @@if (text != '') {
+                    <li>@@text</li>
+                    }
                 </ul>
             </div>
             <div class="boat-info__charter">
                 <span class="boat-info__charter__text">One week charter from:</span>
-                <span class="boat-info__charter__price">1730€</span>
+                <span class="boat-info__charter__price">1730 €</span>
             </div>
             @@if (discount == 1) {
             <div class="boat-info__discount">

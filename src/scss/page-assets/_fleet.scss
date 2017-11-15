@@ -351,12 +351,15 @@
     }
     .boat-info__data {
         list-style: none;
-        padding: 0 100px 0 0;
         margin: 0;
+        padding: 0;
         font-size: 12px;
         line-height: 1.5;
         letter-spacing: 0.1px;
         color: $blue-dark;
+        &.boat-info__data_padding-right {
+            padding-right: 100px;
+        }
     }
     .boat-info__icons__list {
         @include list-inline(4px);
@@ -370,6 +373,7 @@
         .boat-info__charter__text {
             flex: 1;
             font-size: 14px;
+            white-space: nowrap;
             letter-spacing: 0.1px;
             color: $blue-dark;
         }
@@ -377,6 +381,7 @@
             flex-basis: 72px;
             font-family: $font-family-alt;
             font-size: 24px;
+            white-space: nowrap;
             letter-spacing: 0.3px;
             color: #e2613a;
         }
@@ -392,8 +397,8 @@
         width: 92px;
         .boat-info__discount__title {
             font-family: $font-family-alt;
-            font-size: 19px;
-            line-height: 19px;
+            font-size: 24px;
+            line-height: 24px;
             letter-spacing: 0.2px;
             margin-bottom: 8.8px;
         }
@@ -486,9 +491,11 @@
             margin-bottom: 1em;
         }
         .boat-info__data {
-            padding: 0 9em 0 0;
             font-size: 90%;
             letter-spacing: 0.02em;
+            &.boat-info__data_padding-right {
+                padding-right: 9em;
+            }
         }
         .boat-info__icons__list {
             @include list-inline(0.2em);
@@ -509,12 +516,12 @@
         }
         .boat-info__discount {
             padding: 1em;
-            width: 8.2em;
+            width: 8.5em;
             .boat-info__discount__title {
-                font-size: 165%;
+                font-size: 200%;
                 line-height: 1em;
                 letter-spacing: 0.02em;
-                margin-bottom: 0.6em;
+                margin-bottom: 0.4em;
             }
             .boat-info__discount__text {
                 font-size: 100%;
@@ -534,7 +541,6 @@
                 margin-bottom: 2em;
             }
             .boat-info__data {
-                padding: 0 8em 0 0;
                 font-size: 100%;
                 letter-spacing: 0.02em;
                 line-height: 1.6;
@@ -577,28 +583,34 @@
             dd {
                 padding-left: 150px;
                 margin-bottom: 8px;
-                &:last-of-type {
-                    margin-bottom: 0;
+                /*                &:last-of-type {
+                                    margin-bottom: 0;
+                                }*/
+            }
+            &.last {
+                dd {
+                    &:last-of-type {
+                        margin-bottom: 40px;
+                    }
                 }
             }
-
         }
         &.boat-data__list_lg {
-            margin: 40px 0;
+            margin-bottom: 0;
             dt {
                 margin-bottom: 5px;
             }
             dd {
                 margin-bottom: 17px;
                 &:last-of-type {
-                    margin-bottom: 0;
+                    margin-bottom: 40px;
                 }
             }
 
         }
     }
     .boat-data__p {
-        opacity: 0.9;
+        /*opacity: 0.9;*/
         font-size: 14px;
         letter-spacing: 0.2px;
         margin-bottom: 7px;
@@ -648,13 +660,20 @@
                 dd {
                     padding-left: 11.5em;
                     margin-bottom: 0.3em;
+                    &:last-of-type {
+                        margin-bottom: 5em;
+                    }
                 }
                 &.last {
                     margin-left: 2em;
+                    dd {
+                        &:last-of-type {
+                            margin-bottom: 5em;
+                        }
+                    }
                 }
             }
             &.boat-data__list_lg {
-                margin: 5em 0;
                 dt {
                     clear: left;
                     float: left;
@@ -662,6 +681,9 @@
                 dd {
                     padding-left: 11.5em;
                     margin-bottom: 1.8em;
+                    &:last-of-type {
+                        margin-bottom: 5em;
+                    }
                 }
             }
         }
@@ -822,6 +844,7 @@
         }
         .fleet-boats-item__inner {
             display: flex;
+            flex-basis: 33%;
         }
     }
     .fleet-boats-text {

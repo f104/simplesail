@@ -159,6 +159,9 @@ header, footer {
 .video-poster_hidden {
     opacity: 0;
 }
+.video-js button {
+    outline: none !important;
+}
 
 .scrollbar-outer {
     > .scroll-element {

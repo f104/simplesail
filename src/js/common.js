@@ -110,6 +110,11 @@ jQuery(function () {
                 }
             ]
         });
+        $('.slick-dots').each(function(){
+            if ($(this).find('li').length == 1) {
+                $(this).hide();
+            }
+        });
     }
 
     function initSelect() {
@@ -171,6 +176,8 @@ jQuery(function () {
             if (window.innerWidth >= appConfig.breakpoint.lg) {
                 headerHeight = $header.outerHeight();
                 $(window).on('scroll', pinHeader);
+                $('.js-menu').removeClass('mobile-nav_active');
+                $('.js-menu-overlay').hide();
             } else {
                 $(window).off('scroll', pinHeader);
                 $('body').removeAttr('style');

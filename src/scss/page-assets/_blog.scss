@@ -509,11 +509,16 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     img {
         display: block;
         width: 100%;
-        margin: 0 auto 1.5rem auto;
+        margin: 0 auto;
     }
     .article-content__img {
-        margin-left: -20px;
-        margin-right: -20px;
+        &.article-content__img_full {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+    .video-js {
+        margin-bottom: 1.5rem;
     }
     table {
         width: 100%;
@@ -609,8 +614,8 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     .articles-related__header {
         padding: 15px 20px;
         background-color: $blue-dark;
-        a {
-            font-size: 18px;
+        .articles-related__header__link {
+            font-size: 16px;
             letter-spacing: 0.1px;
             color: $white;
             display: block;
@@ -622,8 +627,12 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
                 right: 0;
                 top: 0
             }
-            .underline-anime__line {
-                border-color: $white;
+            .articles-related__header__link__line {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include link-underline($white);
             }
         }
     }
@@ -698,8 +707,10 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
         .article-content__img {
-            margin-left: -30px;
-            margin-right: -30px;
+            &.article-content__img_full {
+                margin-left: -30px;
+                margin-right: -30px;
+            }
             &.article-content__img_left {
                 margin-left: 0;
                 margin-right: 2rem;
@@ -722,9 +733,9 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
     }
-/*    .articles-map {
-        height: 432px;
-    }*/
+    /*    .articles-map {
+            height: 432px;
+        }*/
     .articles-related {
         .articles-related__wrapper {
             display: flex;
@@ -760,8 +771,10 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
         .article-content__img {
-            margin-left: -3vw;
-            margin-right: -3vw;
+            &.article-content__img_full {
+                margin-left: -3vw;
+                margin-right: -3vw;
+            }
             &.article-content__img_left {
                 margin-left: 0;
                 margin-right: 2rem;
@@ -781,8 +794,8 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     .articles-related {
         .articles-related__header {
             padding: 1em 2em;
-            a {
-                font-size: 155%;
+            .articles-related__header__link {
+                font-size: 135%;
                 letter-spacing: 0.01em;
                 padding-right: 2em;
             }
