@@ -17,6 +17,7 @@ jQuery(function () {
         initDatepicker();
         initTabs();
         initRadioSwitch();
+        initScrollbar();
         initOther();
     });
 
@@ -279,6 +280,14 @@ jQuery(function () {
         });
     }
 
+    // custom scrollbar
+    function initScrollbar() {
+        $('.article-content table').wrap('<div class="js-scrollbar scrollbar-outer"></div>');
+        $('.js-scrollbar').scrollbar({
+            disableBodyScroll: true
+        });
+    }
+
     function initOther() {
         $('.marina-item__img-wrapper').hover(
                 function () {
@@ -302,10 +311,6 @@ jQuery(function () {
                 }
 
         );
-        // custom scrollbar
-        $('.js-scrollbar').scrollbar({
-            disableBodyScroll: true
-        });
         // link inside link
         $('.js-link').on('click', function (e) {
             e.preventDefault();
