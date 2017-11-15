@@ -177,6 +177,9 @@
     display: block;
     background-color: $white;
     color: #4c5a62;
+    .fleet-item__link {
+        display: block;
+    }
     .fleet-item__img-wrapper {
         overflow: hidden;
     }
