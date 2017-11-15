@@ -324,6 +324,10 @@ jQuery(function () {
                 }
             });
         });
+        // antispam
+        setTimeout(function () {
+            $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
+        }, 5000);
     }
 
 });

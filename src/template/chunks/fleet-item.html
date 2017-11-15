@@ -1,16 +1,21 @@
-<a href="fleet-boats.html" class="fleet-item">
-    <div class="fleet-item__img-wrapper">
-        <img src="img/fleet/@@img.jpg"
-             srcset="img/fleet/@@img@2x.jpg 2x,
-             img/fleet/@@img@3x.jpg 3x"
-             class="fleet-item__img" alt="alt text">
-    </div>
-    <div class="fleet-item__inner">
-        <div class="fleet-item__title">
-            <span class="fleet-item__title__underline">@@title</span>
+<div class="fleet-item underline-anime">
+    <a href="fleet-boats.html" class="underline-anime__toggler">
+        <div class="fleet-item__img-wrapper">
+            <img src="img/fleet/@@img.jpg"
+                 srcset="img/fleet/@@img@2x.jpg 2x,
+                 img/fleet/@@img@3x.jpg 3x"
+                 class="fleet-item__img" alt="alt text">
         </div>
-        <div class="fleet-item__text">
-            @@text
+        <div class="fleet-item__inner">
+            <div class="fleet-item__title">
+                <span class="underline-anime__hidden">
+                    <span class="underline-anime__line">@@title</span>
+                </span>
+                <span class="underline-anime__visible">@@title</span>
+            </div>
+            <div class="fleet-item__text">
+                @@text
+            </div>
         </div>
-    </div>
-</a>
+    </a>
+</div>
