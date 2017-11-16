@@ -22,7 +22,13 @@
         }
     }
 }
+
 .header_fixed {
+    .top-nav {
+        display: none;
+    }
+    // старый вариант контактов над логотипом
+    /*
     .top-nav {
         position: absolute;
         background: transparent;
@@ -49,7 +55,16 @@
             color: #455a64;
         }
     }
+    */
+    .main-nav {
+        .main-nav__top-menu {
+            .main-nav__top-menu__contacts {
+                visibility: visible;
+            }
+        }
+    }
 }
+
 @include media-breakpoint-up(lg) {
     .top-nav {
         display: block;
@@ -164,16 +179,61 @@
     }
     .main-nav__top-menu {
         display: none;
-        @include list-inline(23px);
+        white-space: nowrap;
         text-align: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         margin-bottom: 20px;
-        a {
-            @include link-underline($primary);
+        li {
+            margin-right: 23px;
+            overflow: hidden;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        .main-nav__top-menu__link {
             @include transition();
             font-size: 16px;
             letter-spacing: 0.3px;
+            .main-nav__top-menu__underline {
+                @include link-underline($primary);                
+            }
             &:hover {
                 color: $primary;
+            }
+        }
+        .main-nav__top-menu__contacts {
+            visibility: hidden;
+            .main-nav__top-menu__contacts__span {
+                color: $blue-dark;
+                margin-right: 0.3em;
+                &.main-nav__top-menu__contacts__span_rounded {
+                    font-family: $font-family-alt;
+                    font-size: 80%;
+                    letter-spacing: 0.02em;
+                    line-height: 2.3em;
+                    width: 2.3em;
+                    margin-top: -0.3em;
+                    background-color: rgba($blue-dark, 0.1);
+                    border-radius: 50%;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            .main-nav__top-menu__underline {
+                &:before {
+                    content: none;
+                }
+            }
+            .main-nav__top-menu__link {
+                &:hover {
+                    color: inherit;
+                }
+            }
+            .main-nav__top-menu__link_contacts {
+                font-family: $font-family-alt;
+                font-size: 70%;
             }
         }
     }
@@ -302,11 +362,12 @@
             padding: 1.3em 0;
         }
         .main-nav__top-menu {
-            display: block;
+            display: flex;
+            justify-content: flex-end;
             margin-bottom: .8em;
             li {
                 margin-right: 1em;
-                a {
+                .main-nav__top-menu__link {
                     font-size: 83%;
                     letter-spacing: 0.02em;
                 }
@@ -348,9 +409,9 @@
                 height: auto;
                 padding: 0.9em 0;
             }
-            .main-nav__logo .main-nav__logo-img {
+/*            .main-nav__logo .main-nav__logo-img {
                 height: 2.1em;
-            }
+            }*/
         }
     }
 }

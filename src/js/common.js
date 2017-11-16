@@ -110,7 +110,7 @@ jQuery(function () {
                 }
             ]
         });
-        $('.slick-dots').each(function(){
+        $('.slick-dots').each(function () {
             if ($(this).find('li').length == 1) {
                 $(this).hide();
             }
@@ -142,6 +142,43 @@ jQuery(function () {
         $('.js-menu-overlay').on('click', function (e) {
             $('.js-menu-toggler').click();
         });
+
+        // анимация контактов в шапке
+        $('.main-nav__top-menu__contacts').on('topMenuAnimate', function () {
+            var $this = $(this);
+            $this.width('auto');
+            var width = $this.outerWidth();
+            var mWidth = $this.find('.main-nav__top-menu__contacts__span').outerWidth();
+            var action = 0;
+            $(this).width(mWidth);
+            $(this).hover(
+                    function () {
+                        if (action == 1)
+                            return;
+                        action = 1;
+                        $this.stop();
+                        $this.animate({'width': width}, 200, function () {
+                            action = false;
+                        });
+                    },
+                    function () {
+                        if (action == 2)
+                            return;
+                        action = 2;
+                        $this.stop();
+                        $this.animate({'width': mWidth}, 200, function () {
+                            action = false;
+                        });
+                    }
+            );
+        });
+        $(window).on('load', function () {
+            $('.main-nav__top-menu__contacts').trigger('topMenuAnimate');
+        });
+        $(window).on('resize', function () {
+            $('.main-nav__top-menu__contacts').trigger('topMenuAnimate');
+        });
+
         var pinHeader = function () {
             if ($(this).scrollTop() > headerHeight * q) {
                 if (action == 1) {
