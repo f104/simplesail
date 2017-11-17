@@ -377,6 +377,10 @@ jQuery(function () {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
         }, 5000);
+        // footer fu$%
+        $(window).on('resize', function(){
+            $('.footer-protection__img').width($('.footer-protection__img img').width());            
+        });
     }
 
 });
