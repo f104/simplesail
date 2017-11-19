@@ -233,7 +233,13 @@
             }
             .main-nav__top-menu__link_contacts {
                 font-family: $font-family-alt;
-                font-size: 70%;
+                font-size: 65%;
+                .main-nav__top-menu__underline {
+                    border-bottom: 1px dashed rgba($blue-dark, 0.8);
+                }
+            }
+            .main-nav__top-menu__link_fb {
+                font-size: 75%;
             }
         }
     }
