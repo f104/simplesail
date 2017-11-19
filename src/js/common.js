@@ -56,7 +56,7 @@ jQuery(function () {
         $('.js-slider_index').slick({
             dots: true,
             infinite: true,
-            autoplay: false,
+            autoplay: true,
             autoplaySpees: appConfig.sliderSpeeed,
             speed: 500,
             slidesToShow: 1,
