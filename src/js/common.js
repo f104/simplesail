@@ -18,6 +18,7 @@ jQuery(function () {
         initTabs();
         initRadioSwitch();
         initScrollbar();
+        initAnchor();
         initOther();
     });
 
@@ -118,16 +119,28 @@ jQuery(function () {
     }
 
     function initSelect() {
-        $('select').styler({
-            selectSmartPositioning: true,
+        $('.js-select').styler({
+//            selectVisibleOptions: 5,
+//            onFormStyled: function () {
+//                $('.jq-selectbox__dropdown')
+//                        .find('ul')
+//                        .wrap('<div class="scrollbar-outer" />');
+//            },
 //            onSelectOpened: function () {
-//                if ($(this).find('select').hasClass('top')) {
-//                    var selectTop = $(this).find('.jq-selectbox__dropdown').height();
-//                    $(this).find('.jq-selectbox__dropdown').css('top', -selectTop + 'px');
-//                }
+//                var _ul = $(this).find('.jq-selectbox__dropdown ul');
+//                var height = _ul.height();
+//                var _srollPane = $(this).find('.jq-selectbox__dropdown .scrollbar-outer');
+//                ;
+//                _srollPane.height(height);
+//                _ul.css('max-height', 'none');
+//                _srollPane.scrollbar();
+////                $(this).find(".jq-selectbox__dropdown ul").scrollbar();
 //            }
         });
-
+////        $('.article-content table').wrap('<div class="js-scrollbar scrollbar-outer"></div>');
+////        $('.js-scrollbar').scrollbar({
+////            disableBodyScroll: true
+////        });
     }
 
     function initMenu() {
@@ -332,6 +345,39 @@ jQuery(function () {
         });
     }
 
+    function initAnchor() {
+        var $root = $('html, body'),
+                $body = $('body'),
+                $header = $('header');
+        var scrollTo = function(href) {
+            var $target = $(href);
+            if ($target.length == 0) {
+                $target = $('a[name=' + href.substr(1) + ']');
+            }
+            if ($target.length == 0) {
+                return;
+            }
+
+            var offset = $target.offset().top - parseFloat($body.css('padding-top'));
+            $root.animate({scrollTop: offset}, 500, function () {
+                if ($header.hasClass('header_fixed')) {
+                    offset = $target.offset().top - $header.outerHeight();
+                    $root.animate({scrollTop: offset}, 200);
+                }
+//                window.location.hash = href;
+//                window.history.pushState({jsAnchor: window.location.pathname + href}, '', window.location.pathname + '#123');
+            });
+        }
+        $('.js-anchor').on('click', function (e) {
+            e.preventDefault();
+            scrollTo($(this).attr('href'));
+        });
+        window.onload = function() {
+            if (window.location.hash != '') {
+                scrollTo(window.location.hash);
+            }
+        }
+    }
     function initOther() {
         $('.marina-item__img-wrapper').hover(
                 function () {
@@ -361,25 +407,13 @@ jQuery(function () {
             var href = $(this).data('link');
             window.location = href;
         });
-        // scroll to anchor
-        $('.js-anchor').on('click', function (e) {
-            e.preventDefault();
-            var target = $(this).attr('href');
-            var offset = $(target).offset().top - parseFloat($('body').css('padding-top'));
-            $('html, body').animate({scrollTop: offset}, 500, function () {
-                if ($('header').hasClass('header_fixed')) {
-                    offset = $(target).offset().top - parseFloat($('body').css('padding-top')) + $('header').outerHeight();
-                    $('html, body').animate({scrollTop: offset}, 200);
-                }
-            });
-        });
         // antispam
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
         }, 5000);
         // footer fu$%
-        $(window).on('load resize', function(){
-            $('.footer-protection__img').width($('.footer-protection__img img').width());            
+        $(window).on('load resize', function () {
+            $('.footer-protection__img').width($('.footer-protection__img img').width());
         });
     }
 
