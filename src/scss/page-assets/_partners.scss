@@ -3,7 +3,6 @@
 }
 .partners-list {
     padding: 0;
-    margin: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +16,7 @@
     }
     .partners-list__link {
         display: block;
-        width: 60px;
+        /*width: 60px;*/
         margin: 0 auto;
     }
     .partners-list__img {
@@ -36,9 +35,6 @@
             display: block;
             flex-basis: 20%;
         }
-        .partners-list__link {
-            width: 80px;
-        }
     }
 }
 
@@ -53,8 +49,8 @@
             display: block;
             flex-basis: 12.5%;
         }
-        .partners-list__link {
+/*        .partners-list__link {
             width: 4.5vw;
-        }
+        }*/
     }
 }
