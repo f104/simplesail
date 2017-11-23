@@ -432,6 +432,18 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     &.article-content_border-bottom {
         border-bottom: 1px solid $articles-line-color;
     }
+    .fleet-list {
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    .fleet-item {
+        font-size: 125%;
+        .fleet-item__link {
+            color: $blue-dark;
+            text-decoration: none;
+            font-weight: normal;
+        }
+    }
 }
 .articles-map__wrapper {
     .articles-map {

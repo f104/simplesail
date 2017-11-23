@@ -243,6 +243,13 @@
             flex: 1;
         }
     }
+    &.underline-anime {
+        .underline-anime__hidden {
+            .underline-anime__line {
+                border-color: $blue-dark;
+            }
+        }
+    }
 }
 @include media-breakpoint-up(md) {
     .fleet-list {
