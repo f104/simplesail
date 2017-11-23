@@ -433,11 +433,21 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         border-bottom: 1px solid $articles-line-color;
     }
 }
-.articles-map {
-    width: 100%;
-    height: 30em;
-    border: none;
-    margin-bottom: 1px;
+.articles-map__wrapper {
+    .articles-map {
+        width: 100%;
+        height: 30em;
+        border: none;
+        margin-bottom: 1px;
+        display: block;
+        position: relative;
+        pointer-events: none;
+    }
+    &.clicked {
+        .articles-map {
+            pointer-events: auto;
+        }
+    }
 }
 .articles-related {
     .articles-related__img {

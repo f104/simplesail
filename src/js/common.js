@@ -349,7 +349,7 @@ jQuery(function () {
         var $root = $('html, body'),
                 $body = $('body'),
                 $header = $('header');
-        var scrollTo = function(href) {
+        var scrollTo = function (href) {
             var $target = $(href);
             if ($target.length == 0) {
                 $target = $('a[name=' + href.substr(1) + ']');
@@ -372,7 +372,7 @@ jQuery(function () {
             e.preventDefault();
             scrollTo($(this).attr('href'));
         });
-        window.onload = function() {
+        window.onload = function () {
             if (window.location.hash != '') {
                 scrollTo(window.location.hash);
             }
@@ -402,9 +402,17 @@ jQuery(function () {
 
         );
         // autoplay background video
-        $('.js-video-autoplay').each(function(){
+        $('.js-video-autoplay').each(function () {
             this.play();
         });
+        // click on iframe map
+        $('.articles-map__wrapper')
+                .click(function () {
+                    $(this).addClass('clicked');
+                })
+                .mouseleave(function () {
+                    $(this).removeClass('clicked');
+                });
         // link inside link
         $('.js-link').on('click', function (e) {
             e.preventDefault();
