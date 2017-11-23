@@ -401,6 +401,10 @@ jQuery(function () {
                 }
 
         );
+        // autoplay background video
+        $('.js-video-autoplay').each(function(){
+            this.play();
+        });
         // link inside link
         $('.js-link').on('click', function (e) {
             e.preventDefault();
