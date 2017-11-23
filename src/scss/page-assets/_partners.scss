@@ -8,9 +8,9 @@
     flex-wrap: wrap;
     /*justify-content: space-between;*/
     align-items: center;
-    margin: -20px;
+    margin: -10px;
     .partners-list__item {
-        padding: 20px;
+        padding: 10px;
         display: block;
         flex-basis: 33.3%;
     }
@@ -29,10 +29,7 @@
         padding: 30px;
     }
     .partners-list {
-        margin: -35px;
         .partners-list__item {
-            padding: 35px;
-            display: block;
             flex-basis: 20%;
         }
     }
@@ -43,14 +40,10 @@
         padding: 3vw;
     }
     .partners-list {
-        margin: -3vw;
+        margin: -1vw;
         .partners-list__item {
-            padding: 3vw;
-            display: block;
+            padding: 1vw;
             flex-basis: 12.5%;
         }
-/*        .partners-list__link {
-            width: 4.5vw;
-        }*/
     }
 }
