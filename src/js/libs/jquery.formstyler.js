@@ -409,6 +409,8 @@
 
 					// запрещаем прокрутку страницы при прокрутке селекта
 					function preventScrolling(selector) {
+                                            
+                                            return;
 
 						var scrollDiff = selector.prop('scrollHeight') - selector.outerHeight(),
 								wheelDelta = null,
@@ -674,7 +676,7 @@
 							};
 
 							if (selectSmartPositioning === true || selectSmartPositioning === 1) {
-                                                            console.log([bottomOffset,minHeight,searchHeight]);
+//                                                            console.log([bottomOffset,minHeight,searchHeight]);
 								// раскрытие вниз
 								if (bottomOffset > (minHeight + searchHeight + 20)) {
 									dropDown();

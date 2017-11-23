@@ -317,10 +317,10 @@
     color: #FFF;*/
 }
 .jq-selectbox li:hover {
-    color: #FFF;
-    opacity: 0.8;
-    border-radius: 3px;
-    background-color: #596e79;
+    color: #ff5722;
+    /*opacity: 0.8;*/
+    /*border-radius: 3px;*/
+    /*background-color: #596e79;*/
 }
 .jq-selectbox li:hover:after {
     content: none;

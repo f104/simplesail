@@ -120,22 +120,26 @@ jQuery(function () {
 
     function initSelect() {
         $('.js-select').styler({
-//            selectVisibleOptions: 5,
-//            onFormStyled: function () {
-//                $('.jq-selectbox__dropdown')
-//                        .find('ul')
-//                        .wrap('<div class="scrollbar-outer" />');
-//            },
-//            onSelectOpened: function () {
-//                var _ul = $(this).find('.jq-selectbox__dropdown ul');
-//                var height = _ul.height();
-//                var _srollPane = $(this).find('.jq-selectbox__dropdown .scrollbar-outer');
-//                ;
-//                _srollPane.height(height);
-//                _ul.css('max-height', 'none');
-//                _srollPane.scrollbar();
-////                $(this).find(".jq-selectbox__dropdown ul").scrollbar();
-//            }
+            selectVisibleOptions: 5,
+            onFormStyled: function () {
+                $('.jq-selectbox__dropdown')
+                        .find('ul')
+                        .wrap('<div class="scrollbar-outer" />');
+            },
+            onSelectOpened: function () {
+                var settings = {
+                    autoReinitialise: true,
+                    verticalGutter: 15,
+                    horizontalGutter: 15
+                };
+                var _ul = $(this).find('.jq-selectbox__dropdown ul');
+                var height = _ul.height();
+                var _srollPane = $(this).find('.jq-selectbox__dropdown .scrollbar-outer');
+                ;
+                _srollPane.height(height);
+                _ul.css('max-height', 'none');
+                _srollPane.jScrollPane(settings);
+            }
         });
 ////        $('.article-content table').wrap('<div class="js-scrollbar scrollbar-outer"></div>');
 ////        $('.js-scrollbar').scrollbar({
