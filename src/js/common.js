@@ -1,14 +1,6 @@
 jQuery(function () {
     "use strict";
 
-    var appConfig = {
-        breakpoint: {
-            md: 768,
-            lg: 1024
-        },
-        sliderSpeeed: 3000
-    };
-
     $(document).ready(function () {
         initSly();
         initSlider();
@@ -58,7 +50,7 @@ jQuery(function () {
             dots: true,
             infinite: true,
             autoplay: true,
-            autoplaySpees: appConfig.sliderSpeeed,
+            autoplaySpeed: appConfig.sliderSpeeed,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
