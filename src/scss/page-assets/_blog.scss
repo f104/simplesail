@@ -482,6 +482,10 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
                 right: 0;
                 top: 0
             }
+            .articles-related__header__link__inner {
+                display: inline-block;
+                max-width: 100%;
+            }
             .articles-related__header__link__line {
                 display: block;
                 white-space: nowrap;
