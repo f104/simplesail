@@ -248,7 +248,7 @@
     }
     .main-nav__bottom-menu {
         display: none;
-        @include list-inline(12px);
+        @include list-inline(17px);
         font-size: 22px;
         letter-spacing: 0.3px;
         text-align: right;
@@ -394,7 +394,7 @@
             letter-spacing: 0.01em;
             line-height: normal;
             li {
-                margin-right: .7em;
+                margin-right: .9em;
                 &:after {
                     right: -0.5em;
                 }

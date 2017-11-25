@@ -47,12 +47,14 @@
         display: flex;
     }
     .footer-protection__img {
-        flex: 1;
+        /*flex: 1;*/
+        position: relative;
     }
     .footer-protection__inner {
         padding-left: 20px;
         color: $white;
         opacity: .6;
+        flex: 1;
         .footer-protection__inner__header {
             font-size: 20px;
             font-weight: 700;
@@ -148,6 +150,10 @@
             img {
                 min-height: 100%;
                 display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
