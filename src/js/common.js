@@ -106,6 +106,7 @@ jQuery(function () {
         $('.slick-dots').each(function () {
             if ($(this).find('li').length == 1) {
                 $(this).hide();
+                $(this).parent().addClass('slick-slider_single');
             }
         });
     }

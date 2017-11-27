@@ -208,6 +208,11 @@
         .slide__content {
             flex: 1;
         }
+        .slick-slider_single {
+            .slide__header {
+                padding-top: 2.1em;
+            }
+        }
         .index-slider__request {
             position: absolute;
             right: 0;
@@ -319,9 +324,9 @@
                 }
                 &:hover {
                     background-color: rgba($blue-dark, .2);
-/*                    &:before {
-                        color: $primary;
-                    }*/
+                    /*                    &:before {
+                                            color: $primary;
+                                        }*/
                 }
             }
             .slick-prev {
@@ -402,9 +407,9 @@
             }
             &:hover {
                 background-color: rgba(69, 90, 100, 0.4);
-/*                &:before {
-                    color: $primary;
-                }*/
+                /*                &:before {
+                                    color: $primary;
+                                }*/
             }
         }
         .slick-prev {
