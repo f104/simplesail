@@ -238,7 +238,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 
 .articles-tabs {
     @include list-inline-center(0);
-    padding: 20px;
+    padding: 0 20px;
     font-size: 13px;
     line-height: 26px;
     letter-spacing: 0.2px;
@@ -249,6 +249,8 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     }
     li {
         position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
         &:after {
             content: '';
             width: 1px;
@@ -257,7 +259,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             display: inline-block;
             vertical-align: middle;
             margin-left: 6px;
-            margin-right: 4px;
+            margin-right: 6px;
         }
         &.last, &:last-of-type {
             &:after {
@@ -333,15 +335,17 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 }
 @include media-breakpoint-up(md) {
     .articles-tabs {
-        padding: 35px;
+        padding: 0 35px;
         font-size: 18px;
         line-height: normal;
         letter-spacing: 0.3px;
         li {
+            padding-top: 35px;
+            padding-bottom: 35px;
             &:after {
                 height: 18px;
                 margin-left: 10px;
-                margin-right: 6px;
+                margin-right: 10px;
             }
         }
     }
@@ -381,14 +385,16 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 }
 @include media-breakpoint-up(lg) {
     .articles-tabs {
-        padding: 1.6em;
+        padding: 0 1.6em;
         font-size: 90%;
         letter-spacing: 0.02em;
         li {
+            padding-top: 1.6em;
+            padding-bottom: 1.6em;
             &:after {
                 height: 1em;
                 margin-left: 1ex;
-                margin-right: 0.6ex;
+                margin-right: 1ex;
             }
         }
     }
@@ -428,6 +434,11 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     letter-spacing: 0.3px;
     color: $blue-dark;
     border-bottom: 1px solid $articles-line-color;
+    .container {
+        > :last-child {
+            margin-bottom: 0 !important;
+        }
+    }
 }
 .article-content {
     .gallery {
