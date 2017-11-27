@@ -259,6 +259,10 @@
 .boat-slider {
     &.slick-dotted.slick-slider {
         margin-bottom: 0;
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
         .slick-dots {
             @include transition();
             bottom: 18px;

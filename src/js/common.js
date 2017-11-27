@@ -50,7 +50,7 @@ jQuery(function () {
             dots: true,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: appConfig.sliderSpeeed,
+            autoplaySpeed: appConfig.sliderSpeed,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -196,6 +196,7 @@ jQuery(function () {
                 action = 1;
                 $header.stop();
                 $('body').css({'padding-top': headerHeight});
+                $('.main-nav__top-menu__contacts').css({'visibility': 'visible'});
                 $header.css({'top': -headerHeight})
                         .addClass('header_fixed')
                         .animate({'top': 0}, 400);
@@ -204,6 +205,7 @@ jQuery(function () {
                     return;
                 }
                 action = 2;
+                $('.main-nav__top-menu__contacts').css({'visibility': 'hidden'});
                 $header.animate({'top': -headerHeight}, "fast", function () {
                     $header.css({'top': 0});
                     $('body').css({'padding-top': 0});
@@ -213,7 +215,7 @@ jQuery(function () {
         }
         var $header = $('header');
         var headerHeight = $header.outerHeight();
-        var q = 2;
+        var q = 1;
         var action = 0;
         if (window.innerWidth >= appConfig.breakpoint.lg) {
             $(window).on('scroll', pinHeader);

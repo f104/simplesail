@@ -271,13 +271,18 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         }
     }
 }
-.articles-list {
+.articles-tabs-wrapper {
     border-style: solid;
+    border-color: $articles-line-color;
+    border-width: 1px 0;
+}
+.articles-list {
+/*    border-style: solid;
     border-color: $articles-line-color;
     border-width: 0 0 1px 0;
     .articles-list__inner {
         border-bottom: 1px solid $articles-line-color;
-    }
+    }*/
     .articles-list__footer {
         text-align: center;
         padding: 48px 35px;

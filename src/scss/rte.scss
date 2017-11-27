@@ -21,4 +21,5 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     @extend .article-content;
+    overflow: auto;
 }
