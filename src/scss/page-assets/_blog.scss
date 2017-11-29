@@ -238,8 +238,9 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 
 .articles-tabs {
     @include list-inline-center(0);
-    padding: 0 20px;
+    margin: 20px;
     font-size: 13px;
+    font-weight: 700;
     line-height: 26px;
     letter-spacing: 0.2px;
     text-align: center;
@@ -249,8 +250,6 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
     }
     li {
         position: relative;
-        padding-top: 20px;
-        padding-bottom: 20px;
         &:after {
             content: '';
             width: 1px;
@@ -335,13 +334,11 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 }
 @include media-breakpoint-up(md) {
     .articles-tabs {
-        padding: 0 35px;
+        margin: 35px;
         font-size: 18px;
         line-height: normal;
         letter-spacing: 0.3px;
         li {
-            padding-top: 35px;
-            padding-bottom: 35px;
             &:after {
                 height: 18px;
                 margin-left: 10px;
@@ -385,12 +382,10 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 }
 @include media-breakpoint-up(lg) {
     .articles-tabs {
-        padding: 0 1.6em;
+        margin: 1.6em;
         font-size: 90%;
         letter-spacing: 0.02em;
         li {
-            padding-top: 1.6em;
-            padding-bottom: 1.6em;
             &:after {
                 height: 1em;
                 margin-left: 1ex;

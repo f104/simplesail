@@ -152,7 +152,7 @@ jQuery(function () {
         $('.js-menu-overlay').on('click', function (e) {
             $('.js-menu-toggler').click();
         });
-
+        
         // анимация контактов в шапке
         $('.main-nav__top-menu__contacts').on('topMenuAnimate', function () {
             var $this = $(this);
@@ -190,6 +190,9 @@ jQuery(function () {
         });
 
         var pinHeader = function () {
+            if (document.readyState !== "complete") {
+                return;
+            }
             if ($(this).scrollTop() > headerHeight * q) {
                 if (action == 1) {
                     return;
@@ -219,7 +222,7 @@ jQuery(function () {
         var q = 1;
         var action = 0;
         if (window.innerWidth >= appConfig.breakpoint.lg) {
-            $(window).on('scroll', pinHeader);
+            $(window).on('load scroll', pinHeader);
         }
         $(window).on('resize', function () {
             if (window.innerWidth >= appConfig.breakpoint.lg) {
@@ -340,7 +343,7 @@ jQuery(function () {
     function initScrollbar() {
         $('.article-content table').wrap('<div class="js-scrollbar scrollbar-outer"></div>');
         $('.js-scrollbar').scrollbar({
-            disableBodyScroll: true
+            //disableBodyScroll: true
         });
     }
 

@@ -111,15 +111,14 @@
         }
     }
     &.nav-contacts_mobile-menu {
-        color: #455a64;
+        color: $blue-dark;
         line-height: 26px;
         text-align: left;
         margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
         li {
-            margin-right: 25px;
-            &:last-of-type {
-                margin-right: 0;
-            }
+            margin-right: 0;
         }
         .nav-contacts__link {
             font-size: 11px;
@@ -418,9 +417,9 @@
                 height: auto;
                 padding: 0.9em 0;
             }
-/*            .main-nav__logo .main-nav__logo-img {
-                height: 2.1em;
-            }*/
+            /*            .main-nav__logo .main-nav__logo-img {
+                            height: 2.1em;
+                        }*/
         }
     }
 }
