@@ -266,8 +266,12 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
         &.active {
-            a:before {
-                transform: scaleX(1);
+            a {
+                color: $primary;
+                &:before {
+                    display: none;
+                    /*transform: scaleX(1);*/
+                }                
             }
         }
     }
@@ -383,7 +387,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 @include media-breakpoint-up(lg) {
     .articles-tabs {
         margin: 1.6em;
-        font-size: 90%;
+        font-size: 120%;
         letter-spacing: 0.02em;
         li {
             &:after {
@@ -570,7 +574,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
 @include media-breakpoint-up(lg) {
     .article-introtext {
         padding: 3vw;
-        font-size: 90%;
+        font-size: 113%;
     }
     .article-content {
         .gallery {

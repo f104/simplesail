@@ -188,7 +188,7 @@
     }
     .fleet-item__inner {
         min-height: 140px;
-        padding: 20px;
+        padding: 20px 20px 40px;
         display: flex;
         flex-direction: column;
     }
@@ -264,7 +264,7 @@
                 flex: 1;
                 margin: 0 1px 1px 0;
                 .fleet-item__inner {
-                    min-height: 155px;
+                    min-height: 125px;
                 }
                 .fleet-item__title {
                     font-size: 22px;
@@ -284,7 +284,7 @@
             .fleet-item {
                 .fleet-item__inner {
                     min-height: 7em;
-                    padding: 1em;
+                    padding: 1em 1em 2em;
                 }
                 .fleet-item__title {
                     font-size: 100%;
