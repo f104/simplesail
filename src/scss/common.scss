@@ -254,6 +254,17 @@ header, footer {
             line-height: 17px;
             letter-spacing: 0.3px;
             text-align: right;
+            .page-header__text_big {
+                font-size: 17px;
+                line-height: 23px;
+                margin-bottom: .5em;
+            }
+            a {
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
         .page-header__back {
             position: absolute;
@@ -277,6 +288,17 @@ header, footer {
     &.page-header_article {
         .page-header__img {
             display: block;
+        }
+    }
+    &.page-header_404 {
+        .page-header__inner {
+            .page-header__title {
+                .page-header__title__h1 {
+                    font-size: 70px;
+                    line-height: 1;
+                    letter-spacing: 2px;
+                }
+            }
         }
     }
 }
@@ -344,10 +366,23 @@ header, footer {
                 font-size: 96.3%;
                 line-height: 1.15em;
                 padding-left: 0;
+                .page-header__text_big {
+                    font-size: 120%;
+                    line-height: normal;
+                }
             }
             .page-header__back {
                 font-size: 90%;
                 line-height: 2.7em;
+            }
+        }
+        &.page-header_404 {
+            .page-header__inner {
+                .page-header__title {
+                    .page-header__title__h1 {
+                        font-size: 400%;
+                    }
+                }
             }
         }
     }
