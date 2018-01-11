@@ -4,6 +4,7 @@
 @import "libs/bootstrap/bootstrap-reboot.scss";
 @import "libs/bootstrap/bootstrap-grid.scss";
 @import "libs/bootstrap/utilities/_embed.scss";
+@import "libs/bootstrap/utilities/display.scss";
 
 body {
     color: $body-color;
@@ -403,3 +404,7 @@ header, footer {
 @import "page-assets/weather";
 @import "page-assets/partners";
 @import "page-assets/downloads";
+
+.preloader {
+    display: none !important;
+}

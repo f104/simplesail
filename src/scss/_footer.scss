@@ -217,6 +217,9 @@
         }
         .footer-address__phone {
             font-size: 106%;
+            a {
+                color: inherit;
+            }
         }
     }
     .footer-protection {

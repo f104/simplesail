@@ -62,7 +62,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         position: relative;
     }
     .blog-item__content-wrapper {
-        padding: 30px 20px;
+        padding: 30px 20px 60px;
         @include transition();
     }
     .blog-item__header {
@@ -266,6 +266,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             }
         }
         &.active {
+            color: $primary;
             a {
                 color: $primary;
                 &:before {
@@ -317,6 +318,7 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
         .articles-item__title__link {
             display: block;
             position: relative;
+            padding-right: 1em;
             @include transition();
             &:after {
                 position: absolute;
@@ -326,6 +328,9 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
                 font-size: 20px;
                 line-height: 17px;
                 font-weight: 700;
+            }
+            .underline-anime__visible {
+                padding-right: 1em;
             }
         }
         .underline-anime__line {
@@ -414,11 +419,30 @@ $articles-line-color: rgba(84, 110, 122, 0.4); // цвет линии разде
             padding: 1em;
         }
         .articles-item__title {
-            font-size: 100%;
+            font-size: 18.75px;
             line-height: normal;
             margin-bottom: 1em;
-            &:after {
-                font-size: 100%;
+            .articles-item__title__link {
+                &:after {
+                    font-size: 18.75px;
+                    line-height: 21px;
+                }
+            }
+        }
+        .articles-item__text {
+            font-size: 15.9375px;
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .articles-item {
+        .articles-item__title {
+            font-size: 100%;
+            .articles-item__title__link {
+                &:after {
+                    font-size: 100%;
+                    line-height: normal;
+                }
             }
         }
         .articles-item__text {

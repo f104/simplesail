@@ -429,6 +429,16 @@ jQuery(function () {
         $(window).on('load resize', function () {
             $('.footer-protection__img').width($('.footer-protection__img img').width());
         });
+        $('.js-social').on('click', function() {
+            var sizex = $(window).width();
+            if (sizex >= 700) sizex = 700;
+            window.open($(this).attr("href"), 'displayWindow', 'width=' + sizex + ',location=no,directories=no,status=no,toolbar=no,menubar=no');
+            return false;
+        });
+        // index slider select
+        $('.js-index-slider-btn').on('click', function(){
+            window.location = $('select.js-index-slider-select').val();
+        });
     }
 
 });
