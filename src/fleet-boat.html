@@ -266,13 +266,19 @@
                                 </div>
                                 <div class="row align-items-center">
                                     <div class="col-md-6">
-                                        <button type="submit" class="btn btn-primary boat-charter__submit">Request</button>
+                                        <button data-fancybox data-src="#popup" class="btn btn-primary boat-charter__submit">Request</button>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="boat-charter__summary">€ 1500 - € 2700 by week</div>
                                     </div>
                                 </div>
                             </form>
+                            <div id="popup" style="display:none">
+                                <div style="text-align: center; padding: 2em">
+                                    <p>Ваш запрос принят. В ближайшее время мы свяжемся с вами.</p>
+                                    <button class="btn btn-primary" onclick="$.fancybox.close()">Возврат на сайт</button>
+                                </div>
+                            </div>
                         </section>
 
                     </div>

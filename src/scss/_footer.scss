@@ -25,6 +25,9 @@
     .footer-address__phone {
         font-family: $font-family-alt;
         font-size: 20px;
+        a {
+            color: inherit;
+        }
     }
     &:after {
         position: absolute;
@@ -217,9 +220,6 @@
         }
         .footer-address__phone {
             font-size: 106%;
-            a {
-                color: inherit;
-            }
         }
     }
     .footer-protection {

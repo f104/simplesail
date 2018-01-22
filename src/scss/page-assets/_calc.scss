@@ -1,0 +1,153 @@
+.boat-calc {
+    color: $blue-dark;
+    border-bottom: 1px solid rgba(84, 110, 122, .4);
+    form {
+        margin: 0;
+    }
+    .boat-calc__form, .boat-calc__price {
+        padding: 20px;
+    }
+    .boat-calc__price {
+        background-color: $gray-light;
+        .boat-calc__price__list {
+            padding: 0;
+            counter-reset: myCounter;
+            li {
+                list-style: none;
+                margin-bottom: 20px;
+                position: relative;
+                padding-left: 1em;
+                padding-right: 5em;
+                &:before {
+                    counter-increment: myCounter;
+                    content: counter(myCounter);
+                    opacity: .7;
+                    position: absolute;
+                    left: 0;
+                }
+                .boat-calc__price__list__sum {
+                    position: absolute;
+                    right: 0;
+                    font-weight: 600;
+                }
+                &:last-of-type {
+                    font-weight: 600;
+                    font-size: 120%;
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+    .input-group {
+        label {
+            opacity: 1;
+            color: $blue-dark;
+            font-size: $font-size-base-px;
+            position: relative;
+        }
+        select, .select {
+            display: block;
+        }
+        .radio-group {
+            label {
+                margin-right: 2em;
+                padding-left: 26px;
+            }
+            input[type=radio] {
+                cursor: pointer;
+                visibility: hidden;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                &:before {
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: 1.5px solid rgba(1, 1, 1, .54);
+                    border-radius: 1.5px;
+                    visibility: visible;
+                    @include transition();
+                }
+                &:checked {
+                    &:before {
+                        border-color: $primary;
+                        background-color: $primary;
+                    }
+                    &:after {
+                        content: '\e814';
+                        font-family: "fontello";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: .5px;
+                        color: white;
+                        font-size: 17px;
+                        visibility: visible;
+                    }
+                }
+                &:disabled {
+                    pointer-events: none;
+                    &:before {
+                        border-color: #888;
+                        background-color: #888;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .boat-calc__submit {
+        width: 100%;
+    }
+}
+@include media-breakpoint-up(md) {
+    .boat-calc {
+        border-top: 1px solid rgba(84, 110, 122, .4);
+        .boat-calc__form, .boat-calc__price {
+            padding: 25px 30px;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .boat-calc {
+        .boat-calc__form, .boat-calc__price {
+            padding: 2em 3vw;
+        }
+        .input-group {
+            label {
+                font-size: 77%;
+                letter-spacing: 0.02em;
+                margin-bottom: .3em;
+            }
+            .radio-group {
+                input[type=checkbox] {
+                    &:before {
+                        width: 1.2em;
+                        height: 1.2em;
+                        border-radius: 0.2em;
+                    }
+                    &:checked {
+                        &:after {
+                            font-size: 110%;
+                            left: .05em;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .boat-charter__summary {
+            margin-left: 1.5em;
+            font-size: 85%;
+        }
+    }
+}

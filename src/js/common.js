@@ -11,6 +11,7 @@ jQuery(function () {
         initRadioSwitch();
         initScrollbar();
         initAnchor();
+        initIndexMap();
         initOther();
     });
 
@@ -152,7 +153,7 @@ jQuery(function () {
         $('.js-menu-overlay').on('click', function (e) {
             $('.js-menu-toggler').click();
         });
-        
+
         // анимация контактов в шапке
         $('.main-nav__top-menu__contacts').on('topMenuAnimate', function () {
             var $this = $(this);
@@ -205,7 +206,7 @@ jQuery(function () {
                         .addClass('header_fixed')
                         .animate({'top': 0}, 400);
             } else {
-                if (action == 2) {
+                if (action == 2 || !$header.hasClass('header_fixed')) {
                     return;
                 }
                 action = 2;
@@ -380,6 +381,25 @@ jQuery(function () {
             }
         }
     }
+
+    function initIndexMap() {
+        if (window.innerWidth >= appConfig.breakpoint.md) {
+            var $toggler = $('.js-index-map-link');
+            if ($toggler.length) {
+                var src = $toggler.data('src');
+                if (src) {
+                    $toggler.addClass('marina-map__img-wrapper_link');
+                    $toggler.on('click', function () {
+                        $.fancybox.open({
+                            src: src,
+                            type: 'image'
+                        });
+                    });
+                }
+            }
+        }
+    }
+
     function initOther() {
         $('.marina-item__img-wrapper').hover(
                 function () {
@@ -429,14 +449,15 @@ jQuery(function () {
         $(window).on('load resize', function () {
             $('.footer-protection__img').width($('.footer-protection__img img').width());
         });
-        $('.js-social').on('click', function() {
+        $('.js-social').on('click', function () {
             var sizex = $(window).width();
-            if (sizex >= 700) sizex = 700;
+            if (sizex >= 700)
+                sizex = 700;
             window.open($(this).attr("href"), 'displayWindow', 'width=' + sizex + ',location=no,directories=no,status=no,toolbar=no,menubar=no');
             return false;
         });
         // index slider select
-        $('.js-index-slider-btn').on('click', function(){
+        $('.js-index-slider-btn').on('click', function () {
             window.location = $('select.js-index-slider-select').val();
         });
     }

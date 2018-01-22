@@ -91,6 +91,9 @@
 }
 .marina-map__img-wrapper {
     flex: 1;
+    &.marina-map__img-wrapper_link {
+        cursor: pointer;
+    }
 }
 .marina-map__img {
     display: block;
