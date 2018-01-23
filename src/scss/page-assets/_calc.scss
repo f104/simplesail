@@ -92,55 +92,6 @@
                     }
                 }
             }
-/*            label {
-                margin-right: 2em;
-                padding-left: 26px;
-            }
-            input[type=radio] {
-                cursor: pointer;
-                visibility: hidden;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                &:before {
-                    content: '';
-                    width: 18px;
-                    height: 18px;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border: 1.5px solid rgba(1, 1, 1, .54);
-                    border-radius: 1.5px;
-                    visibility: visible;
-                    @include transition();
-                }
-                &:checked {
-                    &:before {
-                        border-color: $primary;
-                        background-color: $primary;
-                    }
-                    &:after {
-                        content: '\e814';
-                        font-family: "fontello";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: .5px;
-                        color: white;
-                        font-size: 17px;
-                        visibility: visible;
-                    }
-                }
-                &:disabled {
-                    pointer-events: none;
-                    &:before {
-                        border-color: #888;
-                        background-color: #888;
-                    }
-                }
-            }*/
         }
         &:last-of-type {
             margin-bottom: 0;
@@ -164,10 +115,13 @@
             padding: 2em 3vw;
         }
         .input-group {
-            label {
-                font-size: 77%;
+            > label {
+                font-size: 100%;
                 letter-spacing: 0.02em;
                 margin-bottom: .3em;
+            }
+            input {
+                font-size: 100%;
             }
             .radio-group {
                 input[type=checkbox] {
@@ -186,6 +140,10 @@
             }
         }
 
+        .jq-selectbox__select {
+            line-height: 3em;
+            height: 3.25em;
+        }
 
         .boat-charter__summary {
             margin-left: 1.5em;
