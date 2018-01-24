@@ -87,9 +87,17 @@
         height: auto;
     }
     .article-content__img {
+        figcaption {
+            font-style: italic;
+            opacity: .6;
+            font-size: 90%;
+        }
         &.article-content__img_full {
             margin-left: -20px;
             margin-right: -20px;
+            figcaption {
+                padding: 0 20px;
+            }
         }
     }
     .video-js {
@@ -205,6 +213,9 @@
             &.article-content__img_full {
                 margin-left: -30px;
                 margin-right: -30px;
+                figcaption {
+                    padding: 0 30px;
+                }
             }
             &.article-content__img_left {
                 margin-left: 0;
@@ -257,6 +268,9 @@
             &.article-content__img_full {
                 margin-left: -3vw;
                 margin-right: -3vw;
+                figcaption {
+                    padding: 0 3vw;
+                }
             }
             &.article-content__img_left {
                 max-width: 35vw;
